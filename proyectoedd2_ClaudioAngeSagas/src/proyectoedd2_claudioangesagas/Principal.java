@@ -71,7 +71,6 @@ public class Principal extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(45, 64, 89));
 
         jTextField1.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
         jTextField1.setText("jTextField1");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,24 +79,19 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jTextField2.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
         jTextField2.setText("jTextField2");
 
         jTextField3.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField3.setForeground(new java.awt.Color(0, 0, 0));
         jTextField3.setText("jTextField3");
 
         jTextField4.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setText("jTextField4");
 
         jTextField5.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setText("jTextField5");
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("CAMPOS");
 
         jButton3.setBackground(new java.awt.Color(234, 84, 85));
@@ -109,7 +103,12 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(new java.awt.Color(234, 84, 85));
-        jButton4.setText("Agregar nuevo registro");
+        jButton4.setText("Agregar nuevo campo");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Selecciona el campo que deseas cambiar");
 
@@ -483,6 +482,10 @@ public class Principal extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
  public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
             for (File temp : p_raiz.listFiles()) {
