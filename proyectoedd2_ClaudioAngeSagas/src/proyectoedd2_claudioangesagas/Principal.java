@@ -71,7 +71,6 @@ public class Principal extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(45, 64, 89));
 
         jTextField1.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField1.setText("jTextField1");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -79,16 +78,12 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jTextField2.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField2.setText("jTextField2");
 
         jTextField3.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField3.setText("jTextField3");
 
         jTextField4.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField4.setText("jTextField4");
 
         jTextField5.setBackground(new java.awt.Color(222, 205, 195));
-        jTextField5.setText("jTextField5");
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
