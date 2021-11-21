@@ -563,11 +563,10 @@ public class Principal extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         String rutaAcrear = "./registros/";
         String nombre = JOptionPane.showInputDialog(misArchivos, "Escribe el nombre del nuevo archivo");
-        nombre += ".rtx";
+        nombre += ".txt";
         File file = new File(rutaAcrear + nombre);
-        FileOutputStream fw = null;
-        ObjectOutputStream bw = null;
         try {
+<<<<<<< HEAD
             fw = new FileOutputStream(file);
             bw = new ObjectOutputStream(fw);
             bw.flush();
@@ -578,10 +577,22 @@ public class Principal extends javax.swing.JFrame {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
             
+=======
+            if (file.createNewFile()) {
+                JOptionPane.showMessageDialog(misArchivos, "El archivo fue creado con exito");
+                misArchivos.dispose();
+                actualizarArchivos();
+            } else {
+                JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
+            }
+>>>>>>> 0d9a4942b2516db97953c925f6c3ee8e00f2a565
         } catch (IOException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
+<<<<<<< HEAD
             
+=======
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+>>>>>>> 0d9a4942b2516db97953c925f6c3ee8e00f2a565
         }
 
         // TODO add your handling code here:
@@ -597,8 +608,8 @@ public class Principal extends javax.swing.JFrame {
         
         System.out.println(rutaorigen);
         // Path origen;
-        File cambiarNombreA = new File(rutaorigen);
-        if (cambiarNombreA.delete()) {
+        File eliminar = new File(rutaorigen);
+        if (eliminar.delete()) {
             JOptionPane.showMessageDialog(misArchivos, "eliminacion correcta");
             misArchivos.dispose();
             actualizarArchivos();
