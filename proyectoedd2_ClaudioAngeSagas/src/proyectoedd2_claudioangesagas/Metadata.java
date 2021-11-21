@@ -17,12 +17,16 @@ public class Metadata {
         FileWriter fw = new FileWriter(file, false);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter pw = new PrintWriter(bw);
-
+        
         for (Campos temp : campos) {
-            pw.println(temp.getNombre() + ":" + temp.getTipo() + "[" + temp.getByteoffset() + "]" + ";");
+            int llave = 0;
+            if (temp.isLlavePrimaria()==true) {
+                llave = 1;
+            }
+            pw.print(temp.getNombre() + ":" + temp.getTipo() + "[" + temp.getByteoffset() + "]"+llave + ";");
         }
+        pw.println();
         pw.flush();
-
         pw.close();
     }
 

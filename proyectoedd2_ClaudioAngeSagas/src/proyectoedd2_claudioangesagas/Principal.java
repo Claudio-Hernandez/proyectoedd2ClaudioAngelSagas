@@ -407,7 +407,7 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(78, 17, 132));
-        jButton2.setText("Mis archivos");
+        jButton2.setText("Archivos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -586,7 +586,7 @@ public class Principal extends javax.swing.JFrame {
                     = (DefaultTableModel) jtable_campos.getModel();
 
             if (metadata.getCampos().isEmpty() != true) {
-                
+
                 metadata.getCampos().remove(jtable_campos.getSelectedRow());
             }
 
@@ -663,7 +663,10 @@ public class Principal extends javax.swing.JFrame {
             }
 
             JOptionPane.showMessageDialog(null, "EL registro se modificó con éxito");
+        } else {
+            JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún campo de la tabla");
         }
+
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -673,29 +676,35 @@ public class Principal extends javax.swing.JFrame {
             Scanner myReader = new Scanner(new File(rutaArchivo + selectedNode.getUserObject().toString()));
             DefaultTableModel modelo = (DefaultTableModel) jtable_campos.getModel();
             borrarElementosTabla();//Limpiar tabla
-             metadata.getCampos().clear();//Se limpia todo lo que pueda haber en la metadat
+            metadata.getCampos().clear();//Se limpia todo lo que pueda haber en la metadat
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String[] camposLinea = data.split(";");
                 for (String Campo : camposLinea) {
                     //Conseguir el nombre
                     try {
-                        String[] campSpLit = Campo.split(":"); //Nombre:Tipo[num] = (Nombre)(Tipo[num])
+                        String[] campSpLit = Campo.split(":"); //Nombre:Tipo[num] = (Nombre)(Tipo[num]llave)
                         String nom = campSpLit[0];
                         String tipo = "";
 
                         //Conseguir el tipo
-                        String[] typeSplit = campSpLit[1].split("\\[");// Tipo[Num] = (Tipo)(num])
+                        String[] typeSplit = campSpLit[1].split("\\[");// Tipo[Num] = (Tipo)(num]llave)
                         tipo = typeSplit[0];
 
-                        int len = Integer.parseInt(typeSplit[1].replace("]", ""));
+                        //Conseguir llave primaria
+                        String[] split = typeSplit[1].split("]");
+                        boolean getLlave = false;
+                        if (split[1].equals("1")) {
+                            getLlave = true;
+                        }
+
+                        int len = Integer.parseInt(split[0]);
 
                         //Agregar a la tabla
                         Object[] newrow = {
-                            nom, tipo, len, false
+                            nom, tipo, len, getLlave
                         };
 
-                       
                         metadata.getCampos().add(new Campos(nom, tipo, len, false));
 
                         //Ojo cambiar como saber si es llaveprimaria
