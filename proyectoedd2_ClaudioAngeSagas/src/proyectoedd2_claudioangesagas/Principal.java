@@ -5,11 +5,14 @@
  */
 package proyectoedd2_claudioangesagas;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -76,6 +79,7 @@ public class Principal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
 
         jPanel2.setBackground(new java.awt.Color(45, 64, 89));
 
@@ -317,6 +321,11 @@ public class Principal extends javax.swing.JFrame {
 
         jButton10.setBackground(new java.awt.Color(243, 10, 73));
         jButton10.setText("Abrir archivo");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setBackground(new java.awt.Color(243, 10, 73));
         jButton11.setText("Nuevo archivo");
@@ -409,28 +418,41 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setText("Bienvenido");
 
+        jButton12.setText("APAGAR");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(47, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(53, 53, 53)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(167, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton12)
+                        .addGap(33, 33, 33))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
+                .addGap(49, 49, 49)
+                .addComponent(jButton12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(97, 97, 97)
+                .addGap(90, 90, 90)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -467,8 +489,25 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        //Guardar campos 
         JOptionPane.showMessageDialog(null, "Estas seguro que quieres guardar en este archivo ?\n recurda que puedes cambiarlo cuando desees.");
-        // TODO add your handling code here:
+        try {
+            try {
+                DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) arbolArchivos.getSelectionPath().getLastPathComponent();//consigue el nodo del archivo donde desea guardar
+
+                if (metadata.getCampos().size() != 0) {//Tiene que haber campos para guardar
+
+                    metadata.escribirCampos(new File(rutaArchivo + selectedNode.toString()));
+                } else {
+                    JOptionPane.showMessageDialog(campos, "Campos vacios" + "\n"
+                            + "Para guardar se necesitan campos");
+                }
+
+            } catch (NullPointerException ex) {//Si no
+                JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
+            }
+        } catch (IOException ex) {
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -477,6 +516,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void arbolArchivosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_arbolArchivosMouseClicked
+        //Selecciona el archivo al que vamos a guardar
 
     }//GEN-LAST:event_arbolArchivosMouseClicked
     public void actualizarArchivos() {
@@ -544,10 +584,16 @@ public class Principal extends javax.swing.JFrame {
 
             DefaultTableModel modelo
                     = (DefaultTableModel) jtable_campos.getModel();
+
+            if (metadata.getCampos().isEmpty() != true) {
+                
+                metadata.getCampos().remove(jtable_campos.getSelectedRow());
+            }
+
             modelo.removeRow(jtable_campos.getSelectedRow());
+
             jtable_campos.setModel(modelo);
 
-            
             JOptionPane.showMessageDialog(null, "EL registro se eliminó con éxito");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -569,6 +615,7 @@ public class Principal extends javax.swing.JFrame {
         };
         modelo.addRow(newrow);
         jtable_campos.setModel(modelo); //*
+        metadata.addCampo(new Campos(nombreCampo, tipoCampo, bo, lp));
         JOptionPane.showMessageDialog(null, "Se agregó el campo");
         jTextField1.setText("");
         rb_si.setSelected(false);
@@ -587,31 +634,94 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jtable_camposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtable_camposMouseClicked
-         
+
     }//GEN-LAST:event_jtable_camposMouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-         if (jtable_campos.getSelectedRow() >= 0) {
+        if (jtable_campos.getSelectedRow() >= 0) {
 
             DefaultTableModel modelo
                     = (DefaultTableModel) jtable_campos.getModel();
             //modelo.removeRow(jtable_campos.getSelectedRow());
-           modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
-           modelo.setValueAt((String)jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
-           modelo.setValueAt((int)jSpinner1.getValue(), jtable_campos.getSelectedRow(), 2);
-           boolean b = false;
-           if(rb_si.isSelected()){
-               b = true;
-           }
-           else if(rb_no.isSelected()){
-               b = false;
-           }
-           modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
+            modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
+            modelo.setValueAt((String) jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
+            modelo.setValueAt((int) jSpinner1.getValue(), jtable_campos.getSelectedRow(), 2);
+            boolean b = false;
+            if (rb_si.isSelected()) {
+                b = true;
+            } else if (rb_no.isSelected()) {
+                b = false;
+            }
+            modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
 
-            
+            // MODIFICAR ARRAYLIST DE CAMPOS
+            if (metadata.getCampos().isEmpty() != true) {
+                metadata.getCampos().get(jtable_campos.getSelectedRow()).setNombre(jTextField1.getText());
+                metadata.getCampos().get(jtable_campos.getSelectedRow()).setTipo((String) jComboBox2.getSelectedItem());
+                metadata.getCampos().get(jtable_campos.getSelectedRow()).setByteoffset((int) jSpinner1.getValue());
+                metadata.getCampos().get(jtable_campos.getSelectedRow()).setLlavePrimaria(b);
+            }
+
             JOptionPane.showMessageDialog(null, "EL registro se modificó con éxito");
         }
     }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // ABRIR ARCHIVO
+        try {
+            DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) arbolArchivos.getSelectionPath().getLastPathComponent();
+            Scanner myReader = new Scanner(new File(rutaArchivo + selectedNode.getUserObject().toString()));
+            DefaultTableModel modelo = (DefaultTableModel) jtable_campos.getModel();
+            borrarElementosTabla();//Limpiar tabla
+             metadata.getCampos().clear();//Se limpia todo lo que pueda haber en la metadat
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                String[] camposLinea = data.split(";");
+                for (String Campo : camposLinea) {
+                    //Conseguir el nombre
+                    try {
+                        String[] campSpLit = Campo.split(":"); //Nombre:Tipo[num] = (Nombre)(Tipo[num])
+                        String nom = campSpLit[0];
+                        String tipo = "";
+
+                        //Conseguir el tipo
+                        String[] typeSplit = campSpLit[1].split("\\[");// Tipo[Num] = (Tipo)(num])
+                        tipo = typeSplit[0];
+
+                        int len = Integer.parseInt(typeSplit[1].replace("]", ""));
+
+                        //Agregar a la tabla
+                        Object[] newrow = {
+                            nom, tipo, len, false
+                        };
+
+                       
+                        metadata.getCampos().add(new Campos(nom, tipo, len, false));
+
+                        //Ojo cambiar como saber si es llaveprimaria
+                        modelo.addRow(newrow);
+                    } catch (ArrayIndexOutOfBoundsException ex) {
+                    }
+                }
+            }
+            jtable_campos.setModel(modelo);
+        } catch (NullPointerException ex) {//Si no
+            JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
+        } catch (FileNotFoundException ex) {
+
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    public void borrarElementosTabla() {
+        DefaultTableModel dm1 = (DefaultTableModel) jtable_campos.getModel();
+        dm1.setRowCount(0);
+    }
+
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        // APAGAR SYSTEMA
+        System.exit(0);
+    }//GEN-LAST:event_jButton12MouseClicked
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
             for (File temp : p_raiz.listFiles()) {
@@ -641,19 +751,27 @@ public class Principal extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Principal.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -672,6 +790,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -703,4 +822,6 @@ public class Principal extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
     String rutaArchivo = "./registros/";
     File file = new File(rutaArchivo);//el archivo al que vamos a guardar
+    Metadata metadata = new Metadata();
+
 }
