@@ -398,7 +398,7 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(78, 17, 132));
-        jButton2.setText("Mis archivos");
+        jButton2.setText("Archivos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

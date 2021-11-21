@@ -571,7 +571,7 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="84" green="11" red="4e" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Mis archivos"/>
+            <Property name="text" type="java.lang.String" value="Archivos"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
