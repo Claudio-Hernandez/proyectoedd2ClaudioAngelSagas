@@ -547,7 +547,6 @@ public class Principal extends javax.swing.JFrame {
             modelo.removeRow(jtable_campos.getSelectedRow());
             jtable_campos.setModel(modelo);
 
-            
             JOptionPane.showMessageDialog(null, "EL registro se eliminó con éxito");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -587,30 +586,32 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jtable_camposMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtable_camposMouseClicked
-         
+
     }//GEN-LAST:event_jtable_camposMouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-         if (jtable_campos.getSelectedRow() >= 0) {
+        if (jtable_campos.getSelectedRow() >= 0) {
 
             DefaultTableModel modelo
                     = (DefaultTableModel) jtable_campos.getModel();
             //modelo.removeRow(jtable_campos.getSelectedRow());
-           modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
-           modelo.setValueAt((String)jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
-           modelo.setValueAt((int)jSpinner1.getValue(), jtable_campos.getSelectedRow(), 2);
-           boolean b = false;
-           if(rb_si.isSelected()){
-               b = true;
-           }
-           else if(rb_no.isSelected()){
-               b = false;
-           }
-           modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
+            modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
+            modelo.setValueAt((String) jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
+            modelo.setValueAt((int) jSpinner1.getValue(), jtable_campos.getSelectedRow(), 2);
+            boolean b = false;
+            if (rb_si.isSelected()) {
+                b = true;
+            } else if (rb_no.isSelected()) {
+                b = false;
+            }
+            modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
 
-            
             JOptionPane.showMessageDialog(null, "EL registro se modificó con éxito");
+        } 
+        else {
+            JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún campo de la tabla");
         }
+
     }//GEN-LAST:event_jButton8MouseClicked
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
