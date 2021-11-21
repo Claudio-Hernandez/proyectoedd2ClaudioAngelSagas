@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-Hola1:double[6]0;Hola2:String[6]0;
-=======
-Hola1:double[6]0;Hola2:String[6]0;Hola3:char[5]0;hola4:int[10]0;
->>>>>>> 0d9a4942b2516db97953c925f6c3ee8e00f2a565
+Hola1:double[6]0;

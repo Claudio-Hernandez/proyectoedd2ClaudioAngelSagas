@@ -12,6 +12,7 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -565,8 +566,12 @@ public class Principal extends javax.swing.JFrame {
         String nombre = JOptionPane.showInputDialog(misArchivos, "Escribe el nombre del nuevo archivo");
         nombre += ".txt";
         File file = new File(rutaAcrear + nombre);
+        FileOutputStream fw = null;
+        ObjectOutputStream bw =null;
+        
+        
         try {
-<<<<<<< HEAD
+
             fw = new FileOutputStream(file);
             bw = new ObjectOutputStream(fw);
             bw.flush();
@@ -577,22 +582,21 @@ public class Principal extends javax.swing.JFrame {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
             
-=======
-            if (file.createNewFile()) {
-                JOptionPane.showMessageDialog(misArchivos, "El archivo fue creado con exito");
-                misArchivos.dispose();
-                actualizarArchivos();
-            } else {
-                JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
+
+            try {
+                if (file.createNewFile()) {
+                    JOptionPane.showMessageDialog(misArchivos, "El archivo fue creado con exito");
+                    misArchivos.dispose();
+                    actualizarArchivos();
+                } else {
+                    JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
+                }
+            } catch (IOException ex1) {
+               
             }
->>>>>>> 0d9a4942b2516db97953c925f6c3ee8e00f2a565
+
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
-<<<<<<< HEAD
-            
-=======
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
->>>>>>> 0d9a4942b2516db97953c925f6c3ee8e00f2a565
         }
 
         // TODO add your handling code here:
@@ -789,8 +793,6 @@ public class Principal extends javax.swing.JFrame {
         jButton9.setEnabled(false);
         jButton6.setEnabled(false);        
         jButton13.setEnabled(false);
-        
-        file = null;
         
         jt_archivoActual.setText("");
         
