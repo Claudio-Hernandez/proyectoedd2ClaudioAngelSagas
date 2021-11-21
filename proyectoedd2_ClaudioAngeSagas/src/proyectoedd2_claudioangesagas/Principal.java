@@ -535,23 +535,17 @@ public class Principal extends javax.swing.JFrame {
         String nombre = JOptionPane.showInputDialog(misArchivos, "Escribe el nombre del nuevo archivo");
         nombre += ".txt";
         File file = new File(rutaAcrear + nombre);
-        FileOutputStream fw = null;
-        ObjectOutputStream bw = null;
         try {
-            fw = new FileOutputStream(file);
-            bw = new ObjectOutputStream(fw);
-            bw.flush();
-            JOptionPane.showMessageDialog(misArchivos, "El archivo fue creado con exito");
-            misArchivos.dispose();
-            actualizarArchivos();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
-
+            if (file.createNewFile()) {
+                JOptionPane.showMessageDialog(misArchivos, "El archivo fue creado con exito");
+                misArchivos.dispose();
+                actualizarArchivos();
+            } else {
+                JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
+            }
         } catch (IOException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
-
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         // TODO add your handling code here:
@@ -567,8 +561,8 @@ public class Principal extends javax.swing.JFrame {
 
         System.out.println(rutaorigen);
         // Path origen;
-        File cambiarNombreA = new File(rutaorigen);
-        if (cambiarNombreA.delete()) {
+        File eliminar = new File(rutaorigen);
+        if (eliminar.delete()) {
             JOptionPane.showMessageDialog(misArchivos, "eliminacion correcta");
             misArchivos.dispose();
             actualizarArchivos();
