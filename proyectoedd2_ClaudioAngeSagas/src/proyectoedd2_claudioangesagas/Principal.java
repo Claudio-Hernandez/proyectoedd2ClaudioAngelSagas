@@ -533,7 +533,7 @@ public class Principal extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         String rutaAcrear = "./registros/";
         String nombre = JOptionPane.showInputDialog(misArchivos, "Escribe el nombre del nuevo archivo");
-        nombre += ".rtx";
+        nombre += ".txt";
         File file = new File(rutaAcrear + nombre);
         FileOutputStream fw = null;
         ObjectOutputStream bw = null;
@@ -541,7 +541,7 @@ public class Principal extends javax.swing.JFrame {
             fw = new FileOutputStream(file);
             bw = new ObjectOutputStream(fw);
             bw.flush();
-            JOptionPane.showMessageDialog(misArchivos, "El archivo fue guardado con exito");
+            JOptionPane.showMessageDialog(misArchivos, "El archivo fue creado con exito");
             misArchivos.dispose();
             actualizarArchivos();
         } catch (FileNotFoundException ex) {
