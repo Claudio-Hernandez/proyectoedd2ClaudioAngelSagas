@@ -1,1 +1,1 @@
-Hola1:double[6]0;Hola2:String[6]0;Hola3:char[5]0;hola4:int[10]0;
+Hola1:double[6]0;
