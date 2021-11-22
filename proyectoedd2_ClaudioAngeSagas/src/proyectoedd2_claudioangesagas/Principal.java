@@ -641,6 +641,9 @@ public class Principal extends javax.swing.JFrame {
             
             JOptionPane.showMessageDialog(null, "EL registro se eliminó con éxito");
         }
+        else {
+            JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún elemento");
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
