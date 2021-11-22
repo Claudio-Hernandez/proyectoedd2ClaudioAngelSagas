@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Metadata {
 
     private ArrayList<Campos> campos = new ArrayList<>();
+    private Lista avaiList = new Lista();
 
     public void escribirCampos(File file) throws IOException {
         FileWriter fw = new FileWriter(file, false);
