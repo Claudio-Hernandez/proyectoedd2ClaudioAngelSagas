@@ -1,1 +1,1 @@
-claudiojajaja:int[7]1;
+Cuenta:int[2]1;

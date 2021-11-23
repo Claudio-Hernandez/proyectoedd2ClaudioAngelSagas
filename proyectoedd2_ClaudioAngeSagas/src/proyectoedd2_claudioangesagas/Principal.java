@@ -687,30 +687,36 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
         if (jtable_campos.getSelectedRow() >= 0) {
-            
-            DefaultTableModel modelo
+            if(jTextField1.getText().equals("") || (int)jSpinner1.getValue()==0
+                    || (rb_si.isSelected()==false && rb_no.isSelected()==false)){
+                JOptionPane.showMessageDialog(null, "Ingrese datos válidos para modificar el campo");
+            }
+            else{
+                DefaultTableModel modelo
                     = (DefaultTableModel) jtable_campos.getModel();
-            //modelo.removeRow(jtable_campos.getSelectedRow());
-            modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
-            modelo.setValueAt((String) jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
-            modelo.setValueAt((int) jSpinner1.getValue(), jtable_campos.getSelectedRow(), 2);
-            boolean b = false;
-            if (rb_si.isSelected()) {
-                b = true;
-            } else if (rb_no.isSelected()) {
-                b = false;
-            }
-            modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
+                //modelo.removeRow(jtable_campos.getSelectedRow());
+                modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
+                modelo.setValueAt((String) jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
+                modelo.setValueAt((int) jSpinner1.getValue(), jtable_campos.getSelectedRow(), 2);
+                boolean b = false;
+                if (rb_si.isSelected()) {
+                    b = true;
+                } else if (rb_no.isSelected()) {
+                    b = false;
+                }
+                modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
 
-            // MODIFICAR ARRAYLIST DE CAMPOS
-            if (metadata.getCampos().isEmpty() != true) {
-                metadata.getCampos().get(jtable_campos.getSelectedRow()).setNombre(jTextField1.getText());
-                metadata.getCampos().get(jtable_campos.getSelectedRow()).setTipo((String) jComboBox2.getSelectedItem());
-                metadata.getCampos().get(jtable_campos.getSelectedRow()).setByteoffset((int) jSpinner1.getValue());
-                metadata.getCampos().get(jtable_campos.getSelectedRow()).setLlavePrimaria(b);
+                // MODIFICAR ARRAYLIST DE CAMPOS
+                if (metadata.getCampos().isEmpty() != true) {
+                    metadata.getCampos().get(jtable_campos.getSelectedRow()).setNombre(jTextField1.getText());
+                    metadata.getCampos().get(jtable_campos.getSelectedRow()).setTipo((String) jComboBox2.getSelectedItem());
+                    metadata.getCampos().get(jtable_campos.getSelectedRow()).setByteoffset((int) jSpinner1.getValue());
+                    metadata.getCampos().get(jtable_campos.getSelectedRow()).setLlavePrimaria(b);
+                }
+
+                JOptionPane.showMessageDialog(null, "EL registro se modificó con éxito");
             }
             
-            JOptionPane.showMessageDialog(null, "EL registro se modificó con éxito");
         } else {
             JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún campo de la tabla");
         }
