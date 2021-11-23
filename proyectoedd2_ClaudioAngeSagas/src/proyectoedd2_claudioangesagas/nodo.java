@@ -12,7 +12,35 @@ package proyectoedd2_claudioangesagas;
 public class nodo {
     nodo anterior =null;
     nodo siguiente = null;
+    Llave dato;
+
+    public Llave getDato() {
+        return dato;
+    }
+
+    public void setDato(Llave dato) {
+        this.dato = dato;
+    }
+
+   
     nodo (){
     
     }
+
+    public nodo getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(nodo anterior) {
+        this.anterior = anterior;
+    }
+
+    public nodo getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(nodo siguiente) {
+        this.siguiente = siguiente;
+    }
+    
 }

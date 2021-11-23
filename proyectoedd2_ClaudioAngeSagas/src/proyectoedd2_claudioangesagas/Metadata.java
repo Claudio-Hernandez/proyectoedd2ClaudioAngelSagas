@@ -13,6 +13,7 @@ public class Metadata {
 
     private ArrayList<Campos> campos = new ArrayList<>();
     private Lista avaiList = new Lista();
+    
 
     public void escribirCampos(File file) throws IOException {
         FileWriter fw = new FileWriter(file, false);
@@ -42,5 +43,14 @@ public class Metadata {
     public void addCampo(Campos pCampo) {
         this.campos.add(pCampo);
     }
+
+    public Lista getAvaiList() {
+        return avaiList;
+    }
+
+    public void setAvaiList(Lista avaiList) {
+        this.avaiList = avaiList;
+    }
+    
 
 }
