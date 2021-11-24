@@ -35,6 +35,7 @@ public class Principal extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         buttonGroup1.add(rb_si);
         buttonGroup1.add(rb_no);
+        jComboBox2.setSelectedIndex(1);
     }
 
     /**
@@ -135,10 +136,20 @@ public class Principal extends javax.swing.JFrame {
         jLabel6.setText("Tipo");
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "int", "char", "double", "String", "boolean" }));
+        jComboBox2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox2ItemStateChanged(evt);
+            }
+        });
+        jComboBox2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jComboBox2MouseClicked(evt);
+            }
+        });
 
         jLabel7.setText("Longitud");
 
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
 
         jLabel8.setText("Es llave primaria?");
 
@@ -341,9 +352,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jt_archivoActual.setBackground(new java.awt.Color(255, 255, 255));
         jt_archivoActual.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jt_archivoActual.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel4.setText("Archivo Actual:");
@@ -533,7 +542,7 @@ public class Principal extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(campos, "Campos vacios" + "\n"
                             + "Para guardar se necesitan campos");
                 }
-                
+
             } catch (NullPointerException ex) {//Si no
                 JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
             }
@@ -547,11 +556,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void arbolArchivosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_arbolArchivosMouseClicked
-        
+
     }//GEN-LAST:event_arbolArchivosMouseClicked
-    
+
     public void actualizarArchivos() {
-        
+
         DefaultTreeModel m = (DefaultTreeModel) arbolArchivos.getModel();
         m.setRoot(new DefaultMutableTreeNode(file.getName()));
         listar_no_orden(file, (DefaultMutableTreeNode) m.getRoot());
@@ -559,7 +568,7 @@ public class Principal extends javax.swing.JFrame {
         misArchivos.setLocationRelativeTo(null);
         misArchivos.setVisible(true);
         this.setVisible(false);
-        
+
     }
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         String rutaAcrear = "./registros/";
@@ -567,9 +576,8 @@ public class Principal extends javax.swing.JFrame {
         nombre += ".txt";
         File file = new File(rutaAcrear + nombre);
         FileOutputStream fw = null;
-        ObjectOutputStream bw =null;
-        
-        
+        ObjectOutputStream bw = null;
+
         try {
 
             fw = new FileOutputStream(file);
@@ -581,7 +589,6 @@ public class Principal extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
-            
 
             try {
                 if (file.createNewFile()) {
@@ -592,7 +599,7 @@ public class Principal extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(misArchivos, "Hubo un error");
                 }
             } catch (IOException ex1) {
-               
+
             }
 
         } catch (IOException ex) {
@@ -605,11 +612,11 @@ public class Principal extends javax.swing.JFrame {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         Object[] rutaspacambiar = arbolArchivos.getSelectionPath().getPath();
         String rutaorigen = ".";
-        
+
         for (int i = 0; i < rutaspacambiar.length; i++) {
             rutaorigen += "/" + rutaspacambiar[i];
         }
-        
+
         System.out.println(rutaorigen);
         // Path origen;
         File eliminar = new File(rutaorigen);
@@ -626,49 +633,60 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         if (jtable_campos.getSelectedRow() >= 0) {
-            
+
             DefaultTableModel modelo
                     = (DefaultTableModel) jtable_campos.getModel();
-            
-            if (metadata.getCampos().isEmpty() != true) {
-                
-                metadata.getCampos().remove(jtable_campos.getSelectedRow());
+
+            if ((boolean)modelo.getValueAt(jtable_campos.getSelectedRow(), 3)) {
+                JOptionPane.showMessageDialog(null, "No puede eliminar este campo, porque es llave primaria");
+            } 
+            else {
+                if (metadata.getCampos().isEmpty() != true) {
+
+                    metadata.getCampos().remove(jtable_campos.getSelectedRow());
+                }
+
+                modelo.removeRow(jtable_campos.getSelectedRow());
+
+                jtable_campos.setModel(modelo);
+
+                JOptionPane.showMessageDialog(null, "El registro se eliminó con éxito");
             }
-            
-            modelo.removeRow(jtable_campos.getSelectedRow());
-            
-            jtable_campos.setModel(modelo);
-            
-            JOptionPane.showMessageDialog(null, "EL registro se eliminó con éxito");
-        }
+            jtable_campos.clearSelection();
+        } 
         else {
-            JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún elemento");
+            JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún elemento de la tabla para eliminar");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        String nombreCampo = jTextField1.getText();
-        String tipoCampo = "";
-        tipoCampo = (String) jComboBox2.getModel().getSelectedItem();
-        int bo = (int) jSpinner1.getModel().getValue();
-        boolean lp = false; //llave primaria
-        if (rb_si.isSelected()) {
-            lp = true;
-        } else if (rb_no.isSelected()) {
-            lp = false;
+        if (jTextField1.getText().equals("") || (rb_si.isSelected() == false && rb_no.isSelected() == false)) {
+            JOptionPane.showMessageDialog(null, "Faltan datos para crear campo");
+        } else {
+            String nombreCampo = jTextField1.getText();
+            String tipoCampo = "";
+            tipoCampo = (String) jComboBox2.getModel().getSelectedItem();
+            int bo = (int) jSpinner1.getModel().getValue();
+            boolean lp = false; //llave primaria
+            if (rb_si.isSelected()) {
+                lp = true;
+            } else if (rb_no.isSelected()) {
+                lp = false;
+            }
+            DefaultTableModel modelo = (DefaultTableModel) jtable_campos.getModel();
+            Object[] newrow = {
+                nombreCampo, tipoCampo, bo, lp
+            };
+            modelo.addRow(newrow);
+            jtable_campos.setModel(modelo); //*
+            metadata.addCampo(new Campos(nombreCampo, tipoCampo, bo, lp));
+            JOptionPane.showMessageDialog(null, "Se agregó el campo");
+            jTextField1.setText("");
+            buttonGroup1.clearSelection();
+            jSpinner1.setValue(1);
+            jComboBox2.setSelectedIndex(1);
         }
-        DefaultTableModel modelo = (DefaultTableModel) jtable_campos.getModel();
-        Object[] newrow = {
-            nombreCampo, tipoCampo, bo, lp
-        };
-        modelo.addRow(newrow);
-        jtable_campos.setModel(modelo); //*
-        metadata.addCampo(new Campos(nombreCampo, tipoCampo, bo, lp));
-        JOptionPane.showMessageDialog(null, "Se agregó el campo");
-        jTextField1.setText("");
-        rb_si.setSelected(false);
-        rb_no.setSelected(false);
-        jSpinner1.setValue(0);
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -687,13 +705,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
         if (jtable_campos.getSelectedRow() >= 0) {
-            if(jTextField1.getText().equals("") || (int)jSpinner1.getValue()==0
-                    || (rb_si.isSelected()==false && rb_no.isSelected()==false)){
+            if (jTextField1.getText().equals("") || (int) jSpinner1.getValue() == 0
+                    || (rb_si.isSelected() == false && rb_no.isSelected() == false)) {
                 JOptionPane.showMessageDialog(null, "Ingrese datos válidos para modificar el campo");
-            }
-            else{
+            } else {
                 DefaultTableModel modelo
-                    = (DefaultTableModel) jtable_campos.getModel();
+                        = (DefaultTableModel) jtable_campos.getModel();
                 //modelo.removeRow(jtable_campos.getSelectedRow());
                 modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
                 modelo.setValueAt((String) jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
@@ -705,6 +722,8 @@ public class Principal extends javax.swing.JFrame {
                     b = false;
                 }
                 modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
+                buttonGroup1.clearSelection();
+                jTextField1.setText("");
 
                 // MODIFICAR ARRAYLIST DE CAMPOS
                 if (metadata.getCampos().isEmpty() != true) {
@@ -713,10 +732,10 @@ public class Principal extends javax.swing.JFrame {
                     metadata.getCampos().get(jtable_campos.getSelectedRow()).setByteoffset((int) jSpinner1.getValue());
                     metadata.getCampos().get(jtable_campos.getSelectedRow()).setLlavePrimaria(b);
                 }
-
+                jtable_campos.clearSelection();
                 JOptionPane.showMessageDialog(null, "EL registro se modificó con éxito");
             }
-            
+
         } else {
             JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún campo de la tabla");
         }
@@ -728,14 +747,14 @@ public class Principal extends javax.swing.JFrame {
 
         //Habilitar opciones de archivos
         jButton9.setEnabled(true);
-        jButton6.setEnabled(true);        
+        jButton6.setEnabled(true);
         jButton13.setEnabled(true);
-        
+
         try {
             DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) arbolArchivos.getSelectionPath().getLastPathComponent();
-            
+
             jt_archivoActual.setText(selectedNode.getUserObject().toString());
-            
+
             Scanner myReader = new Scanner(new File(rutaArchivo + selectedNode.getUserObject().toString()));
             DefaultTableModel modelo = (DefaultTableModel) jtable_campos.getModel();
             borrarElementosTabla();//Limpiar tabla
@@ -760,14 +779,14 @@ public class Principal extends javax.swing.JFrame {
                         if (split[1].equals("1")) {
                             getLlave = true;
                         }
-                        
+
                         int len = Integer.parseInt(split[0]);
 
                         //Agregar a la tabla
                         Object[] newrow = {
                             nom, tipo, len, getLlave
                         };
-                        
+
                         metadata.getCampos().add(new Campos(nom, tipo, len, false));
 
                         //Ojo cambiar como saber si es llaveprimaria
@@ -780,15 +799,15 @@ public class Principal extends javax.swing.JFrame {
         } catch (NullPointerException ex) {//Si no
             JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
         } catch (FileNotFoundException ex) {
-            
+
         }
     }//GEN-LAST:event_jButton10ActionPerformed
-    
+
     public void borrarElementosTabla() {
         DefaultTableModel dm1 = (DefaultTableModel) jtable_campos.getModel();
         dm1.setRowCount(0);
     }
-    
+
 
     private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
         // APAGAR SYSTEMA
@@ -800,17 +819,41 @@ public class Principal extends javax.swing.JFrame {
 
         //Habilitar opciones de archivos
         jButton9.setEnabled(false);
-        jButton6.setEnabled(false);        
+        jButton6.setEnabled(false);
         jButton13.setEnabled(false);
-        
+
         jt_archivoActual.setText("");
-        
+
         metadata.getCampos().clear();
         borrarElementosTabla();
-        
-        JOptionPane.showMessageDialog(campos, "Archivo cerrado");        
+
+        JOptionPane.showMessageDialog(campos, "Archivo cerrado");
     }//GEN-LAST:event_jButton13ActionPerformed
-    
+
+    private void jComboBox2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox2MouseClicked
+
+
+    }//GEN-LAST:event_jComboBox2MouseClicked
+
+    private void jComboBox2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox2ItemStateChanged
+        if (jComboBox2.getSelectedItem().equals("int")) {
+            jSpinner1.setEnabled(false);
+            jSpinner1.setValue(4);
+        } else if (jComboBox2.getSelectedItem().equals("char")) {
+            jSpinner1.setEnabled(false);
+            jSpinner1.setValue(1);
+        } else if (jComboBox2.getSelectedItem().equals("double")) {
+            jSpinner1.setEnabled(false);
+            jSpinner1.setValue(8);
+        } else if (jComboBox2.getSelectedItem().equals("boolean")) {
+            jSpinner1.setEnabled(false);
+            jSpinner1.setValue(2);
+        } else {
+            jSpinner1.setEnabled(true);
+            jSpinner1.setValue(1);
+        }
+    }//GEN-LAST:event_jComboBox2ItemStateChanged
+
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
             for (File temp : p_raiz.listFiles()) {
@@ -843,21 +886,21 @@ public class Principal extends javax.swing.JFrame {
                 if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                    
+
                 }
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(Principal.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            
+
         } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(Principal.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            
+
         } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(Principal.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Principal.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
@@ -915,5 +958,5 @@ public class Principal extends javax.swing.JFrame {
     String rutaArchivo = "./registros/";
     File file = new File(rutaArchivo);//el archivo al que vamos a guardar
     Metadata metadata = new Metadata();
-    
+
 }
