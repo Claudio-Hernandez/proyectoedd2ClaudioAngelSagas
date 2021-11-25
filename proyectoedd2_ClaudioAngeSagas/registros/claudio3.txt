@@ -1,1 +1,1 @@
-Hola1:double[6]0;
+Nombre1:String[1]0;Sexo:char[1]0;id:int[4]1;
