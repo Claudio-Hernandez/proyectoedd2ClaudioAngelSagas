@@ -10,6 +10,7 @@ package proyectoedd2_claudioangesagas;
  * @author Usuario
  */
 public class Llave {
+    private String llave;
     private long byteoffset;
     private int tamanio;
     public Llave(){}
@@ -28,6 +29,13 @@ public class Llave {
 
     public void setTamanio(int tamanio) {
         this.tamanio = tamanio;
+    }
+       public String getLlave() {
+        return llave;
+    }
+
+    public void setLlave(String llave) {
+        this.llave = llave;
     }
     
     
