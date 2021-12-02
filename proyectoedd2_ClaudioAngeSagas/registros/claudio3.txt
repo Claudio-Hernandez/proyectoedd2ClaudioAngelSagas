@@ -1,1 +1,1 @@
-Nombre1:String[1]0;Sexo:char[1]0;id:int[4]1;
+claudio1:char[1]1;nombre:String[10]1;Edad:int[4]0;altura:double[8]0;
