@@ -502,6 +502,11 @@ public class Principal extends javax.swing.JFrame {
                 jButton15MouseClicked(evt);
             }
         });
+        jButton15.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton15KeyPressed(evt);
+            }
+        });
 
         jButton16.setText("BuscarRegistro");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -542,7 +547,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(65, 65, 65)
+                        .addGap(36, 36, 36)
                         .addComponent(jButton21))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -555,7 +560,7 @@ public class Principal extends javax.swing.JFrame {
                                 .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -565,7 +570,7 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
+                        .addGap(85, 85, 85)
                         .addComponent(jButton21)))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -989,6 +994,8 @@ public class Principal extends javax.swing.JFrame {
             jt_archivoActual.setText(selectedNode.getUserObject().toString());
 
             ubicacionActual = rutaArchivo + selectedNode.getUserObject().toString();
+            file = new File(ubicacionActual);
+            
 
         } catch (NullPointerException ex) {//Si no
             JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
@@ -1149,18 +1156,46 @@ public class Principal extends javax.swing.JFrame {
             registroTemp = "[";
 
         }
-        System.out.println(registros);
+        
+        
+        try {
+            escribirRegistros();
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
 
     }//GEN-LAST:event_jButton15MouseClicked
-
+    public void escribirRegistros() throws IOException{
+   
+        FileWriter fw = new FileWriter(file, true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        PrintWriter pw = new PrintWriter(bw);
+        
+        
+        for (String temp : registros) {
+           
+            pw.print(temp);
+             pw.println();
+        }
+        pw.println();
+        pw.flush();
+        pw.close();
+    
+    
+    }
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         DefaultTableModel modeloTablaRegistros = (DefaultTableModel) tabla_registro.getModel();
         Object[] b = {};
         modeloTablaRegistros.addRow(b);
+        JOptionPane.showMessageDialog(registros_gui,"LLena los espacios correspondiente en la nueva fila que se creo en la tabla");
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton15KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton15KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton15KeyPressed
 
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
@@ -1223,6 +1258,7 @@ public class Principal extends javax.swing.JFrame {
         });
     }
     ArrayList<String> registros = new ArrayList<String>();
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree arbolArchivos;
     private javax.swing.ButtonGroup buttonGroup1;
