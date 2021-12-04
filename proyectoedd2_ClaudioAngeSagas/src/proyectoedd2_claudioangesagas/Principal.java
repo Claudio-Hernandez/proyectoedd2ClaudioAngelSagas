@@ -837,41 +837,87 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
+    boolean yaHayLlave() {//Para saber si ya hay una llave primaria en la tabla de camapos
+        boolean yaHayLlave = false;
+        for (int i = 0; i < jtable_campos.getRowCount(); i++) {
+            if ((boolean) jtable_campos.getValueAt(i, 3)) {
+                yaHayLlave = true;
+                break;
+            } else {
+                yaHayLlave = false;
+            }
+        }
+        return yaHayLlave;
+    }
+    
+    boolean yaHayCampoConEseNombre(){
+        boolean ya = false;
+        String x = jTextField1.getText().toLowerCase(), y;
+        for(int i=0 ;i<jtable_campos.getRowCount(); i++){
+            y = ((String)jtable_campos.getValueAt(i, 0)).toLowerCase();
+            if(x.equals(y)){
+                ya = true;
+                break;
+            }
+            else{
+                ya = false;
+            }
+        }
+        return ya;
+    }
+
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         if (jTextField1.getText().equals("") || (rb_si.isSelected() == false && rb_no.isSelected() == false)) {
             JOptionPane.showMessageDialog(null, "Faltan datos para crear campo");
         } else {
-            String nombreCampo = jTextField1.getText();
-            String tipoCampo = "";
-            tipoCampo = (String) jComboBox2.getModel().getSelectedItem();
-            int bo = (int) jSpinner1.getModel().getValue();
-            boolean lp = false; //llave primaria
-            if (rb_si.isSelected()) {
-                lp = true;
-            } else if (rb_no.isSelected()) {
-                lp = false;
+            if (yaHayLlave() && rb_si.isSelected()) {
+                JOptionPane.showMessageDialog(null, "Ya existe una llave primaria en la tabla de campos");
+                buttonGroup1.clearSelection();
             }
-            metadata.addCampo(new Campos(nombreCampo, tipoCampo, bo, lp));
-            DefaultTableModel modelo = (DefaultTableModel) jtable_campos.getModel();
-            Object[] newrow = {
-                nombreCampo, tipoCampo, bo, lp
-            };
-            modelo.addRow(newrow);
-            jtable_campos.setModel(modelo); //*
+            else if(!yaHayCampoConEseNombre()){
+                String nombreCampo = jTextField1.getText();
+                String tipoCampo = "";
+                tipoCampo = (String) jComboBox2.getModel().getSelectedItem();
+                int bo = (int) jSpinner1.getModel().getValue();
+                boolean lp = false; //llave primaria
+                if (rb_si.isSelected()) {
+                    lp = true;
+                } else if (rb_no.isSelected()) {
+                    lp = false;
+                }
+                metadata.addCampo(new Campos(nombreCampo, tipoCampo, bo, lp));
+                DefaultTableModel modelo = (DefaultTableModel) jtable_campos.getModel();
+                Object[] newrow = {
+                    nombreCampo, tipoCampo, bo, lp
+                };
+                modelo.addRow(newrow);
+                jtable_campos.setModel(modelo); //*
 
-            JOptionPane.showMessageDialog(null, "Se agregó el campo");
-            jTextField1.setText("");
-            buttonGroup1.clearSelection();
-            jSpinner1.setValue(1);
-            jComboBox2.setSelectedIndex(1);
+                JOptionPane.showMessageDialog(null, "Se agregó el campo");
+                jTextField1.setText("");
+                buttonGroup1.clearSelection();
+                jSpinner1.setValue(1);
+                jComboBox2.setSelectedIndex(1);
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Ya existe un campo con ese nombre, ingrese un nombre distinto");
+                jTextField1.setText("");
+            }
+
         }
-
+        jtable_campos.clearSelection();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        campos.dispose();
-        this.setVisible(true);
+        if (!yaHayLlave() && jtable_campos.getRowCount() >= 1) {
+            JOptionPane.showMessageDialog(null, "ERROR, No hay ningún campo seleccionado como llave primaria. Por favor, escoja un"
+                    + " campo de los existentes y modifíquelo para que sea campo llave, o cree un campo nuevo que sea campo llave");
+        } else {
+            campos.dispose();
+            this.setVisible(true);
+        }
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -889,34 +935,40 @@ public class Principal extends javax.swing.JFrame {
                     || (rb_si.isSelected() == false && rb_no.isSelected() == false)) {
                 JOptionPane.showMessageDialog(null, "Ingrese datos válidos para modificar el campo");
             } else {
+                if (yaHayLlave() && rb_si.isSelected() && (boolean)jtable_campos.getValueAt(jtable_campos.getSelectedRow(), 3)==false) {
+                    JOptionPane.showMessageDialog(null, "Ya existe una llave primaria en la tabla de campos");
+                    buttonGroup1.clearSelection();
+                } else {
+                    DefaultTableModel modelo
+                            = (DefaultTableModel) jtable_campos.getModel();
+                    //modelo.removeRow(jtable_campos.getSelectedRow());
+                    modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
+                    modelo.setValueAt((String) jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
+                    modelo.setValueAt((int) jSpinner1.getValue(), jtable_campos.getSelectedRow(), 2);
+                    boolean b = false;
+                    if (rb_si.isSelected()) {
+                        b = true;
+                    } else if (rb_no.isSelected()) {
+                        b = false;
+                    }
 
-                DefaultTableModel modelo
-                        = (DefaultTableModel) jtable_campos.getModel();
-                //modelo.removeRow(jtable_campos.getSelectedRow());
-                modelo.setValueAt(jTextField1.getText(), jtable_campos.getSelectedRow(), 0);
-                modelo.setValueAt((String) jComboBox2.getSelectedItem(), jtable_campos.getSelectedRow(), 1);
-                modelo.setValueAt((int) jSpinner1.getValue(), jtable_campos.getSelectedRow(), 2);
-                boolean b = false;
-                if (rb_si.isSelected()) {
-                    b = true;
-                } else if (rb_no.isSelected()) {
-                    b = false;
+                    // MODIFICAR ARRAYLIST DE CAMPOS
+                    if (metadata.getCampos().isEmpty() != true) {
+                        metadata.getCampos().get(jtable_campos.getSelectedRow()).setNombre(jTextField1.getText());
+                        metadata.getCampos().get(jtable_campos.getSelectedRow()).setTipo((String) jComboBox2.getSelectedItem());
+                        metadata.getCampos().get(jtable_campos.getSelectedRow()).setByteoffset((int) jSpinner1.getValue());
+                        metadata.getCampos().get(jtable_campos.getSelectedRow()).setLlavePrimaria(b);
+                    }
+
+                    modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
+                    buttonGroup1.clearSelection();
+                    jTextField1.setText("");
+
+                    jtable_campos.clearSelection();
+                    JOptionPane.showMessageDialog(null, "EL registro se modificó con éxito");
+
                 }
-
-                // MODIFICAR ARRAYLIST DE CAMPOS
-                if (metadata.getCampos().isEmpty() != true) {
-                    metadata.getCampos().get(jtable_campos.getSelectedRow()).setNombre(jTextField1.getText());
-                    metadata.getCampos().get(jtable_campos.getSelectedRow()).setTipo((String) jComboBox2.getSelectedItem());
-                    metadata.getCampos().get(jtable_campos.getSelectedRow()).setByteoffset((int) jSpinner1.getValue());
-                    metadata.getCampos().get(jtable_campos.getSelectedRow()).setLlavePrimaria(b);
-                }
-
-                modelo.setValueAt(b, jtable_campos.getSelectedRow(), 3);
-                buttonGroup1.clearSelection();
-                jTextField1.setText("");
-
                 jtable_campos.clearSelection();
-                JOptionPane.showMessageDialog(null, "EL registro se modificó con éxito");
             }
 
         } else {
@@ -995,7 +1047,6 @@ public class Principal extends javax.swing.JFrame {
 
             ubicacionActual = rutaArchivo + selectedNode.getUserObject().toString();
             file = new File(ubicacionActual);
-            
 
         } catch (NullPointerException ex) {//Si no
             JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
@@ -1106,26 +1157,22 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseClicked
         DefaultTableModel modelotablaCampos = (DefaultTableModel) jtable_campos.getModel();
-        int numerodeColumnas =  modelotablaCampos.getRowCount();
-         ArrayList<Class> types = new ArrayList();
-         for (int i = 0; i < modelotablaCampos.getRowCount(); i++) {
+        int numerodeColumnas = modelotablaCampos.getRowCount();
+        ArrayList<Class> types = new ArrayList();
+        for (int i = 0; i < modelotablaCampos.getRowCount(); i++) {
             types.add(modelotablaCampos.getColumnClass(i));
         }
         //System.out.println(types);
         DefaultTableModel modelopersonalizado = new DefaultTableModel() {
-            
-            ArrayList<Class> clases =types;
-            
-                
-               
+
+            ArrayList<Class> clases = types;
 
             @Override
             public Class getColumnClass(int columnIndex) {
                 return types.get(columnIndex);
             }
         };
-       
-      
+
         modelopersonalizado.setColumnCount(0);
         for (int i = 0; i < modelotablaCampos.getRowCount(); i++) {
             //modeloTablaRegistros.addColumn(modelotablaCampos.getValueAt(i, 0));
@@ -1145,19 +1192,18 @@ public class Principal extends javax.swing.JFrame {
         String registroTemp = "[";
         DefaultTableModel modeloTablaRegistros = (DefaultTableModel) tabla_registro.getModel();
         for (int i = 0; i < modeloTablaRegistros.getRowCount(); i++) {
-           // registroTemp += modeloTablaRegistros.getValueAt(i, 0);
-           // registroTemp += "|";
+            // registroTemp += modeloTablaRegistros.getValueAt(i, 0);
+            // registroTemp += "|";
             for (int k = 0; k < modeloTablaRegistros.getColumnCount(); k++) {
                 registroTemp += modeloTablaRegistros.getValueAt(i, k);
-                registroTemp+="|";
+                registroTemp += "|";
             }
             registroTemp += "]";
             registros.add(registroTemp);
             registroTemp = "[";
 
         }
-        
-        
+
         try {
             escribirRegistros();
         } catch (IOException ex) {
@@ -1166,29 +1212,27 @@ public class Principal extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton15MouseClicked
-    public void escribirRegistros() throws IOException{
-   
+    public void escribirRegistros() throws IOException {
+
         FileWriter fw = new FileWriter(file, true);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter pw = new PrintWriter(bw);
-        
-        
+
         for (String temp : registros) {
-           
+
             pw.print(temp);
-             pw.println();
+            pw.println();
         }
         pw.println();
         pw.flush();
         pw.close();
-    
-    
+
     }
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         DefaultTableModel modeloTablaRegistros = (DefaultTableModel) tabla_registro.getModel();
         Object[] b = {};
         modeloTablaRegistros.addRow(b);
-        JOptionPane.showMessageDialog(registros_gui,"LLena los espacios correspondiente en la nueva fila que se creo en la tabla");
+        JOptionPane.showMessageDialog(registros_gui, "LLena los espacios correspondiente en la nueva fila que se creo en la tabla");
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton21ActionPerformed
@@ -1258,7 +1302,7 @@ public class Principal extends javax.swing.JFrame {
         });
     }
     ArrayList<String> registros = new ArrayList<String>();
-   
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree arbolArchivos;
     private javax.swing.ButtonGroup buttonGroup1;
