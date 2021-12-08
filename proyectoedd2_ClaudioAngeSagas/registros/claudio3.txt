@@ -1,6 +1,3 @@
 nombre:String[10]1;edad:int[4]0;id:int[4]0;
 
 
-[claudio|15|8012002|]
-[andre|19|8012003|]
-

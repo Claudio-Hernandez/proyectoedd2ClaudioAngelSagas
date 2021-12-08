@@ -1,0 +1,7 @@
+Claudio1|25|40
+claudio2|21|41
+claudio3|41|454
+claudio4|12|454545
+Claudio5|20|1452
+claudio6|14|45874
+Claudio32|1254|12041311

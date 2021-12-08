@@ -5,21 +5,34 @@
  */
 package proyectoedd2_claudioangesagas;
 
+import java.awt.BorderLayout;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.RowFilter;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
@@ -87,12 +100,15 @@ public class Principal extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tabla_registro = new javax.swing.JTable();
         jButton21 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        fecha_de_modificacion = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        campoFiltro = new javax.swing.JTextField();
+        textoFiltro = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -515,11 +531,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton17.setText("Modificar registros");
-
         jButton18.setText("Borrar Registros");
-
-        jButton19.setText("Listar Registros");
 
         tabla_registro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -538,50 +550,80 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton17.setText("Atras");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        fecha_de_modificacion.setFont(new java.awt.Font("Dialog", 0, 15)); // NOI18N
+        fecha_de_modificacion.setText("Fecha de modificacion");
+
+        jLabel10.setBackground(new java.awt.Color(0, 153, 204));
+        jLabel10.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jLabel10.setText("Ultima modificacion del archivo:");
+
+        textoFiltro.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        textoFiltro.setText("Buscar registros que contengan:");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton17)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addComponent(jButton21))
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(fecha_de_modificacion)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(68, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(textoFiltro)
+                        .addGap(1, 1, 1)
+                        .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 470, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(fecha_de_modificacion))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(65, 65, 65)
+                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(jButton21)))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(104, 104, 104))
+                    .addComponent(textoFiltro)
+                    .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout registros_guiLayout = new javax.swing.GroupLayout(registros_gui.getContentPane());
@@ -658,10 +700,12 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(143, 143, 143)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(113, 113, 113))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(302, 302, 302)
+                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -672,9 +716,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                .addGap(33, 33, 33)
                 .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
+                .addGap(84, 84, 84)
                 .addComponent(jButton12)
                 .addGap(25, 25, 25))
         );
@@ -849,17 +893,16 @@ public class Principal extends javax.swing.JFrame {
         }
         return yaHayLlave;
     }
-    
-    boolean yaHayCampoConEseNombre(){
+
+    boolean yaHayCampoConEseNombre() {
         boolean ya = false;
         String x = jTextField1.getText().toLowerCase(), y;
-        for(int i=0 ;i<jtable_campos.getRowCount(); i++){
-            y = ((String)jtable_campos.getValueAt(i, 0)).toLowerCase();
-            if(x.equals(y)){
+        for (int i = 0; i < jtable_campos.getRowCount(); i++) {
+            y = ((String) jtable_campos.getValueAt(i, 0)).toLowerCase();
+            if (x.equals(y)) {
                 ya = true;
                 break;
-            }
-            else{
+            } else {
                 ya = false;
             }
         }
@@ -873,8 +916,7 @@ public class Principal extends javax.swing.JFrame {
             if (yaHayLlave() && rb_si.isSelected()) {
                 JOptionPane.showMessageDialog(null, "Ya existe una llave primaria en la tabla de campos");
                 buttonGroup1.clearSelection();
-            }
-            else if(!yaHayCampoConEseNombre()){
+            } else if (!yaHayCampoConEseNombre()) {
                 String nombreCampo = jTextField1.getText();
                 String tipoCampo = "";
                 tipoCampo = (String) jComboBox2.getModel().getSelectedItem();
@@ -898,8 +940,7 @@ public class Principal extends javax.swing.JFrame {
                 buttonGroup1.clearSelection();
                 jSpinner1.setValue(1);
                 jComboBox2.setSelectedIndex(1);
-            }
-            else{
+            } else {
                 JOptionPane.showMessageDialog(null, "Ya existe un campo con ese nombre, ingrese un nombre distinto");
                 jTextField1.setText("");
             }
@@ -935,7 +976,7 @@ public class Principal extends javax.swing.JFrame {
                     || (rb_si.isSelected() == false && rb_no.isSelected() == false)) {
                 JOptionPane.showMessageDialog(null, "Ingrese datos válidos para modificar el campo");
             } else {
-                if (yaHayLlave() && rb_si.isSelected() && (boolean)jtable_campos.getValueAt(jtable_campos.getSelectedRow(), 3)==false) {
+                if (yaHayLlave() && rb_si.isSelected() && (boolean) jtable_campos.getValueAt(jtable_campos.getSelectedRow(), 3) == false) {
                     JOptionPane.showMessageDialog(null, "Ya existe una llave primaria en la tabla de campos");
                     buttonGroup1.clearSelection();
                 } else {
@@ -1152,16 +1193,98 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14MouseClicked
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+         campoFiltro.setVisible(true);//los hago visibles
+        textoFiltro.setVisible(true);//los hago visibles
+         TableRowSorter<TableModel> filtrarResultados= new TableRowSorter<>(tabla_registro.getModel());//este el sorteador de las filas
+          tabla_registro.setRowSorter(filtrarResultados);//asigno este nuevo sorteador a la fila
+           campoFiltro.getDocument().addDocumentListener(new DocumentListener(){//hago el listener para que escuche entradas y se cambie
+               //esto solo son metodos abstractos 
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                String text = campoFiltro.getText();
+
+                if (text.trim().length() == 0) {
+                    filtrarResultados.setRowFilter(null);//si no hay nada ingresado el sorteador nor ecibe actualizacion
+                } else {
+                    filtrarResultados.setRowFilter(RowFilter.regexFilter("(?i)" + text));//si hay algo ingresado hace la busqueda con el texto que se obtiene
+                }
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                String text = campoFiltro.getText();//este metodo es un lisener para cuando se va eliminando del campo texto/ al irse eliminando voy actualizando el sorteador
+
+                if (text.trim().length() == 0) {
+                    filtrarResultados.setRowFilter(null);
+                } else {
+                    filtrarResultados.setRowFilter(RowFilter.regexFilter("(?i)" + text));
+                }
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+
+        });
+         
+        
+
+        //registros_gui.setLayout(new BorderLayout());
+        //registros_gui.add(panel, BorderLayout.SOUTH);
+        //registros_gui.add(new JScrollPane(tabla_registro), BorderLayout.CENTER);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseClicked
+       
+        campoFiltro.setVisible(false);
+        textoFiltro.setVisible(false);
+        File registrosPrueba = new File("./registros/registros.txt");
+         
+       SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+       
+         fecha_de_modificacion.setText(sdf.format(registrosPrueba.lastModified()));
+        
+
         DefaultTableModel modelotablaCampos = (DefaultTableModel) jtable_campos.getModel();
         int numerodeColumnas = modelotablaCampos.getRowCount();
         ArrayList<Class> types = new ArrayList();
         for (int i = 0; i < modelotablaCampos.getRowCount(); i++) {
-            types.add(modelotablaCampos.getColumnClass(i));
-        }
+
+            String tipo = modelotablaCampos.getValueAt(i, 1).toString();
+            switch (tipo) {
+                case "boolean": {
+
+                    types.add(java.lang.Boolean.class);
+
+                    break;
+                }
+                case "String": {
+                    types.add(java.lang.String.class);
+
+                    break;
+                }
+                case "char": {
+                    types.add(java.lang.Character.class);
+
+                    break;
+                }
+                case "double": {
+                    types.add(java.lang.Double.class);
+
+                    break;
+                }
+                case "int": {
+                    types.add(java.lang.Integer.class);//agrego la clase correspondiente
+                    break;
+                }
+
+            }
+
+        }//tomo las clases
+
         //System.out.println(types);
         DefaultTableModel modelopersonalizado = new DefaultTableModel() {
 
@@ -1179,9 +1302,70 @@ public class Principal extends javax.swing.JFrame {
             modelopersonalizado.addColumn(modelotablaCampos.getValueAt(i, 0));
 
         }
-        //modelotablaCampos.getValueAt(1, 0);
         tabla_registro.setModel(modelopersonalizado);
+        DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro.getModel();
+
         this.setVisible(false);
+
+      
+        if (registrosPrueba.exists()) {
+            FileReader fr = null;
+            BufferedReader br = null;
+            try {
+                fr = new FileReader(registrosPrueba);
+                br = new BufferedReader(fr);
+                String linea = "";
+                while ((linea = br.readLine()) != null) {
+                    System.out.println("entra");
+                    String[] registro = linea.split("[|]");
+                    int tamanoLlave = 0;
+                    for (int i = 0; i < registro.length; i++) {
+                        tamanoLlave += registro[i].length();
+
+                    }
+                    Object[] row = new Object[modeloRegistros.getColumnCount()];
+                    System.out.println(modeloRegistros.getColumnCount());
+                    System.out.println(linea);
+                    for (int i = 0; i < registro.length; i++) {
+                        System.out.println(registro[i]);
+                        if (registro[i].equals("true")) {
+                            boolean v;
+                            v = true;
+                            row[i] = v;
+
+                        } else if (registro[i].equals("false")) {
+                            boolean c;
+                            c = false;
+                            row[i] = false;
+
+                        } else {
+
+                            row[i] = registro[i];
+                        }
+
+                    }
+                    modeloRegistros.addRow(row);
+                    for (int i = 0; i < row.length; i++) {
+                        System.out.print(row[i] + "  ");
+                    }
+                    Llave llave = new Llave();
+                    llave.setLlave(linea);
+
+                    llave.setTamanio(tamanoLlave);
+                    registros.add(linea);
+                    llaves.add(llave);
+                }
+
+                // Object[] registroNuevo =  new Object[tamanio];
+            } catch (Exception e) {
+            }
+            try {
+                br.close();
+                fr.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         registros_gui.pack();
         registros_gui.setLocationRelativeTo(this);
         registros_gui.setVisible(true);
@@ -1189,42 +1373,53 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton20MouseClicked
 
     private void jButton15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton15MouseClicked
-        String registroTemp = "[";
+        String registroTemp = "";
         DefaultTableModel modeloTablaRegistros = (DefaultTableModel) tabla_registro.getModel();
-        for (int i = 0; i < modeloTablaRegistros.getRowCount(); i++) {
-            // registroTemp += modeloTablaRegistros.getValueAt(i, 0);
-            // registroTemp += "|";
+
+        if (tabla_registro.getSelectedRow()==-1) {
+            JOptionPane.showMessageDialog(registros_gui, "Primero selecciona el registro que deseas guardar");
+        
+        } else {
+
             for (int k = 0; k < modeloTablaRegistros.getColumnCount(); k++) {
-                registroTemp += modeloTablaRegistros.getValueAt(i, k);
-                registroTemp += "|";
+                if (modeloTablaRegistros.getColumnCount() - k == 1) {
+                    registroTemp += modeloTablaRegistros.getValueAt(tabla_registro.getSelectedRow(), k);
+
+                } else {
+                    registroTemp += modeloTablaRegistros.getValueAt(tabla_registro.getSelectedRow(), k);
+                    registroTemp += "|";
+                }
+                System.out.println(registroTemp);
+
             }
-            registroTemp += "]";
             registros.add(registroTemp);
-            registroTemp = "[";
+            try {
+                escribirRegistros(registroTemp);
+            } catch (IOException ex) {
+                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            registroTemp = "";
 
         }
 
-        try {
-            escribirRegistros();
-        } catch (IOException ex) {
-            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
+        // registroTemp="";
 
     }//GEN-LAST:event_jButton15MouseClicked
-    public void escribirRegistros() throws IOException {
-
-        FileWriter fw = new FileWriter(file, true);
+    public void escribirRegistros(String registro) throws IOException {
+        File registroArchivo = new File("./registros/registros.txt");
+        FileWriter fw = new FileWriter(registroArchivo, true);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter pw = new PrintWriter(bw);
 
-        for (String temp : registros) {
-
-            pw.print(temp);
-            pw.println();
-        }
+        pw.print(registro);
         pw.println();
+
+        // pw.println();
         pw.flush();
+        JOptionPane.showMessageDialog(registros_gui, "Registro guardado con exito");
+         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+       
+         fecha_de_modificacion.setText(sdf.format(registroArchivo.lastModified()));
         pw.close();
 
     }
@@ -1240,6 +1435,12 @@ public class Principal extends javax.swing.JFrame {
     private void jButton15KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton15KeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton15KeyPressed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        registros_gui.dispose();
+        this.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17ActionPerformed
 
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
@@ -1302,11 +1503,14 @@ public class Principal extends javax.swing.JFrame {
         });
     }
     ArrayList<String> registros = new ArrayList<String>();
+    ArrayList<Llave> llaves = new ArrayList();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree arbolArchivos;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextField campoFiltro;
     private javax.swing.JDialog campos;
+    private javax.swing.JLabel fecha_de_modificacion;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -1317,7 +1521,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
@@ -1330,6 +1533,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1354,6 +1558,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_si;
     private javax.swing.JDialog registros_gui;
     private javax.swing.JTable tabla_registro;
+    private javax.swing.JLabel textoFiltro;
     // End of variables declaration//GEN-END:variables
     String rutaArchivo = "./registros/";
     File file = new File(rutaArchivo);//el archivo al que vamos a guardar
