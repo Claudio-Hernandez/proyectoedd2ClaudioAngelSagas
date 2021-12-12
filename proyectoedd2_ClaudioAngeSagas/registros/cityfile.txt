@@ -1,0 +1,5 @@
+cityId:int[4]1;cityName:String[10]0;
+@@@
+1119|New York
+8698|Paris
+5041|Tegucigalpa

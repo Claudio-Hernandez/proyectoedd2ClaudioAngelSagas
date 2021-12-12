@@ -1,3 +1,0 @@
-Daniel|null|15|Honduras
-Angel|null|1|null
-Angel|null|1|Honduras

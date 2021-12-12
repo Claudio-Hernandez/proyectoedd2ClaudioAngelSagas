@@ -36,6 +36,16 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+//Las del video
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+//import java.io.FileOutputStream;
+import java.io.IOException;
 
 /**
  *
@@ -109,6 +119,10 @@ public class Principal extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         campoFiltro = new javax.swing.JTextField();
         textoFiltro = new javax.swing.JLabel();
+        estandarizacion = new javax.swing.JDialog();
+        botonExcel = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -116,6 +130,7 @@ public class Principal extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
 
         campos.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
@@ -406,6 +421,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jt_archivoActual.setEditable(false);
         jt_archivoActual.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -624,6 +640,49 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        botonExcel.setText("Exportar a Excel");
+        botonExcel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonExcelMouseClicked(evt);
+            }
+        });
+
+        jButton23.setText("Exportar a XML");
+
+        jButton22.setText("Volver");
+        jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton22MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout estandarizacionLayout = new javax.swing.GroupLayout(estandarizacion.getContentPane());
+        estandarizacion.getContentPane().setLayout(estandarizacionLayout);
+        estandarizacionLayout.setHorizontalGroup(
+            estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(estandarizacionLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(botonExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, estandarizacionLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        estandarizacionLayout.setVerticalGroup(
+            estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(estandarizacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(82, 82, 82))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -679,6 +738,13 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton9.setText("Estandarización");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -695,12 +761,13 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(143, 143, 143)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
                 .addGap(113, 113, 113))
         );
         jPanel1Layout.setVerticalGroup(
@@ -716,7 +783,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100)
+                .addGap(47, 47, 47)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
                 .addComponent(jButton12)
                 .addGap(25, 25, 25))
         );
@@ -1062,8 +1131,7 @@ public class Principal extends javax.swing.JFrame {
             jt_archivoActual.setText(selectedNode.getUserObject().toString());
 
             ubicacionActual = rutaArchivo + selectedNode.getUserObject().toString();
-            
-           
+
         } catch (NullPointerException ex) {//Si no
             JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
         }
@@ -1096,7 +1164,6 @@ public class Principal extends javax.swing.JFrame {
         metadata.getCampos().clear();
         borrarElementosTabla();
 
-        
         JOptionPane.showMessageDialog(campos, "Archivo cerrado");
     }//GEN-LAST:event_jButton13ActionPerformed
 
@@ -1416,6 +1483,83 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton19ActionPerformed
 
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        estandarizacion.pack();
+        estandarizacion.setLocationRelativeTo(this);
+        estandarizacion.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void botonExcelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonExcelMouseClicked
+        File prueba = new File(ubicacionActual);
+        if (prueba.exists()) {
+            FileReader fr = null;
+            BufferedReader br = null;
+            try {
+                fr = new FileReader(prueba);
+                br = new BufferedReader(fr);
+                String read;
+                String[] array = new String[0];
+                //String[] encabezado = {"City ID", "City Name"};
+
+                //Ponerle el encabezado de los registros en la primera fila de excel, ejemplo: Nombre, Apellido, Edad
+                Workbook wb = new XSSFWorkbook();
+                Sheet sheet = wb.createSheet("Registros");
+                Row rowCol = sheet.createRow(0);
+                for (int i = 0; i < jtable_campos.getRowCount(); i++) {
+                    Cell cell = rowCol.createCell(i);
+                    if(jtable_campos.getValueAt(i, 0)!=null){
+                        cell.setCellValue((String)jtable_campos.getValueAt(i, 0));
+                    }
+                }
+                //FIN de ponerle el encabezado
+
+                int j = 0;
+                boolean oneMore = false;
+                while ((read = br.readLine()) != null) {
+                    if (read.equals("@@@")) {
+                        oneMore = true;
+                    }
+                    if (oneMore == true && !read.equals("@@@")) {
+                        array = read.split("\\|");
+
+                        Row row = sheet.createRow(j + 1);
+                        for (int k = 0; k < array.length; k++) {
+                            Cell cell = row.createCell(k);
+                            if (array[k] != null) {
+                                cell.setCellValue(array[k]);
+                            }
+                        }
+                        j++;
+                    }
+                }
+                FileOutputStream out = new FileOutputStream(new File("RegistrosExportados.xlsx"));
+                wb.write(out);
+
+                /*for(int i=0; i<array.length; i++){
+                    System.out.println(array[i]);
+                }*/
+                System.out.println("Todo salió bien");
+                JOptionPane.showMessageDialog(null, "Registros exportados a Excel satisfactoriamente");
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+            try {
+                br.close();
+                fr.close();
+            } catch (IOException ex) {
+                System.out.println(ex);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Archivo no encontrado");
+        }
+    }//GEN-LAST:event_botonExcelMouseClicked
+
+    private void jButton22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseClicked
+        estandarizacion.dispose();
+        this.setVisible(true);
+    }//GEN-LAST:event_jButton22MouseClicked
+
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
             for (File temp : p_raiz.listFiles()) {
@@ -1481,9 +1625,11 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree arbolArchivos;
+    private javax.swing.JButton botonExcel;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField campoFiltro;
     private javax.swing.JDialog campos;
+    private javax.swing.JDialog estandarizacion;
     private javax.swing.JLabel fecha_de_modificacion;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
@@ -1499,12 +1645,15 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
