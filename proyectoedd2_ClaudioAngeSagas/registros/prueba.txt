@@ -1,0 +1,2 @@
+personId:int[4]1;personaName:String[10]0;Edad:int[4]0;
+cityId:int[4]0;cityName:String[10]0;
