@@ -46,6 +46,27 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 //import java.io.FileOutputStream;
 import java.io.IOException;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Result;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Attr;
+import org.w3c.dom.DOMImplementation;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Text;
+
+/*import javax.swing.text.Document;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.TransformerFactory;*/
 
 /**
  *
@@ -1498,8 +1519,7 @@ public class Principal extends javax.swing.JFrame {
     private void botonExcelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonExcelMouseClicked
         if (ubicacionActual.equals("") || ubicacionActual.equals(null)) {
             JOptionPane.showMessageDialog(null, "No se ha abierto ningún archivo");
-        } 
-        else {
+        } else {
             File prueba = new File(ubicacionActual);
             if (prueba.exists()) {
                 FileReader fr = null;
@@ -1572,8 +1592,180 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22MouseClicked
 
     private void botonXMLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonXMLMouseClicked
-        
+        if (ubicacionActual.equals("") || ubicacionActual == null) {
+            JOptionPane.showMessageDialog(null, "No se ha abierto ningún archivo");
+        } else {
+            if (jtable_campos.getRowCount() == 0) {
+                JOptionPane.showMessageDialog(null, "Aún no se han cargado o creado campos, la tabla de campos está vacía");
+            } else {
+                try {
+                    crearXML("Campos");
+                } catch (TransformerException ex) {
+                    Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                JOptionPane.showMessageDialog(null, "El archivo XML se creó con éxito");
+            }
+        }
     }//GEN-LAST:event_botonXMLMouseClicked
+
+    public void crearXML(String filename) throws TransformerException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        try {
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            DOMImplementation implementation = builder.getDOMImplementation();
+            Document document = (Document) implementation.createDocument(null, filename, null);
+            document.setXmlVersion("1.0");
+
+            //Obtener los valores de la tabla
+            ArrayList<String> nombres = new ArrayList();
+            ArrayList<String> tipos = new ArrayList();
+            ArrayList<String> longitud = new ArrayList();
+            ArrayList<String> llaveprimaria = new ArrayList();
+
+            for (int i = 0; i < jtable_campos.getRowCount(); i++) {
+                nombres.add((String) jtable_campos.getValueAt(i, 0));
+                tipos.add((String) jtable_campos.getValueAt(i, 1));
+
+                //Integer
+                Integer n = (Integer) jtable_campos.getValueAt(i, 2);
+                String x = n.toString();
+                longitud.add(x);
+
+                //Boolean
+                boolean b = (boolean) jtable_campos.getModel().getValueAt(i, 3);
+                String valor = "";
+                if (b) {
+                    valor = "SI";
+                } else {
+                    valor = "NO";
+                }
+                llaveprimaria.add(valor);
+            }
+            //FIN de obtener los valores de la tabla
+
+            //NODO RAIZ
+            Element raiz = document.getDocumentElement();
+            for (int i = 0; i < nombres.size(); i++) {
+                Element itemNode = document.createElement("Campo_"+(i+1));
+
+                Element nameNode = document.createElement("NOMBRE");
+                Text nodeNameValue = document.createTextNode("" + nombres.get(i));
+                nameNode.appendChild(nodeNameValue);
+
+                Element typeNode = document.createElement("TIPO");
+                Text nodeTypeValue = document.createTextNode("" + tipos.get(i));
+                typeNode.appendChild(nodeTypeValue);
+
+                Element lengthNode = document.createElement("LONGITUD");
+                Text nodeLengthValue = document.createTextNode("" + longitud.get(i));
+                lengthNode.appendChild(nodeLengthValue);
+                
+                Element isKey = document.createElement("LLAVE");
+                Text nodeIsKey = document.createTextNode("" + llaveprimaria.get(i));
+                isKey.appendChild(nodeIsKey);
+
+                itemNode.appendChild(nameNode);
+                itemNode.appendChild(typeNode);
+                itemNode.appendChild(lengthNode);
+                itemNode.appendChild(isKey);
+
+                raiz.appendChild(itemNode);
+            }
+
+            //GENERA XML
+            Source source = new DOMSource(document);
+            //DONDE SE GUARDARA
+            Result result = new StreamResult(new java.io.File(filename + ".xml"));
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.transform(source, result);
+
+        } catch (ParserConfigurationException e) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, e);
+        }
+        /*try {
+            String file = filename;
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+            
+            Document doc = docBuilder.newDocument();
+            Element rootElement = doc.createElement("Campos");
+            doc.appendChild(rootElement);
+            
+            String array[] = {"Nombre","Tipo","Longitud","LLave_Primaria"};
+            for(int i=0; i<jtable_campos.getRowCount(); i++){
+                Element rows = doc.createElement("Fila");
+                rootElement.appendChild(rows);
+                
+                Attr attr = doc.createAttribute("id");
+                attr.setValue((i+1)+"");
+                rows.setAttributeNode(attr);
+                
+                for(int j=0; j<jtable_campos.getColumnCount(); j++){
+                    //Element element = doc.createElement((String) jtable_campos.getTableHeader().getColumnModel().getColumn(j).getHeaderValue());
+                    Element element = doc.createElement(array[j]);
+                    if((jtable_campos.getValueAt(i, j)) instanceof Integer){
+                        Integer n = (Integer)jtable_campos.getModel().getValueAt(i, j);
+                        String value = n.toString();
+                        element.appendChild(doc.createTextNode(value+""));
+                        rows.appendChild(element);
+                    }
+                    else if((jtable_campos.getValueAt(i, j)) instanceof Boolean){
+                        boolean b = (boolean)jtable_campos.getModel().getValueAt(i, j);
+                        String valor = "";
+                        if(b){
+                            valor = "SI";
+                        }
+                        else{
+                            valor = "NO";
+                        }
+                        element.appendChild(doc.createTextNode(valor+""));
+                        rows.appendChild(element);
+                    }
+                    else{
+                        element.appendChild(doc.createTextNode((String) jtable_campos.getModel().getValueAt(i, j)+""));//ojo aquí
+                        rows.appendChild(element);
+                    } 
+                }
+            }
+            
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            
+            DOMSource source = new DOMSource(doc);
+            StreamResult result;
+            
+            try {
+                FileOutputStream fileOutputStream = null;
+                File arch = new File(file+".xml");
+                //FileOutputStream FileOutputStream = new FileOutputStream(new File(file+".xml"));
+                FileOutputStream FileOutputStream = new FileOutputStream(arch);
+                result = new StreamResult(fileOutputStream);
+                transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+                transformer.transform(source, result);
+                if(arch.exists()){
+                    System.out.println("SI");
+                }
+                else{
+                    System.out.println("NO");
+                }
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            
+        } catch (ParserConfigurationException poe) {
+            
+            poe.printStackTrace();
+        } 
+        catch (TransformerException te){
+            te.printStackTrace();
+        }*/
+    }
 
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
