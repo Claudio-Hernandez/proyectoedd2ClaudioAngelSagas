@@ -121,7 +121,7 @@ public class Principal extends javax.swing.JFrame {
         textoFiltro = new javax.swing.JLabel();
         estandarizacion = new javax.swing.JDialog();
         botonExcel = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
+        botonXML = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -647,7 +647,12 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton23.setText("Exportar a XML");
+        botonXML.setText("Exportar a XML");
+        botonXML.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonXMLMouseClicked(evt);
+            }
+        });
 
         jButton22.setText("Volver");
         jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -664,7 +669,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addComponent(botonExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonXML, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(74, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, estandarizacionLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -679,7 +684,7 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonXML, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(82, 82, 82))
         );
 
@@ -1491,74 +1496,84 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void botonExcelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonExcelMouseClicked
-        File prueba = new File(ubicacionActual);
-        if (prueba.exists()) {
-            FileReader fr = null;
-            BufferedReader br = null;
-            try {
-                fr = new FileReader(prueba);
-                br = new BufferedReader(fr);
-                String read;
-                String[] array = new String[0];
-                //String[] encabezado = {"City ID", "City Name"};
+        if (ubicacionActual.equals("") || ubicacionActual.equals(null)) {
+            JOptionPane.showMessageDialog(null, "No se ha abierto ningún archivo");
+        } 
+        else {
+            File prueba = new File(ubicacionActual);
+            if (prueba.exists()) {
+                FileReader fr = null;
+                BufferedReader br = null;
+                try {
+                    fr = new FileReader(prueba);
+                    br = new BufferedReader(fr);
+                    String read;
+                    String[] array = new String[0];
+                    //String[] encabezado = {"City ID", "City Name"};
 
-                //Ponerle el encabezado de los registros en la primera fila de excel, ejemplo: Nombre, Apellido, Edad
-                Workbook wb = new XSSFWorkbook();
-                Sheet sheet = wb.createSheet("Registros");
-                Row rowCol = sheet.createRow(0);
-                for (int i = 0; i < jtable_campos.getRowCount(); i++) {
-                    Cell cell = rowCol.createCell(i);
-                    if(jtable_campos.getValueAt(i, 0)!=null){
-                        cell.setCellValue((String)jtable_campos.getValueAt(i, 0));
-                    }
-                }
-                //FIN de ponerle el encabezado
-
-                int j = 0;
-                boolean oneMore = false;
-                while ((read = br.readLine()) != null) {
-                    if (read.equals("@@@")) {
-                        oneMore = true;
-                    }
-                    if (oneMore == true && !read.equals("@@@")) {
-                        array = read.split("\\|");
-
-                        Row row = sheet.createRow(j + 1);
-                        for (int k = 0; k < array.length; k++) {
-                            Cell cell = row.createCell(k);
-                            if (array[k] != null) {
-                                cell.setCellValue(array[k]);
-                            }
+                    //Ponerle el encabezado de los registros en la primera fila de excel, ejemplo: Nombre, Apellido, Edad
+                    Workbook wb = new XSSFWorkbook();
+                    Sheet sheet = wb.createSheet("Registros");
+                    Row rowCol = sheet.createRow(0);
+                    for (int i = 0; i < jtable_campos.getRowCount(); i++) {
+                        Cell cell = rowCol.createCell(i);
+                        if (jtable_campos.getValueAt(i, 0) != null) {
+                            cell.setCellValue((String) jtable_campos.getValueAt(i, 0));
                         }
-                        j++;
                     }
-                }
-                FileOutputStream out = new FileOutputStream(new File("RegistrosExportados.xlsx"));
-                wb.write(out);
+                    //FIN de ponerle el encabezado
 
-                /*for(int i=0; i<array.length; i++){
+                    int j = 0;
+                    boolean oneMore = false;
+                    while ((read = br.readLine()) != null) {
+                        if (read.equals("@@@")) {
+                            oneMore = true;
+                        }
+                        if (oneMore == true && !read.equals("@@@")) {
+                            array = read.split("\\|");
+
+                            Row row = sheet.createRow(j + 1);
+                            for (int k = 0; k < array.length; k++) {
+                                Cell cell = row.createCell(k);
+                                if (array[k] != null) {
+                                    cell.setCellValue(array[k]);
+                                }
+                            }
+                            j++;
+                        }
+                    }
+                    FileOutputStream out = new FileOutputStream(new File("RegistrosExportados.xlsx"));
+                    wb.write(out);
+
+                    /*for(int i=0; i<array.length; i++){
                     System.out.println(array[i]);
                 }*/
-                System.out.println("Todo salió bien");
-                JOptionPane.showMessageDialog(null, "Registros exportados a Excel satisfactoriamente");
-            } catch (Exception e) {
-                System.out.println(e);
+                    System.out.println("Todo salió bien");
+                    JOptionPane.showMessageDialog(null, "Registros exportados a Excel satisfactoriamente");
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                try {
+                    br.close();
+                    fr.close();
+                } catch (IOException ex) {
+                    System.out.println(ex);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Archivo no encontrado");
             }
-            try {
-                br.close();
-                fr.close();
-            } catch (IOException ex) {
-                System.out.println(ex);
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Archivo no encontrado");
         }
+
     }//GEN-LAST:event_botonExcelMouseClicked
 
     private void jButton22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseClicked
         estandarizacion.dispose();
         this.setVisible(true);
     }//GEN-LAST:event_jButton22MouseClicked
+
+    private void botonXMLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonXMLMouseClicked
+        
+    }//GEN-LAST:event_botonXMLMouseClicked
 
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
@@ -1626,6 +1641,7 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree arbolArchivos;
     private javax.swing.JButton botonExcel;
+    private javax.swing.JButton botonXML;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField campoFiltro;
     private javax.swing.JDialog campos;
@@ -1646,7 +1662,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;

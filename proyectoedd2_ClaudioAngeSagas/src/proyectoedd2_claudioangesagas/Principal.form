@@ -780,7 +780,7 @@
                   <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                   <Component id="botonExcel" min="-2" pref="136" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="jButton23" min="-2" pref="134" max="-2" attributes="0"/>
+                  <Component id="botonXML" min="-2" pref="134" max="-2" attributes="0"/>
                   <EmptySpace pref="74" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
@@ -798,7 +798,7 @@
                   <EmptySpace pref="29" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="botonExcel" alignment="3" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="jButton23" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="botonXML" alignment="3" min="-2" pref="71" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
               </Group>
@@ -814,10 +814,13 @@
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonExcelMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton23">
+        <Component class="javax.swing.JButton" name="botonXML">
           <Properties>
             <Property name="text" type="java.lang.String" value="Exportar a XML"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonXMLMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton22">
           <Properties>
