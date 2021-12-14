@@ -614,10 +614,11 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton21" max="32767" attributes="0"/>
-                          <Component id="jButton15" max="32767" attributes="0"/>
-                          <Component id="jButton16" max="32767" attributes="0"/>
-                          <Component id="jButton18" max="32767" attributes="0"/>
+                          <Component id="botonAgregarEspacio" max="32767" attributes="0"/>
+                          <Component id="botonGuardarRegistros" max="32767" attributes="0"/>
+                          <Component id="botonBuscarRegistro" max="32767" attributes="0"/>
+                          <Component id="botonEliminarRegistro" max="32767" attributes="0"/>
+                          <Component id="jButton26" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -636,13 +637,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="jButton21" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="botonAgregarEspacio" min="-2" pref="57" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton15" min="-2" pref="57" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                              <Component id="jButton16" min="-2" pref="58" max="-2" attributes="0"/>
+                              <Component id="botonGuardarRegistros" min="-2" pref="57" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jButton26" min="-2" pref="43" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="botonBuscarRegistro" min="-2" pref="58" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton18" min="-2" pref="54" max="-2" attributes="0"/>
+                              <Component id="botonEliminarRegistro" min="-2" pref="54" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -660,26 +663,28 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton15">
+            <Component class="javax.swing.JButton" name="botonGuardarRegistros">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Guardar Registro"/>
+                <Property name="text" type="java.lang.String" value="Guardar Registros"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton15MouseClicked"/>
-                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jButton15KeyPressed"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonGuardarRegistrosMouseClicked"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="botonGuardarRegistrosKeyPressed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton16">
+            <Component class="javax.swing.JButton" name="botonBuscarRegistro">
               <Properties>
                 <Property name="text" type="java.lang.String" value="BuscarRegistro"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonBuscarRegistroActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton18">
+            <Component class="javax.swing.JButton" name="botonEliminarRegistro">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Borrar Registros"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -698,12 +703,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton21">
+            <Component class="javax.swing.JButton" name="botonAgregarEspacio">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar espacio de nuevo Registro"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton21ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAgregarEspacioActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton17">
@@ -742,6 +747,14 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Buscar registros que contengan:"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton26">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cargar registros"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton26ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

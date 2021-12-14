@@ -1,5 +1,2 @@
 personId:int[4]1;personName:String[10]0;Edad:int[4]0;cityId:int[4]0;
 @@@
-080197|Angel|20|2331
-070163|Mansour|14|4589
-106372|Douglas|19|3106
