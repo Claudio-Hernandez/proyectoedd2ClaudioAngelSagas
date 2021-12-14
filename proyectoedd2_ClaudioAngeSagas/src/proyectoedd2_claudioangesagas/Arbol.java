@@ -20,6 +20,25 @@ public class Arbol {
         this.raiz = raiz;
         this.grado = grado;
     }
+
+    public NodoArbol getRaiz() {
+        return raiz;
+    }
+
+    public void setRaiz(NodoArbol raiz) {
+        this.raiz = raiz;
+    }
+
+    public int getGrado() {
+        return grado;
+    }
+
+    public void setGrado(int grado) {
+        this.grado = grado;
+    }
+    
+    
+    
     public void intertar(Llave nueva){
         if (raiz==null) {
             raiz = new NodoArbol(true,grado);

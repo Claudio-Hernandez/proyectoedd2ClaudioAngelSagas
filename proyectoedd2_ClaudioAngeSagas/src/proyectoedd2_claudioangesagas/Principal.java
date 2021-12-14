@@ -67,7 +67,6 @@ import org.w3c.dom.Text;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.TransformerFactory;*/
-
 /**
  *
  * @author Usuario
@@ -144,6 +143,13 @@ public class Principal extends javax.swing.JFrame {
         botonExcel = new javax.swing.JButton();
         botonXML = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
+        crearIndices_reindexar = new javax.swing.JDialog();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        reindexar = new javax.swing.JDialog();
+        jButton25 = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jt_reindexar = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -212,13 +218,10 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel5.setText("Nombre del campo");
 
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel6.setText("Tipo");
 
-        jComboBox2.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "int", "char", "double", "String", "boolean" }));
         jComboBox2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -231,19 +234,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel7.setText("Longitud");
 
-        jSpinner1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
 
-        jLabel8.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel8.setText("Es llave primaria?");
 
-        rb_si.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         rb_si.setText("Si");
 
-        rb_no.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         rb_no.setText("No");
 
         jtable_campos.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
@@ -278,7 +276,6 @@ public class Principal extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jtable_campos);
 
-        jLabel9.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jLabel9.setText("Para modificar/eliminar seleccione uno de la tabla");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -533,6 +530,12 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        registros_gui.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                registros_guiWindowClosing(evt);
+            }
+        });
+
         jPanel4.setBackground(new java.awt.Color(0, 102, 102));
         jPanel4.setForeground(new java.awt.Color(0, 102, 102));
 
@@ -661,6 +664,12 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        estandarizacion.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                estandarizacionWindowClosing(evt);
+            }
+        });
+
         botonExcel.setText("Exportar a Excel");
         botonExcel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -709,6 +718,103 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(82, 82, 82))
         );
 
+        crearIndices_reindexar.setBackground(new java.awt.Color(204, 102, 255));
+        crearIndices_reindexar.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                crearIndices_reindexarWindowClosing(evt);
+            }
+        });
+
+        jButton23.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton23.setText("Crear Indices");
+        jButton23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton23MouseClicked(evt);
+            }
+        });
+
+        jButton24.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton24.setText("Reindexar");
+        jButton24.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton24MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout crearIndices_reindexarLayout = new javax.swing.GroupLayout(crearIndices_reindexar.getContentPane());
+        crearIndices_reindexar.getContentPane().setLayout(crearIndices_reindexarLayout);
+        crearIndices_reindexarLayout.setHorizontalGroup(
+            crearIndices_reindexarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crearIndices_reindexarLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(58, Short.MAX_VALUE))
+        );
+        crearIndices_reindexarLayout.setVerticalGroup(
+            crearIndices_reindexarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, crearIndices_reindexarLayout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addGroup(crearIndices_reindexarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36))
+        );
+
+        reindexar.setBackground(new java.awt.Color(102, 0, 255));
+
+        jButton25.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton25.setText("Reindexar");
+        jButton25.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton25MouseClicked(evt);
+            }
+        });
+
+        jt_reindexar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jt_reindexar.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Campos"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(jt_reindexar);
+
+        javax.swing.GroupLayout reindexarLayout = new javax.swing.GroupLayout(reindexar.getContentPane());
+        reindexar.getContentPane().setLayout(reindexarLayout);
+        reindexarLayout.setHorizontalGroup(
+            reindexarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(reindexarLayout.createSequentialGroup()
+                .addGroup(reindexarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(reindexarLayout.createSequentialGroup()
+                        .addGap(230, 230, 230)
+                        .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(reindexarLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
+        reindexarLayout.setVerticalGroup(
+            reindexarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(reindexarLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -740,7 +846,6 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setText("Bienvenido");
 
-        jButton12.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         jButton12.setText("APAGAR");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -748,10 +853,16 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton20.setText("Registros");
         jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton20MouseClicked(evt);
+            }
+        });
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
             }
         });
 
@@ -764,6 +875,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setText("Estandarización");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -787,7 +899,6 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(143, 143, 143)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
@@ -795,13 +906,17 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                     .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
                 .addGap(113, 113, 113))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(319, 319, 319)
+                .addComponent(jButton9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -809,9 +924,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                .addGap(18, 18, 18)
                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addGap(42, 42, 42)
                 .addComponent(jButton12)
                 .addGap(25, 25, 25))
         );
@@ -1157,6 +1272,15 @@ public class Principal extends javax.swing.JFrame {
             jt_archivoActual.setText(selectedNode.getUserObject().toString());
 
             ubicacionActual = rutaArchivo + selectedNode.getUserObject().toString();
+
+            
+            //Cargar Arbol
+            AdminArbol adar = new AdminArbol("./registros/" + "Arbol.indices");
+            if (adar.getArchivo().exists()) {
+                adar.setArbol(arbolB);
+                adar.cargarArchivo();
+                arbolB = adar.getArbol();
+            }
 
         } catch (NullPointerException ex) {//Si no
             JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
@@ -1506,7 +1630,12 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
+        // Abrir indices
+        crearIndices_reindexar.pack();
+        crearIndices_reindexar.setLocationRelativeTo(this);
+        crearIndices_reindexar.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -1608,6 +1737,70 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_botonXMLMouseClicked
 
+    private void jButton23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MouseClicked
+        // Crear Indices
+        if (arbolB.getRaiz() != null) {
+            AdminArbol adar = new AdminArbol("./registros/" + "Arbol.indices");
+            adar.setArbol(arbolB);
+            adar.escribirArchivo();
+            JOptionPane.showMessageDialog(this, "Se ha guardado el archivo del arbol ", "Información", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+    }//GEN-LAST:event_jButton23MouseClicked
+
+    private void crearIndices_reindexarWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_crearIndices_reindexarWindowClosing
+        abrirVentanaP();
+    }//GEN-LAST:event_crearIndices_reindexarWindowClosing
+
+    private void registros_guiWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_registros_guiWindowClosing
+        abrirVentanaP();
+    }//GEN-LAST:event_registros_guiWindowClosing
+
+    private void estandarizacionWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_estandarizacionWindowClosing
+        abrirVentanaP();
+    }//GEN-LAST:event_estandarizacionWindowClosing
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton24MouseClicked
+        String temp = "";
+        
+         DefaultTableModel model = (DefaultTableModel) jt_reindexar.getModel();
+        
+        for (int i = 0; i < metadata.getCampos().size(); i++) {
+            int llave = 0;
+            if (!metadata.getCampos().get(i).isLlavePrimaria()) {
+                llave=1;
+            }
+            model.addRow(new Object[]{metadata.getCampos().get(i).getNombre()+":"+metadata.getCampos().get(i).getTipo()+"["+metadata.getCampos().get(i).getByteoffset()+"]"+llave});
+            
+        }
+        
+        
+        
+        reindexar.pack();
+        reindexar.setLocationRelativeTo(this);
+        reindexar.setVisible(true);
+        reindexar.setModal(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton24MouseClicked
+
+    private void jButton25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton25MouseClicked
+        // Reindexar
+        if (jt_reindexar.getSelectedRow()>=0) {
+            AdminArbol adar = new AdminArbol("./registros/" + "Arbol.indices");
+            adar.setArbol(arbolB);
+            adar.escribirArchivo();
+            JOptionPane.showMessageDialog(this, "Se han reindexado los registros exitosamente", "Información", JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(this, "Ningun campo seleccionado");
+        }
+        
+        
+    }//GEN-LAST:event_jButton25MouseClicked
+
     public void crearXML(String filename) throws TransformerException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
@@ -1646,7 +1839,7 @@ public class Principal extends javax.swing.JFrame {
             //NODO RAIZ
             Element raiz = document.getDocumentElement();
             for (int i = 0; i < nombres.size(); i++) {
-                Element itemNode = document.createElement("Campo_"+(i+1));
+                Element itemNode = document.createElement("Campo_" + (i + 1));
 
                 Element nameNode = document.createElement("NOMBRE");
                 Text nodeNameValue = document.createTextNode("" + nombres.get(i));
@@ -1659,7 +1852,7 @@ public class Principal extends javax.swing.JFrame {
                 Element lengthNode = document.createElement("LONGITUD");
                 Text nodeLengthValue = document.createTextNode("" + longitud.get(i));
                 lengthNode.appendChild(nodeLengthValue);
-                
+
                 Element isKey = document.createElement("LLAVE");
                 Text nodeIsKey = document.createTextNode("" + llaveprimaria.get(i));
                 isKey.appendChild(nodeIsKey);
@@ -1827,8 +2020,17 @@ public class Principal extends javax.swing.JFrame {
             }
         });
     }
+
+    //Variables Globales
     ArrayList<String> registros = new ArrayList<String>();
     ArrayList<Llave> llaves = new ArrayList();
+    String rutaArchivo = "./registros/";
+    File file = new File(rutaArchivo);//el archivo al que vamos a guardar
+    Metadata metadata = new Metadata();
+    String ubicacionActual = "";
+    Arbol arbolB = new Arbol(null, 6);
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree arbolArchivos;
@@ -1837,6 +2039,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField campoFiltro;
     private javax.swing.JDialog campos;
+    private javax.swing.JDialog crearIndices_reindexar;
     private javax.swing.JDialog estandarizacion;
     private javax.swing.JLabel fecha_de_modificacion;
     private javax.swing.JButton jButton1;
@@ -1854,6 +2057,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1879,19 +2085,19 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jt_archivoActual;
+    private javax.swing.JTable jt_reindexar;
     private javax.swing.JTable jtable_campos;
     private javax.swing.JDialog misArchivos;
     private javax.swing.JRadioButton rb_no;
     private javax.swing.JRadioButton rb_si;
     private javax.swing.JDialog registros_gui;
+    private javax.swing.JDialog reindexar;
     private javax.swing.JTable tabla_registro;
     private javax.swing.JLabel textoFiltro;
     // End of variables declaration//GEN-END:variables
-    String rutaArchivo = "./registros/";
-    File file = new File(rutaArchivo);//el archivo al que vamos a guardar
-    Metadata metadata = new Metadata();
-    String ubicacionActual = "";
+
 }
