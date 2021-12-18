@@ -141,6 +141,7 @@ public class Principal extends javax.swing.JFrame {
         campoFiltro = new javax.swing.JTextField();
         textoFiltro = new javax.swing.JLabel();
         jButton26 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
         estandarizacion = new javax.swing.JDialog();
         botonExcel = new javax.swing.JButton();
         botonXML = new javax.swing.JButton();
@@ -152,6 +153,13 @@ public class Principal extends javax.swing.JFrame {
         jButton25 = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jt_reindexar = new javax.swing.JTable();
+        guiModificarRegistro = new javax.swing.JDialog();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tabla_registro2 = new javax.swing.JTable();
+        jButton16 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        campoFiltro2 = new javax.swing.JTextField();
+        textoFiltro2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -601,12 +609,19 @@ public class Principal extends javax.swing.JFrame {
         jLabel10.setText("Ultima modificacion del archivo:");
 
         textoFiltro.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        textoFiltro.setText("Buscar registros que contengan:");
+        textoFiltro.setText("Buscar registro con  ");
 
         jButton26.setText("Cargar registros");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton26ActionPerformed(evt);
+            }
+        });
+
+        jButton15.setText("Modificar");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
             }
         });
 
@@ -628,17 +643,18 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(textoFiltro)
-                        .addGap(1, 1, 1)
+                        .addGap(165, 165, 165)
                         .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 470, Short.MAX_VALUE))
-                    .addComponent(jScrollPane3))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1086, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(botonAgregarEspacio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botonGuardarRegistros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botonBuscarRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botonEliminarRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30))
         );
         jPanel4Layout.setVerticalGroup(
@@ -646,7 +662,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(fecha_de_modificacion))
@@ -661,7 +677,9 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(botonBuscarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonEliminarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonEliminarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -669,7 +687,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textoFiltro)
                     .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout registros_guiLayout = new javax.swing.GroupLayout(registros_gui.getContentPane());
@@ -832,6 +850,75 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tabla_registro2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane4.setViewportView(tabla_registro2);
+
+        jButton16.setText("Buscar");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("Modificar");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        campoFiltro2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoFiltro2ActionPerformed(evt);
+            }
+        });
+
+        textoFiltro2.setText("Buscar Registros que contengan  ");
+
+        javax.swing.GroupLayout guiModificarRegistroLayout = new javax.swing.GroupLayout(guiModificarRegistro.getContentPane());
+        guiModificarRegistro.getContentPane().setLayout(guiModificarRegistroLayout);
+        guiModificarRegistroLayout.setHorizontalGroup(
+            guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(guiModificarRegistroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, guiModificarRegistroLayout.createSequentialGroup()
+                        .addComponent(textoFiltro2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(170, 170, 170)
+                        .addComponent(campoFiltro2, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 876, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+                    .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
+        );
+        guiModificarRegistroLayout.setVerticalGroup(
+            guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(guiModificarRegistroLayout.createSequentialGroup()
+                .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(guiModificarRegistroLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(guiModificarRegistroLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(campoFiltro2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(textoFiltro2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1403,45 +1490,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14MouseClicked
 
     private void botonBuscarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarRegistroActionPerformed
-        campoFiltro.setVisible(true);//los hago visibles
-        textoFiltro.setVisible(true);//los hago visibles
-        TableRowSorter<TableModel> filtrarResultados = new TableRowSorter<>(tabla_registro.getModel());//este el sorteador de las filas
-        tabla_registro.setRowSorter(filtrarResultados);//asigno este nuevo sorteador a la fila
-        campoFiltro.getDocument().addDocumentListener(new DocumentListener() {//hago el listener para que escuche entradas y se cambie
-            //esto solo son metodos abstractos 
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                String text = campoFiltro.getText();
+       activarFiltro();
 
-                if (text.trim().length() == 0) {
-                    filtrarResultados.setRowFilter(null);//si no hay nada ingresado el sorteador nor ecibe actualizacion
-                } else {
-                    filtrarResultados.setRowFilter(RowFilter.regexFilter("(?i)" + text));//si hay algo ingresado hace la busqueda con el texto que se obtiene
-                }
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                String text = campoFiltro.getText();//este metodo es un lisener para cuando se va eliminando del campo texto/ al irse eliminando voy actualizando el sorteador
-
-                if (text.trim().length() == 0) {
-                    filtrarResultados.setRowFilter(null);
-                } else {
-                    filtrarResultados.setRowFilter(RowFilter.regexFilter("(?i)" + text));
-                }
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-        });
-
-        //registros_gui.setLayout(new BorderLayout());
-        //registros_gui.add(panel, BorderLayout.SOUTH);
-        //registros_gui.add(new JScrollPane(tabla_registro), BorderLayout.CENTER);
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_botonBuscarRegistroActionPerformed
 
     private void jButton20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton20MouseClicked
@@ -1837,7 +1888,7 @@ public class Principal extends javax.swing.JFrame {
                     registros.add(linea);
                     llaves.add(llave);
                 }
-                // System.out.println(registros);
+                
                 guardarRegistroEnArchivo();
                 JOptionPane.showMessageDialog(this, "Se ha cargado el archivo exitosamente");
             } catch (Exception e) {
@@ -1868,6 +1919,111 @@ public class Principal extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_botonEliminarRegistroActionPerformed
+    public void activarFiltro(){
+     campoFiltro.setVisible(true);//los hago visibles
+        textoFiltro.setText("Buscar registros con "+tabla_registro.getColumnName(0));
+        textoFiltro.setVisible(true);//los hago visibles
+        TableRowSorter<TableModel> filtrarResultados = new TableRowSorter<>(tabla_registro.getModel());//este el sorteador de las filas
+        tabla_registro.setRowSorter(filtrarResultados);//asigno este nuevo sorteador a la fila
+        campoFiltro.getDocument().addDocumentListener(new DocumentListener() {//hago el listener para que escuche entradas y se cambie
+            //esto solo son metodos abstractos 
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                String text = campoFiltro.getText();
+
+                if (text.trim().length() == 0) {
+                    filtrarResultados.setRowFilter(null);//si no hay nada ingresado el sorteador nor ecibe actualizacion
+                } else {
+                    filtrarResultados.setRowFilter(RowFilter.regexFilter("(?i)" + text));//si hay algo ingresado hace la busqueda con el texto que se obtiene
+                }
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                String text = campoFiltro.getText();//este metodo es un lisener para cuando se va eliminando del campo texto/ al irse eliminando voy actualizando el sorteador
+
+                if (text.trim().length() == 0) {
+                    filtrarResultados.setRowFilter(null);
+                } else {
+                    filtrarResultados.setRowFilter(RowFilter.regexFilter("(?i)" + text));
+                   
+                }
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+        });
+    
+    }
+    
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        activarFiltro(); 
+        
+         DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro.getModel();
+         tabla_registro2.setModel(modeloRegistros);
+               
+       // System.out.println(modeloRegistros.getRowCount());
+        //Llave llaveTemporal =  new Llave();
+        //System.out.println(tabla_registro.getSelectedRow());
+        //System.out.println(tabla_registro.getRowCount());
+       // System.out.println(tabla_registro.getSelectedColumn());
+        /*
+        llaveTemporal.setLlave(tabla_registro.getValueAt(tabla_registro.getSelectedRow(), tabla_registro.getSelectedColumn()).toString());
+        arbolB.buscar(llaveTemporal.getLlave());
+        if ( arbolB.buscar(llaveTemporal.getLlave())!=null) {
+            for (int i = 0; i < arbolB.buscar(llaveTemporal.getLlave()).getLlaves().length; i++) {
+                if (arbolB.buscar(llaveTemporal.getLlave()).getLlaves()[i].getLlave()==llaveTemporal.getLlave()) {
+                    llaveTemporal.setByteoffset(arbolB.buscar(llaveTemporal.getLlave()).getLlaves()[i].getByteoffset());
+                    System.out.println(arbolB.buscar(llaveTemporal.getLlave()).getLlaves()[i].getByteoffset());
+                }
+            }
+        }
+        */
+        guiModificarRegistro.pack();
+        guiModificarRegistro.setLocationRelativeTo(null);
+        guiModificarRegistro.setVisible(true);
+        
+        
+        
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        String llaveBuscar  =  campoFiltro2.getText();
+        if (arbolB.buscar(llaveBuscar)!=null) {
+            System.out.println("lo encontro");
+            NodoArbol n  = arbolB.buscar(llaveBuscar);
+            Llave llaveTemporal = new Llave();
+            for (int i = 0; i < n.getLlaves().length; i++) {
+                if (n.getLlaves()[i].getLlave().equals(llaveBuscar)) {
+                    llaveTemporal =  n.getLlaves()[i];
+                    
+                    System.out.println(arbolB.buscar(llaveTemporal.getLlave()).getLlaves()[i].getByteoffset());
+                    
+                    break;
+                }
+            }
+        
+            
+        }
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+           tabla_registro2.setRowSorter(null);
+           campoFiltro2.getDocument().removeDocumentListener(null);
+
+           System.out.println(tabla_registro2.getSelectedRow());
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void campoFiltro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoFiltro2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoFiltro2ActionPerformed
     public void actualizarTablaRegistros() {
         // cargarRegistros();
         registros_gui.dispose();
@@ -1914,18 +2070,13 @@ public class Principal extends javax.swing.JFrame {
                 boolean flag = false;
                 while ((linea = br.readLine()) != null) {
                     if (flag == true) {
-                        System.out.println("entra");
+                        
                         String[] registro = linea.split("[|]");
-                        int tamanoLlave = 0;
-                        for (int i = 0; i < registro.length; i++) {
-                            tamanoLlave += registro[i].length();
-
-                        }
+                       
                         Object[] row = new Object[modeloRegistros.getColumnCount()];
-                        System.out.println(modeloRegistros.getColumnCount());
-                        System.out.println(linea);
+                       
                         for (int i = 0; i < registro.length; i++) {
-                            System.out.println(registro[i]);
+                            
                             if (registro[i].equals("true")) {
                                 boolean v;
                                 v = true;
@@ -1943,15 +2094,8 @@ public class Principal extends javax.swing.JFrame {
 
                         }
                         modeloRegistros.addRow(row);
-                        for (int i = 0; i < row.length; i++) {
-                            System.out.print(row[i] + "  ");
-                        }
-                        Llave llave = new Llave();
-                        llave.setLlave(linea);
-
-                        llave.setTamanio(tamanoLlave);
-                        registros.add(linea);
-                        llaves.add(llave);
+                       
+                        
                     }
                     if (linea.equals("@@@")) {
                         flag = true;
@@ -2216,17 +2360,22 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton botonXML;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField campoFiltro;
+    private javax.swing.JTextField campoFiltro2;
     private javax.swing.JDialog campos;
     private javax.swing.JDialog crearIndices_reindexar;
     private javax.swing.JDialog estandarizacion;
     private javax.swing.JLabel fecha_de_modificacion;
+    private javax.swing.JDialog guiModificarRegistro;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
@@ -2260,6 +2409,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField jTextField1;
@@ -2272,7 +2422,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog registros_gui;
     private javax.swing.JDialog reindexar;
     private javax.swing.JTable tabla_registro;
+    private javax.swing.JTable tabla_registro2;
     private javax.swing.JLabel textoFiltro;
+    private javax.swing.JLabel textoFiltro2;
     // End of variables declaration//GEN-END:variables
 
 }
