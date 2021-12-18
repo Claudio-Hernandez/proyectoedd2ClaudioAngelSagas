@@ -38,6 +38,23 @@ public class Lista {
         return temp;
 
     }
+     public Llave elementoPosicion(int posicion) {
+          nodo tmp = new nodo();
+        if (posicion >= 1 && posicion <= tamanio) {
+            tmp = cabeza;
+//            if (posicion == size) {
+//                for (int i = 1; i <=posicion - 1; i++) {
+//                    tmp = tmp.getSiguiente();
+//                }
+//            }
+                for (int i = 1; i <=posicion-1; i++) {
+                    tmp = tmp.getSiguiente();
+                }
+            return tmp.getDato();
+        } else {
+            return null;
+        }
+    }
     public void suprimir(int pos){
         if (pos==1) {
             cabeza = cabeza.getSiguiente();  
