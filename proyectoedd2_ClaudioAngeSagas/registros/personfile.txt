@@ -1,6 +1,6 @@
 personId:int[4]1;personName:String[10]0;Edad:int[4]0;cityId:int[4]0;
 @@@
-2006|Alvaro|88|103502
+*********************
 1962|Vanna|92|101923
 3134|Shiquita|46|104501
 3403|Vanesa|69|103407

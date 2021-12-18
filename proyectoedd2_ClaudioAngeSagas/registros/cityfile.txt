@@ -1,2 +1,5002 @@
 cityId:int[4]1;cityName:String[10]0;
 @@@
+101916|Commerce, United States
+104309|Davding, Denmark
+101712|Rockwall, United States
+101873|Mifflintown, United States
+104692|Ixonia, United States
+101338|Chapin, United States
+104220|Tongliao, China
+101669|New Knoxville, United States
+104206|Ramah, United States
+100128|Centerton, United States
+104903|Angora, United States
+102188|Carbrook, Australia
+102996|Riomaggiore, Italy
+101333|Natrona, United States
+100180|Silverado, United States
+102647|Cordova, United States
+102997|Knightstown, United States
+102175|Hammond, United States
+102801|Belmonte Mezzagno, Italy
+102738|Willimantic, United States
+103244|DAMPER CREEK, Australia
+101330|Craiova, Romania
+103488|Parrottsville, United States
+100816|Floral Park, United States
+101296|Olamon, United States
+103302|Edinboro, United States
+100882|Richlands, United States
+104914|Windom, United States
+100358|South Harwich, United States
+104380|Golden, United States
+104241|Carroll, United States
+104726|Woonsocket, United States
+103349|Ocean View, United States
+102745|Newbury, United States
+101610|Dahod, India
+100822|Marion, United States
+102574|Cannon AFB, United States
+104527|Saint Charles, United States
+100583|Grunthal, Canada
+102829|East Brisbane, Australia
+103114|Normal, United States
+102746|Cairo, Egypt
+101661|Huntington, United States
+101396|Williamson, United States
+103821|Essex, United States
+100792|Carson, United States
+101036|Minnedosa, Canada
+100452|Harrisville, United States
+102220|Paradise Valley, United States
+103001|Alexander, United States
+104209|Sitka, United States
+100633|Adair, United States
+102518|Wilmot, United States
+104147|Bloomdale, United States
+104945|Singers Glen, United States
+102269|Mckinney, United States
+104872|Youngsville, United States
+100964|Bien Hoa, Vietnam
+100821|Stafford Springs, United States
+104172|Guide Rock, United States
+100121|Sabine Pass, United States
+100439|Hillsdale, United States
+103457|Farmersville, United States
+102614|Sparta, United States
+101201|Fulshear, United States
+100402|Paradise Inn, United States
+100108|Lugo, Spain
+100376|Fort Washakie, United States
+104141|Aldergrove, Canada
+102968|Torreon, Mexico
+100626|Dronninglund, Denmark
+102183|Recreo, Chile
+103795|Bradley, United States
+103013|Chichester, United States
+103550|Longford, United States
+104375|Waynesville, United States
+100899|Oakford, United States
+100577|Pemberton, United States
+101356|Abbyville, United States
+101975|Outlook, United States
+102326|New Chum, Australia
+103987|La Guaira, Venezuela
+100512|Athol, Australia
+102711|Nellysford, United States
+102387|Leroy, United States
+104461|Pleasant Plains, United States
+102804|Auburn, United States
+104655|Korba, India
+100216|Culiacan, Mexico
+102279|Natural Bridge, United States
+104115|Sala Consilina, Italy
+102916|Temple, United States
+102054|Zittau, Germany
+102851|Tranquility, United States
+101179|Jonesboro, United States
+101835|Limestone, United States
+103841|Orfordville, United States
+101795|Holliday, United States
+104201|Suwon, Korea
+103633|Frederick, United States
+100645|Big Rock, United States
+104305|Jetmore, United States
+100020|Pleasantville, United States
+102589|Frederick, United States
+104675|Young America, United States
+101239|Pontotoc, United States
+104920|Wister, United States
+100876|Gandhinagar, India
+101439|KILLALOE, Australia
+102235|Delmar, United States
+101135|Cokato, United States
+103616|Jarrell, United States
+103447|Plymouth, United States
+102362|Siilinjrvi, Finland
+101948|Dewar, United States
+103101|Presque Isle, United States
+103528|Hodgen, United States
+101803|Toppenish, United States
+101889|Washingtonville, United States
+102295|Sabana Grande Palenque, Dominican Republic
+104602|Diggins, United States
+100177|Millbury, United States
+103395|Surprise, United States
+103902|San Juan, Philippines
+100270|Chojnice, Poland
+101493|Coyville, United States
+102488|Kenilworth, United States
+104620|Lansing, United States
+104544|Armstrong Creek, United States
+101113|Bumpus Mills, United States
+100873|Sabattus, United States
+104739|Ryegate, United States
+101592|Wilmington, United States
+102309|Baking Board, Australia
+100681|Jones Hill, Australia
+102796|Enfield Center, United States
+104761|New Haven, United States
+102957|New Albany, United States
+103061|Rockleigh, United States
+103739|Pialba, Australia
+101816|Coyanosa, United States
+102766|Kooralgin, Australia
+104353|Grand Junction, United States
+100756|Palermo, Italy
+104418|Frogner, Norway
+102299|Galatia, United States
+102022|Jenkinsville, United States
+102291|Mako, Hungary
+104849|Union, United States
+104221|Vlaardingen, Netherlands
+101554|Verdalsoren, Norway
+100069|Pembroke, United States
+101883|Union Star, United States
+102811|Battle Mountain, United States
+104533|Newcastle, United Kingdom
+104114|Verdugo City, United States
+102909|San Saba, United States
+102418|Oakvale, United States
+103514|Feldkirchen, Austria
+100592|Gould City, United States
+104182|Hua Shan, China
+100784|North Bend, United States
+103920|Dover AFB, United States
+103206|Jeffrey City, United States
+101173|Shirley, United States
+100930|Asbury, United States
+100764|Tyngsboro, United States
+104404|Cawdor, Australia
+104605|Blossburg, United States
+102600|Farner, United States
+102995|Bon Wier, United States
+100348|Evart, United States
+100476|West Rushville, United States
+100138|Hartford, United States
+104101|Stone Mountain, United States
+101253|Prinsburg, United States
+102659|Custer, United States
+102074|Marland, United States
+100443|Westlake Village, United States
+101587|Dawson, United States
+100323|Sandringham, Australia
+102398|Coats, United States
+100850|Hazelhurst, United States
+102543|Northampton, United States
+101854|La Jolla, United States
+103046|Ronceverte, United States
+101595|Sunshine, Australia
+102072|Cary, United States
+101369|Hackettstown, United States
+101932|Tannersville, United States
+100150|Gladstone, United States
+100552|Welling, United States
+103323|Ronco, United States
+103690|Haskell, United States
+100758|Tomah, United States
+103200|Coeymans, United States
+100857|Peosta, United States
+102241|Athens, United States
+101993|Shaw, United States
+101731|Morton, United States
+100548|Great Wilbraham, United Kingdom
+101504|Ramey, United States
+100665|Cantonment, United States
+103929|Navajo Dam, United States
+103498|Thokoza, South Africa
+101909|Glen Alpine, United States
+102339|Shafter, United States
+103602|Varazdin, Croatia
+103886|Monette, United States
+103468|Rogerson, United States
+104549|Garber, United States
+103777|East Bernard, United States
+103688|Loysville, United States
+100165|Bloomsdale, United States
+101128|Lexington, United States
+104758|Murdock, United States
+101105|Maiden, United States
+102232|Carrollton, United States
+103752|Berat, Australia
+102575|Kremsmnster, Austria
+103219|New Delhi, India
+100460|Greenview, Australia
+103527|Dbriach, Austria
+104350|Silver Spring, United States
+103094|Omsk, Russia
+104545|Pioneertown, United States
+104735|La Jara, United States
+102576|Bellevue, United States
+102173|La Crosse, United States
+100558|Nashville, United States
+100782|Venray, Netherlands
+101847|West Leyden, United States
+102340|Dodge, United States
+103943|Sunnyvale, United States
+101981|Westcliffe, United States
+104405|Speedwell, United States
+103628|Ardmore, United States
+100027|Newfield, United States
+100388|Union, United States
+103120|Keuka Park, United States
+100580|Paradise Valley, United States
+102951|Steele City, United States
+102203|Green Camp, United States
+104816|Gulbarga, India
+104218|Sekiu, United States
+104306|Drift, United States
+104635|Loretto, United States
+103582|Reynoldsburg, United States
+104886|Akeley, United States
+100258|Mangham, United States
+102325|Clarissa, United States
+104199|Walnut, United States
+103229|Reno, United States
+100965|North Amherst, United States
+104993|Comstock, United States
+102979|Minturn, United States
+100260|Park Ridge South, Australia
+102111|Holy Trinity, United States
+100531|Jiangling, China
+104959|Baharestan, Iran
+103276|MOUNT CARBINE, Australia
+103400|Ashland, United States
+101389|Kowloon, Hong Kong (SAR)
+104224|Atomic City, United States
+102026|Mostar, Bosnia and Herzegovina
+104349|Wahpeton, United States
+101860|Sleepy Eye, United States
+102504|Middletown, United States
+101982|Ansonia, United States
+101530|Centreville, United States
+101079|Slingerlands, United States
+102004|Darragh, United States
+102726|Apache Junction, United States
+100505|Gladbrook, United States
+104301|Bryant, United States
+102876|East Arlington, United States
+103273|Meyungs, Palau
+101564|Toyama, Japan
+102229|Sargentville, United States
+102838|Canyon City, United States
+101747|Panjim, India
+103088|Sun City, United States
+100958|Andover, United States
+100594|East Hampton, United States
+100591|Umbiram, Australia
+100998|Danforth, United States
+100655|Gleason, United States
+100164|Barrancas, Colombia
+104290|Chennai, India
+104288|Sedalia, United States
+101141|Guadalupita, United States
+104034|Frenchton, United States
+101317|Buckley, United States
+100143|Windom, United States
+100754|Stratton, United States
+102503|Borgosesia, Italy
+101755|Nundah, Australia
+103667|Long Creek, United States
+101866|Strathmore, Canada
+104203|Sudbury, United States
+102606|Mitchell, United States
+103317|Fort Mill, United States
+104769|Arcadia, United States
+101741|Oldfield, United States
+103525|Redfield, United States
+103794|Uttarpara, India
+102404|Boothville, United States
+103608|Emery, United States
+102380|Greene, United States
+101456|Sayville, United States
+103952|Kudat, Malaysia
+103352|Bumpass, United States
+101949|Sawyer, United States
+104066|Bruceville, United States
+104942|Culberson, United States
+104662|Wurdong Heights, Australia
+102675|Kenmare, United States
+104560|Kingsland, United States
+104584|Tuzla, Bosnia and Herzegovina
+103269|Pendleton, United States
+103753|Brownsboro, United States
+100182|Witter, United States
+100884|Tetouan, Morocco
+100629|Keflavik, Iceland
+102859|Deep River, United States
+102524|Blue Gap, United States
+102790|Minetto, United States
+103227|Sioux Rapids, United States
+101529|Saxonburg, United States
+100546|Santa Rosa, United States
+104642|Clarington, United States
+103258|Falkland, United States
+100739|Huddinge, Sweden
+100996|Chesapeake City, United States
+104992|Hackensack, United States
+104134|Nanticoke, Canada
+103163|Freeburg, United States
+101619|Bluewater, United States
+101406|Tallmadge, United States
+102843|Arnold, United States
+101792|Morann, United States
+100284|Edmonton, Canada
+101684|Mount Vernon, United States
+103848|Bradshaw, United States
+102359|Stampede, United States
+104582|Glade Valley, United States
+104887|Hammond, United States
+100525|Opolis, United States
+100017|Milford, United States
+101630|Falcon, United States
+100948|Enid, United States
+104589|Hee, Denmark
+104084|Grillby, Sweden
+103123|Metamora, United States
+102639|Kalaupapa, United States
+102897|Rockaway Beach, United States
+102157|Lewiston, United States
+104024|Orminge, Sweden
+100752|Haverhill, United States
+103988|Princeton, United States
+101566|Cornwall, United States
+102089|Mc Henry, United States
+103172|Prudence Island, United States
+100935|Nevis, United States
+101607|Waianae, United States
+104377|Cooksville, United States
+104969|East Brunswick Towns, United States
+101318|Abbotsford, Canada
+102037|Oxford, United States
+100286|Stretton, Australia
+101837|Stockbridge, United States
+102969|Green Springs, United States
+104295|Ibirite, Brazil
+101062|Calpella, United States
+104359|Petroleum, United States
+102233|Jodhpur, India
+100931|Quincy, United States
+101624|Dale, United States
+102482|Patiala, India
+102076|Sparkill, United States
+103027|Talmage, United States
+101391|Flen, Sweden
+102453|Wadmalaw Island, United States
+103686|Wolflake, United States
+102904|Kimberley, South Africa
+104824|Sollentuna, Sweden
+102391|Callahan, United States
+100400|Burlington, United States
+103969|Halstead, United States
+101637|Lisle, United States
+101176|Conover, United States
+103760|Sykesville, United States
+104958|Mugla, Turkey
+104411|Utica, United States
+104031|Beloit, United States
+102294|Dayton, United States
+100039|Vannes, France
+102651|Chorley, United Kingdom
+103220|Pioneer, United States
+104275|Catawba, United States
+102748|Canastota, United States
+103020|Babcock, United States
+102068|Tollesboro, United States
+101373|Macungie, United States
+102066|Terlton, United States
+101999|Kitts Hill, United States
+104760|San Sebastian, Venezuela
+104211|Bydgoszcz, Poland
+100394|New Lisbon, United States
+101155|Claremont, United States
+103033|Tuskegee Institute, United States
+103103|Mottville, United States
+100533|Clarksburg, United States
+101183|Kalona, United States
+103578|Highland City, United States
+101446|Cleveland, United States
+101561|Lewellen, United States
+104264|Centralia, United States
+100088|Redfield, United States
+100804|Grayslake, United States
+101850|Smithton, United States
+104021|Wedron, United States
+100371|Salina, United States
+104048|Mount Pleasant, United States
+102134|Roosevelt, United States
+101324|Harper, United States
+101397|Plainville, United States
+102424|Trosa, Sweden
+103599|Daleville, United States
+103315|Oxford, Australia
+100112|Bethany, United States
+103499|Mereta, United States
+104297|Connoquenessing, United States
+102428|YUSCARAN, Honduras
+102896|Juntura, United States
+103863|Hollandale, United States
+104622|Harrogate, United States
+100183|Hawthorne, United States
+101921|Macclenny, United States
+104907|Methow, United States
+100941|Padang, Indonesia
+102320|Clarklake, United States
+102194|Tutor Key, United States
+101725|Whitman, United States
+101965|Clintonvale, Australia
+103084|Blythewood, United States
+101027|Gadsden, United States
+100213|Thorne Bay, United States
+103397|Lakeview, United States
+101349|Costa, United States
+100206|Suardi, Argentina
+102898|Shawnee on Delaware, United States
+104718|Dafter, United States
+103874|Kaaawa, United States
+102403|Compton, United States
+101251|West Long Branch, United States
+100257|Union City, United States
+102021|Victorville, United States
+104116|Pacific Palasaides, United States
+100319|Lowell, United States
+104728|Palmer, United States
+102303|Rockland, United States
+104151|Taneyville, United States
+103973|Edgewood, United States
+102255|Goomeri, Australia
+100582|Arequipa, Peru
+104867|Troupsburg, United States
+103417|Moville, United States
+104822|Granville, United States
+102329|Elkins, United States
+100118|Marine on Saint Croix, United States
+104653|Wideman, United States
+102278|Parlin, United States
+101714|Center Moriches, United States
+103322|Lubno, Poland
+100368|Daman, India
+104166|Wellingborough, United Kingdom
+103949|Clyde, United States
+103693|Marbella, Spain
+101419|La Fayette, United States
+100951|Tornado, United States
+101428|Iola, United States
+103990|Dadra, India
+102703|Eksharad, Sweden
+101192|Rigby, United States
+104649|Brant Lake, United States
+101015|Graysville, United States
+100849|Varysburg, United States
+100597|Greenbush, United States
+102579|Redbird, United States
+102490|Haddock, United States
+102159|Lakeland, United States
+102135|Universal City, United States
+104321|Exeter, United States
+101876|Mentor, United States
+102641|Seeley Lake, United States
+103179|Lyford, United States
+102941|Ajman, United Arab Emirates
+102737|Bonnerdale, United States
+100401|Conway, United States
+104108|Oscar, United States
+103517|Perth, Australia
+103558|Fort Lyon, United States
+101255|Alameda, United States
+101799|Smoketown, United States
+104131|Redbank, Australia
+103187|Union Lake, United States
+104081|Yolo, United States
+101064|Hoyleton, United States
+104415|Morgantown, United States
+102043|Blue Grass, United States
+101980|Forssa, Finland
+101989|Chia-i Chia-I, Taiwan
+104836|Tula, Mexico
+103354|Rossburg, United States
+104695|Arcadia, United States
+103649|Glasgow, United States
+104740|Leesville, United States
+103000|Gordonbrook, Australia
+104122|La Chaux-de-Fonds, Switzerland
+102591|River Ranch, Australia
+100921|Bigler, United States
+101400|Shelley, United States
+100044|Gypsy, United States
+100398|Scarville, United States
+102471|Tyrone, United States
+101061|Joliet, United States
+103979|Larwill, United States
+100040|Stockwell, United States
+104600|Frejus, France
+102494|Sturgeon Bay, United States
+104654|Duryea, United States
+102287|Zeigler, United States
+101994|Lipscomb, United States
+104226|Menno, United States
+102564|Hampton, United States
+103128|Libby, United States
+104407|Waialua, United States
+103416|Toledo, United States
+104830|McKenna, United States
+102623|Brownfield, United States
+101051|Urayasu, Japan
+101645|Newcastle, United States
+100067|Winfield, United States
+101153|Ewa Beach, United States
+104658|Lalitpur, India
+102776|Valleyview, Canada
+102563|Patagonia, United States
+102611|Yarnell, United States
+103641|Sextonville, United States
+104674|Rexburg, United States
+103180|Coarsegold, United States
+101884|Delray Beach, United States
+100250|Dubai, United Arab Emirates
+102475|Middle River, United States
+102742|Klokkerholm, Denmark
+100404|Friolzheim, Germany
+103301|Linefork, United States
+102168|Soweto, South Africa
+100430|Bear Creek, United States
+103768|Star City, United States
+101878|Marylhurst, United States
+102733|Cullowhee, United States
+104851|Weymouth, United States
+101969|Shoshone, United States
+101315|Latham, United States
+103567|Isabel, United States
+104946|Valdivia, Chile
+104947|Goree, United States
+101309|Scottsville, United States
+103113|Caryville, United States
+100783|Hoople, United States
+103773|Flora, United States
+101024|Elm Grove, United States
+100492|Pointblank, United States
+100691|Hohenems, Austria
+103350|Lisbon, United States
+101284|WATSONVILLE, Australia
+102102|Midvale, United States
+100489|Delmont, United States
+104571|Gregory, United States
+102390|Milan, United States
+102180|George Town, Cayman Islands
+103224|Maxwell, United States
+101491|Fort-De-France, Martinique
+102472|Nosy-Be, Madagascar
+100034|Franklin, United States
+103643|Lavinia, United States
+104566|Haliday Bay, Australia
+101594|Idabel, United States
+100845|Camatagua, Venezuela
+101459|Coronado, United States
+103238|Upton, United States
+102535|VINCENT, Australia
+104362|Delavan, United States
+104003|Riverdale, United States
+102981|Pelican Lake, United States
+100628|West Hills, United States
+102394|Westminster, United States
+103822|Barkam, China
+101686|Brooks, United States
+100139|Dillsboro, United States
+104563|Epsom, United Kingdom
+100038|Jicin, Czech Republic
+103532|Bernice, United States
+103520|Wolverhampton, United Kingdom
+102928|Sharpsburg, United States
+101973|Jaitaran, India
+101004|Ravne na Koroskem, Slovenia
+101229|Lake Como, United States
+100403|West Wendover, United States
+100623|Georgetown, Guyana
+100202|Chandlers Valley, United States
+100366|Clio, United States
+103440|Montebello, United States
+100316|Carlyle, United States
+101040|Essex, United States
+100895|Warsaw, United States
+103995|Montoursville, United States
+102684|Riverton, United States
+104071|Cervinia, Italy
+102656|Crosbyton, United States
+102397|Avilla, United States
+101367|Akiachak, United States
+104050|Saint Matthews, United States
+102467|Dahlen, United States
+104660|South Lancaster, United States
+101640|Johnstown, United States
+102256|Tombstone, United States
+102377|Naples, United States
+101257|Falmouth, Jamaica
+103335|Warner, United States
+101090|Townville, United States
+104063|Dumbleton, Australia
+103725|Union Hill, United States
+102384|Val-Belair, Canada
+101399|Silver Spur, Australia
+104338|El Campo, United States
+103069|Fort Hill, United States
+104925|Hoagland, United States
+100976|Dixon, United States
+100985|La Grande, United States
+102855|Slaughters, United States
+102917|Plainfield, United States
+103487|Vinton, United States
+102024|Tamborine Mountain, Australia
+101992|Bear Lake, United States
+100825|Carcassonne, France
+100544|Lake Spring, United States
+100152|Memphis, United States
+104340|Appleton, United States
+103441|Putnam, United States
+102646|Le Center, United States
+104827|Brightview, Australia
+103663|Bowie, United States
+104811|Lively, United States
+103437|Smithmill, United States
+100155|Perry, United States
+101138|Independence, United States
+104061|Midkiff, United States
+101510|Crescent, United States
+101287|Wimborne Minster, United Kingdom
+104059|Nangwee, Australia
+100147|Bundaberg East, Australia
+102861|Duck Hill, United States
+100530|Barber's Corner, United States
+103756|Cuba, United States
+104677|Gilman, United States
+101234|Adrian, United States
+102304|Eleva, United States
+102729|Sheep Ranch, United States
+102273|Griesheim, Germany
+100193|Wyoming, United States
+102778|Gouverneur, United States
+103981|Fayville, United States
+101801|KOOMBOOLOOMBA, Australia
+102810|Fremont, United States
+100405|Kennedy, United States
+103236|Waunakee, United States
+101224|Mc Intosh, United States
+104516|Patoka, United States
+103149|Fanrock, United States
+104296|Canton, United States
+100685|Ivanhoe, United States
+101542|Blue Springs, United States
+103150|Cohasset, United States
+101962|Leon, United States
+104023|Earth, United States
+104044|Mormon Lake, United States
+104364|Upland, United States
+104910|Uppsala, Sweden
+103092|Coverty, Australia
+103071|Elton, United States
+101849|Kumasi, Ghana
+102889|Roscoe, United States
+103606|Oxly, United States
+103776|Pollok, United States
+101285|Glenwood Springs, United States
+100052|Long Grove, United States
+103166|Richford, United States
+103478|Ujjain, India
+102001|Floydada, United States
+102164|Taby, Sweden
+103134|Moultrie, United States
+101443|Johnstown, United States
+101831|Oley, United States
+104299|Gastonville, United States
+104260|Oskaloosa, United States
+100018|Troms, Norway
+104979|Sakado, Japan
+101856|Frenchglen, United States
+103343|Summer Shade, United States
+104130|Terry, United States
+102697|Waldorf, United States
+103813|Osage Beach, United States
+100111|Cobden, United States
+104269|Honesdale, United States
+103850|Eastbourne, United Kingdom
+103454|Fromberg, United States
+101266|Lyons, United States
+104227|Blue Diamond, United States
+102312|Butler, United States
+102030|Quitman, United States
+101245|Clarksboro, United States
+104083|Avoca, United States
+103017|Dewart, United States
+103399|Euclid, United States
+103497|Delmont, United States
+103866|Beaver Creek, Canada
+101482|Dunhua, China
+104788|Naturita, United States
+103962|Waverly, United States
+104294|Gorham, United States
+100520|Laveen, United States
+101935|Westchester, United States
+103941|Limington, United States
+104673|Rochester, United States
+100311|Nickelsville, United States
+102149|The Hague, Netherlands
+102438|Sylvester, United States
+103107|Chino, United States
+103958|Cayuga, United States
+101026|Mooresville, United States
+101819|Gelgaudiskis, Lithuania
+103917|Lefthand Branch, Australia
+101186|College Place, United States
+101041|Rostock, Germany
+102792|Yukon, United States
+102290|Bowler, United States
+104382|Davisville, United States
+100909|Bigfoot, United States
+101052|Dawsonville, United States
+101946|Meriden, United States
+100092|Jaroso, United States
+102368|Canaan, United States
+102006|Gibbs, United States
+100872|Birch Tree, United States
+102162|South Pomfret, United States
+100373|Cement City, United States
+104060|Arcadia, United States
+102652|Cooter, United States
+104894|Saint Francis, United States
+104121|Morral, United States
+100184|Alta, United States
+101269|Thoreau, United States
+102521|Nevada, United States
+101457|Briggsdale, United States
+102499|Narbonne, France
+104971|Stratford, United States
+104961|Walker, United States
+100427|Headrick, United States
+102056|Portland, United States
+101535|Marikina, Philippines
+104438|Holland Patent, United States
+104029|Saint. Joachim, Canada
+101262|Kealia, United States
+100945|Wallula, United States
+101332|Greenwich, United States
+100110|Topusko, Croatia
+100378|Powell, United States
+104988|Verona, Italy
+101638|Powell, United States
+103064|Havre De Grace, United States
+102863|Caliente, United States
+104860|Lakewood, United States
+100724|Wofford Heights, United States
+100522|Edmonton, United States
+102032|Cisco, United States
+101166|Streeter, United States
+104239|Mexicali, Mexico
+100554|Huttonsville, United States
+104558|Wahkiacus, United States
+104915|Ferney, United States
+104895|Herreid, United States
+101708|Mounds, United States
+101580|Alcalde, United States
+100790|Williamson, United States
+104826|Rosemont, United States
+100765|Red Banks, United States
+102993|Thiensville, United States
+101796|Harrisville, United States
+101160|Havaco, United States
+100587|Nichols, United States
+103683|Des Lacs, United States
+104500|Little Eagle, United States
+101065|Clinton, United States
+100477|Lebeau, United States
+104385|Corning, United States
+102526|Fork, United States
+102496|O Neals, United States
+100344|Sterling, United States
+103516|Horner, United States
+100863|Marina Del Rey, United States
+104343|Rosewood, Australia
+101070|South Orange, United States
+103507|Waynesboro, United States
+101649|Jeromesville, United States
+100359|Medimont, United States
+102136|Glenhaughton, Australia
+102337|Springtown, United States
+102028|Humboldt, United States
+103743|Highwood, United States
+104697|Grand Rivers, United States
+101857|Pengjia Yu, China
+100905|Runnemede, United States
+101343|Lamartine, United States
+100382|Deane, United States
+102918|Fostoria, United States
+104223|Tylerton, United States
+102525|Hugo, United States
+104069|Addison, United States
+100733|Valbonne, France
+104838|Dewitt, United States
+100016|Siler City, United States
+103426|Pingree, United States
+103778|Jagraon, India
+103286|Milmine, United States
+101483|Carlisle, United Kingdom
+104282|Asheboro, United States
+102728|Chandler, United States
+104670|Avery Island, United States
+100844|Fort Pierre, United States
+100834|New Westminster, Canada
+102027|Snag, Canada
+104398|Carpenter, United States
+102640|Carthage, United States
+104623|Wahoo, United States
+103939|Bode, United States
+100318|Lawes, Australia
+102890|Marseille, France
+103954|Hendrum, United States
+103689|Hardy, United States
+100635|Neipu Hsiang, China
+103835|Kamagaya, Japan
+103959|Farnham, United States
+101221|Roland, United States
+101888|Sizerock, United States
+104388|Gibbon, United States
+100417|Fairfield, United States
+102336|Saint Charles, United States
+104667|Cee Vee, United States
+104705|Envigado, Colombia
+101762|Winthrop Harbor, United States
+100219|Crocketts Bluff, United States
+100157|Hiawatha, United States
+100313|Laidley South, Australia
+100916|Bokchito, United States
+100908|Eastview, United States
+103757|Dolan Springs, United States
+103075|Callao, United States
+103208|Bristol, United States
+102727|Blue River, United States
+102613|Guasti, United States
+100563|Cornelia, United States
+104482|Wamuran, Australia
+101970|Gibsonton, United States
+100436|Glenorchy, Australia
+103834|Vadodara, India
+104435|Tongaat, South Africa
+103951|Crestline, United States
+103390|Kenneth City, United States
+103358|Shiloh, United States
+100431|Dufur, United States
+103207|Warner, United States
+102364|Caraballeda, Venezuela
+104640|Pagri, China
+103423|Homer, United States
+104900|Lappeenranta, Finland
+102555|Catalina, United States
+104741|Whitesville, United States
+101617|Notasulga, United States
+102785|Adel, United States
+100446|San Bernardo, Chile
+103026|Nickerson, United States
+102762|Greenwood Lake, United States
+101828|Deer Creek, United States
+104324|Biella, Italy
+104070|Stephenville, Canada
+102035|Williamsburg, United States
+102144|North Turner, United States
+103476|Huntley, United States
+103328|Dongsheng, China
+104828|Columbus Grove, United States
+103261|Studio Village, Australia
+103946|Santee, United States
+101571|Qinglong, China
+102730|Pamplona, Spain
+103036|Edgewood, United States
+104489|Fish Haven, United States
+102316|Mosier, United States
+103378|Eagle Springs, United States
+103632|Schifferstadt, Germany
+100478|Allakaket, United States
+100803|Valley Park, United States
+103842|Humacao, Puerto Rico
+102959|Harborcreek, United States
+104328|Penrose, United States
+104781|Laurens, United States
+100363|Lawrenceburg, United States
+101533|Zebbug, Malta
+101104|Catania, Italy
+101308|Como, United States
+100854|Seymour, United States
+103018|Brookfield, United States
+102520|Mountain Home, United States
+103351|Centreville, United States
+101588|Chelmsford, Canada
+100441|Duff, United States
+104183|Phil Campbell, United States
+100827|Sidney, United States
+102698|Cottonwood, United States
+100589|Armstrong Beach, Australia
+102126|Cooper, United States
+104497|Fordoche, United States
+100761|Summit, United States
+100993|Dona Ana, United States
+102071|Irwinton, United States
+103415|Vapi, India
+102739|Seward, United States
+101680|Borden, United States
+102274|Village, United States
+100057|Cologne, United States
+103960|Poprad, Slovakia
+104570|Cambridge, United States
+103260|NANUM, Australia
+100898|Rockville, United States
+101274|Witheren, Australia
+104888|Rockledge, United States
+104615|Schriever, United States
+102632|Antioch, United States
+102558|New Market, United States
+103167|Bloomsburg, United States
+103635|Leavenworth, United States
+103536|Southgate, United States
+102094|Greeley, United States
+101127|Scottdale, United States
+104120|Fairchance, United States
+103537|Rainelle, United States
+102680|Mineville, United States
+103844|Mc Elhattan, United States
+103935|Sunndal, Norway
+104064|Sirsa, India
+102895|Smyrna, United States
+101589|Gary, United States
+102349|Stanton, United States
+101972|Bensalem, United States
+103553|Bethania, Australia
+100944|Republic, United States
+100481|Ashton, United States
+104680|Mack, United States
+104682|Martinez, United States
+100470|Chalkyitsik, United States
+103574|Proctor, United States
+103538|Enterprise, United States
+101414|Michigan City, United States
+103674|Livingston, United States
+104279|KARRON, Australia
+104815|Lan Yu, China
+100098|Butterfield, United States
+104870|Blackwood, United States
+101370|West Decatur, United States
+103401|Yalta, Ukraine
+104864|Leopold, United States
+104897|Cohutta, United States
+102750|Watervliet, United States
+104159|Montezuma, United States
+100576|Mulliken, United States
+100555|Laholm, Sweden
+102069|Nantwich, United Kingdom
+100106|La Rose, United States
+100353|Bankston, United States
+104939|South Burlington, United States
+102815|White Salmon, United States
+104028|Palmyra, United States
+103518|Follansbee, United States
+103858|Turner, United States
+100807|Black Mountain, United States
+103523|Denver City, United States
+104632|Tate, United States
+104283|Hartland Four Corners, United States
+103239|Forbes, United States
+102772|Kingston, United States
+101709|Vstervik, Sweden
+102670|Sandy Hook, United States
+101011|Christine, United States
+102082|Brunswick, United States
+102862|Eagle Pass, United States
+100024|Haliut, China
+100911|Mrida, Spain
+103991|Montgomery, United States
+102523|Kungsbacka, Sweden
+103192|Leota, United States
+101651|Marietta, United States
+104952|Mustang, United States
+104978|Herington, United States
+101674|Lake Dallas, United States
+103039|Bloomfield, United States
+103992|Rishikesh, India
+101960|Ardmore, United States
+104890|Mode, United States
+101996|Champlain, United States
+100278|Mc Ewensville, United States
+103804|Farmingville, United States
+101882|Browder, United States
+100871|Hansville, United States
+103755|Harmon, United States
+104449|Nathan, Australia
+101952|Glenorchy, Australia
+102009|Cavour, United States
+100968|Big Sky, United States
+103410|La Louvire, Belgium
+100613|Haydenville, United States
+104079|Rockville, United States
+103809|Oak Grove, United States
+104581|Fairdale, United States
+103836|Richwood, United States
+100026|Laddonia, United States
+102891|Rio Cuarto, Argentina
+102234|White Haven, United States
+100265|Clothier, United States
+100005|Alexander, United States
+104234|Chillicothe, United States
+103681|Hayward, United States
+103434|Ashton, United States
+102892|Durack, Australia
+100192|Calvin, United States
+103783|Monument, United States
+101326|Jones Mills, United States
+103040|Chalmers, United States
+104191|Mount Pleasant, United States
+104574|Altheimer, United States
+103974|Bella Vista, United States
+100203|Mims, United States
+100740|Holgate, United States
+101028|Glen Dale, United States
+100678|Schlieren, Switzerland
+103937|Olyphant, United States
+103264|Villa Grove, United States
+103555|Broadwater, United States
+100795|Idlewild, United States
+103135|Amqui, Canada
+103118|Bicknell, United States
+100760|Hickman, United States
+101382|Middleport, United States
+103381|Puerto Angel, Mexico
+104015|Antioch, United States
+100735|Shambaugh, United States
+104442|Rockland, United States
+102130|West Palm Beach, United States
+102342|Inchanga, South Africa
+102786|Sharon, United States
+104984|Avalon, United States
+101886|Vega, United States
+100281|Clinchfield, United States
+102532|Rushville, United States
+103393|Lynwood, United States
+100550|Bernard, United States
+101117|Issue, United States
+101688|Hultsfred, Sweden
+102052|Louise, United States
+104991|Lydia, United States
+104610|Corryton, United States
+100992|Oxford, United States
+100433|Kenna, United States
+103209|Gleneagle, Australia
+103901|Maricopa, United States
+101631|Madison Heights, United States
+104010|Woodville, United States
+103210|Rushville, United States
+103675|Barberton, United States
+100099|High Bridge, United States
+103905|Floweree, United States
+104286|Blair, United States
+102150|Mathis, United States
+101870|North Tazewell, United States
+100621|Sondheimer, United States
+102791|Courchevel, France
+103043|Welch, United States
+100643|Blairs, United States
+103852|Keperra, Australia
+103557|Indiantown, United States
+103117|Sanford, United States
+104525|New Kent, United States
+104813|Kulpi, Australia
+103342|Lhunze, China
+104540|Lake George, United States
+102545|Glendora, United States
+103930|West Leisenring, United States
+102854|Boys Ranch, United States
+101944|Chefornak, United States
+104483|Curryville, United States
+104262|Utica, United States
+104561|Oneida, United States
+102409|Salem, United States
+103391|Simms, United States
+102789|Ewing, United States
+101334|Bettsville, United States
+101719|Tolstoy, United States
+104933|Elsie, United States
+101906|East Windsor, United States
+103201|Lincoln, United States
+104598|Kinnear, United States
+102469|Lapwai, United States
+101727|Converse, United States
+103604|Sumner, United States
+103165|Everest, United States
+102436|San Juan, Puerto Rico
+101069|Holcomb, United States
+101560|Ventspils, Latvia
+102117|Lynndyl, United States
+104004|Artemas, United States
+103458|Bauple Forest, Australia
+102046|Roseland, United States
+103747|Nogal, United States
+101785|Lake Panasoffkee, United States
+100627|Westport, Ireland
+101887|Advance, United States
+101273|Margate, United Kingdom
+100028|Dimona, Israel
+103940|Farnam, United States
+104477|Waverly, United States
+102301|Mount Summit, United States
+100889|Pineville, United States
+103105|Wetaskiwin, Canada
+100602|Hurst, United States
+104875|Crofton, United States
+103409|Allensville, United States
+100515|Sobonakhona, South Africa
+100381|McLeod, United States
+104505|Jamul, United States
+104572|Sturgeon Lake, United States
+102502|Hamilton City, United States
+103482|Collierville, United States
+104725|Linden, United States
+103382|Steele, United States
+104467|Pleasant Hill, United States
+104386|Braymer, United States
+104916|Belle Valley, United States
+104567|Cheltenham Township, United States
+100158|Davidson, United States
+104802|Grand Rapids, United States
+101670|Peru, United States
+103024|Milltown, United States
+100659|Cle Elum, United States
+104552|Menoken, United States
+102019|Chelmsford, United Kingdom
+101986|Nicoma Park, United States
+100714|Lafayette, United States
+101941|Moose, United States
+103070|Farmington, United States
+104293|Cushing, United States
+100170|La Porte, United States
+101705|Alberta, United States
+103056|Inman, United States
+101335|Bath, United States
+103627|Live Oak, United States
+103955|Jacksonville, United States
+103489|York, United Kingdom
+100787|Summerfield, United States
+102683|Needham, United States
+100010|Fortuna, United States
+102419|Shade Gap, United States
+103631|Belews Creek, United States
+100813|Hillsdale, United States
+101086|Moundridge, United States
+104814|Eger, Hungary
+103336|Portageville, United States
+101608|Germantown, United States
+102529|Wee Jasper, Australia
+102399|Lynchburg, United States
+101614|Upper Falls, United States
+101942|Indore, United States
+102559|Wakefield, United States
+102973|Lanark, United States
+103744|Pittsburg, United States
+104711|Norris, United States
+102449|New Point, United States
+101537|Lerna, United States
+104617|Sarabah, Australia
+100461|Hoosick, United States
+104426|Meredosia, United States
+101822|Locarno, Switzerland
+103191|Aldoga, Australia
+103796|Furth Im Wald, Germany
+102828|Meadows, United States
+103473|Guaranda, Ecuador
+100321|Gold Beach, United States
+102356|Phillipsville, United States
+100805|Veteran, United States
+103290|Worthington, United States
+100967|Oviedo, United States
+101098|Lerwick, United Kingdom
+103495|Solway, United States
+104402|Analomink, United States
+102280|Sandisfield, United States
+101861|Cheras, Malaysia
+101380|Shasta, United States
+103612|Hickory, United States
+103021|Riverdale, United States
+103965|Salto, Uruguay
+100261|Fulton, United States
+103953|Davis, United States
+101550|Arden, United States
+103508|Palisades, United States
+103907|Jamestown, United States
+101068|Indian Lake, United States
+100084|Broken Arrow, United States
+100542|Howard, United States
+102208|East Point, United States
+101046|Terrell, United States
+103124|Helper, United States
+102932|Belpre, United States
+102051|Blanks, United States
+104439|Green Sulphur Springs, United States
+104850|Vilnius, Lithuania
+102262|Chest Springs, United States
+102883|Milton, United States
+103232|Meadville, United States
+104111|Big Bend, United States
+103618|Garrard, United States
+103702|Mullingar, Ireland
+100149|Bryan, United States
+100462|Bloomingburg, United States
+104812|Hayneville, United States
+102379|Essex Junction, United States
+100234|YARRABAH, Australia
+102900|Heber Springs, United States
+102594|Gisborne, New Zealand
+103146|McKenzie, United States
+101846|PORMPURAAW, Australia
+103687|Fernandina Beach, United States
+102649|Elk Point, United States
+101648|Mosca, United States
+101198|Dunwich, Australia
+104508|Lecco, Italy
+101376|Changshu, China
+103389|Portersville, United States
+101519|Deerfield, United States
+103878|Kresgeville, United States
+100054|Chester, United States
+100212|Pearl City, United States
+102053|Seaview, United States
+100984|Finger, United States
+100838|Iona, United States
+104805|West Salem, United States
+103868|Wood River, United States
+101511|Flaxville, United States
+102609|Tranquillity, United States
+101863|Trnava, Slovakia
+102823|Acacia Ridge, Australia
+104709|Kimberly, United States
+103011|Gillette, United States
+104913|Strawberry, United States
+103270|Clipper Mills, United States
+102108|Centertown, United States
+100064|Manitou, United States
+100907|Dumbarton, United Kingdom
+100080|Beckley, United States
+104281|Jamesville, United States
+101059|Holtsville, United States
+104371|Butler, United States
+100853|Iron, United States
+101737|Summerdale, United States
+103522|Senonches, France
+103894|Newcastle, Australia
+101830|Larchwood, United States
+101442|Dexter City, United States
+101467|Cagayan, Philippines
+103950|La Reina, Chile
+103734|Hastings, New Zealand
+103513|Bhuj, India
+101242|Burolo, Italy
+103089|Hull, United States
+103141|Pasadena, United States
+100547|Spring Valley, United States
+101092|Hickory Grove, United States
+100885|Blandinsville, United States
+100249|Carthage, United States
+104086|Mc Cool Junction, United States
+101839|Saint-Lambert, Canada
+100728|Petrozavodsk, Russia
+102003|Collinston, United States
+104173|Elma, United States
+101387|Ocean Beach, United States
+104471|Converse, United States
+101450|Corning, United States
+102549|Berrien Center, United States
+101006|Belden, United States
+103910|Thornton, United States
+104027|Strasburg, United States
+103144|Ohrid, Macedonia
+102835|Payson, United States
+102385|Jourdanton, United States
+103982|Montgomery City, United States
+100267|Laguna De Perlas, Nicaragua
+100291|Vlissingen, Netherlands
+101639|Woodland, United States
+101663|Buzau, Romania
+100840|Penokee, United States
+102381|Ashley, United States
+102285|Glen Allen, United States
+104014|Plainfield, United States
+102637|Ohiopyle, United States
+103394|Viola, United States
+100292|Denbo, United States
+102302|Parramatta, Australia
+102797|Blocker, United States
+102798|Hailey, United States
+102393|Lexington, United States
+102961|Kincheloe, United States
+100468|Napoleon, United States
+101310|Red Hook, United States
+102192|Borup, United States
+103155|Piercy, United States
+100391|Bailey Island, United States
+101094|Lakeside, United States
+102067|Bliss, United States
+104020|Putnam, United States
+103826|Alloway, United States
+102565|Dunkirk, United States
+102474|Salyer, United States
+103304|Montpelier, United States
+103568|Hebel, Australia
+102322|South Carrollton, United States
+101689|Westmoreland, United States
+104507|Ashburn, United States
+100083|Gifford, United States
+104521|Mulgowie, Australia
+101900|Chilo, United States
+102915|Deepwater, United States
+103864|Rawson, United States
+101874|Norwalk, United States
+103970|Helton, United States
+100689|Irondale, United States
+101698|Recife, Brazil
+102544|Madison, United States
+103407|Bejou, United States
+103293|Stratford, Canada
+102708|Stinson Beach, United States
+103324|Flagstone Creek, Australia
+104575|Sunderland, United States
+103143|Turkey, United States
+103366|Helsingr, Denmark
+104733|Claysville, United States
+103125|Mc Gehee, United States
+103310|Gorham, United States
+100279|Murphys Creek, Australia
+101281|Detroit, United States
+104750|Irbid, Jordan
+102031|Stanmore, Australia
+101295|Sabinas, Mexico
+104215|Lexington, United States
+100354|Montvale, United States
+102311|Rock City Falls, United States
+101210|West Sunbury, United States
+100500|Palestine, United States
+102190|Klamath, United States
+104949|Puerto Escondido, Mexico
+102583|Queen City, United States
+102834|Zemun, Yugoslavia
+103002|Ciudad Obregon, Mexico
+100903|Cygnet, United States
+104513|Hampton Falls, United States
+104780|Hamilton Square, United States
+100472|Dearborn Heights, United States
+104901|Bar-sur-Loup, France
+102123|Downsfield, Australia
+101746|Dyersville, United States
+103501|Madison Mills, United States
+102699|Custar, United States
+104105|Goes, Netherlands
+104088|Ellisville, United States
+104839|Hiram, United States
+101085|Granite Falls, United States
+101780|Wright, United States
+103104|Genoa, United States
+103869|Via Del Mar, Chile
+100625|Butterfield, United States
+103050|Reedley, United States
+102913|Cornucopia, United States
+102198|Henderson, United States
+101862|Kendall, United States
+101742|Prague, United States
+103624|Bombay, United States
+104302|Greenlawn, United States
+100196|Hope, United States
+103654|Passadumkeag, United States
+102012|Kapelle, Netherlands
+103078|Lewis, United States
+103636|Littlefield, United States
+101305|Getzville, United States
+102553|Miri, Malaysia
+102753|Karawaci, Indonesia
+101454|East Randolph, United States
+101976|Lake Lure, United States
+103650|French Camp, United States
+104252|Harrisburg, United States
+102686|Forest Grove, United States
+100277|Santa Rosalia, Mexico
+100569|Lakota, United States
+104372|Kinsey, United States
+102777|Fair Grove, United States
+104437|Lagoa, Portugal
+102140|Sahuarita, United States
+104126|Illinbah, Australia
+104487|South Charleston, United States
+103379|Mount Clemens, United States
+100383|New Ross, Ireland
+101955|Warren, United States
+101328|Jacobsburg, United States
+100007|Shrewsbury, United States
+103332|Ulman, United States
+102824|Tornillo, United States
+102161|Pecan Gap, United States
+104911|New Boston, United States
+100652|Lipan, United States
+100718|Sparland, United States
+100586|Shache, China
+100458|Lineville, United States
+102864|Wilsonville, United States
+102152|Enterprise, United States
+104245|Newfields, United States
+103769|Fajardo, Puerto Rico
+104413|Bluff City, United States
+104357|Baralaba, Australia
+100852|Temple Bar Marina, United States
+100119|Great Bend, United States
+103661|Pontivy, France
+100749|Deming, United States
+100767|Bli Bli, Australia
+103119|Roma, Australia
+104317|Hammerfest, Norway
+102415|Krnov, Czech Republic
+104884|Van Hornesville, United States
+101774|Basking Ridge, United States
+102802|Baku, Azerbaijan
+104473|Doctor Creek, Australia
+100129|Robbinsville, United States
+103279|Donora, United States
+101551|Pettibone, United States
+101585|Elmira, United States
+102879|Vienna, Austria
+101936|Cremona, Italy
+104025|YINGKOU, China
+101950|Copse, Jamaica
+100220|Siping, China
+102754|Lilydale, Australia
+100296|Mount Morris, United States
+101711|Cambridge, Jamaica
+104431|Claremont, United States
+103318|Leeton, United States
+103691|Vermontville, United States
+103676|Pforzheim, Germany
+104193|Wilburton, United States
+102620|Morenci, United States
+102204|Watseka, United States
+101074|Hitchita, United States
+101716|Nu Mine, United States
+101590|Coupon, United States
+103133|Montrose, United States
+103596|Volda, Norway
+102282|West Alexander, United States
+100823|Elgin, United States
+103373|Bradfordsville, United States
+102506|Lu Verne, United States
+100093|Free Union, United States
+100455|Holicong, United States
+103023|IDALIA, Australia
+101915|Iwai, Japan
+104289|Stony Point, United States
+102045|Bismarck, United States
+104524|Clarkridge, United States
+102541|Bylas, United States
+104517|Carrier, United States
+103695|Thacker, United States
+101798|Albertville, United States
+103072|Falconer, United States
+100033|South Lima, United States
+104387|Marionville, United States
+100843|Dunnsville, United States
+101223|Elkton, United States
+101097|Chatham, United States
+103096|Hume, United States
+104155|Holyoke, United States
+103594|Wrenshall, United States
+104762|Marion, United States
+103751|Tuba City, United States
+102743|Marcy, United States
+101420|Pala, United States
+104536|Guarda, Portugal
+100927|Laclede, United States
+104113|Kettering, United Kingdom
+101559|South Salem, United States
+102374|Almeria, Spain
+100776|Highland Plains, Australia
+101568|Arrecife, Spain
+104379|Argyle, United States
+103563|Mullett Creek, Australia
+103680|Edna, United States
+104244|Countyline, United States
+101940|CARRINGTON, Australia
+101124|Xiushui, China
+101885|Chesterfield, United Kingdom
+104844|Loco, United States
+103888|Aiken, United States
+102731|Newton Falls, United States
+103707|New Johnsonville, United States
+100046|Amery, United States
+101371|Kununurra, Australia
+104691|Danville, United States
+104506|Vashon, United States
+100087|Williams, United States
+101231|Wiener Neustadt, Austria
+104611|Hastings, United States
+103493|Berwind, United States
+100142|Sundsvall, Sweden
+102186|Capitan, United States
+101267|Artemus, United States
+103296|Southside, United States
+101329|Oconto, United States
+100189|Okawville, United States
+102677|Salisbury, United States
+103446|Valdez, United States
+104684|Glen Wild, United States
+104259|Splendora, United States
+100396|Sabinsville, United States
+100573|Bolton, United States
+102008|Du Quoin, United States
+102949|Woodland Park, United States
+101961|Summer Lake, United States
+102146|Beverly Shores, United States
+101667|Neligh, United States
+101170|Greenough, United States
+102227|Woodland Mills, United States
+100012|La Motte, United States
+104462|Atsugi, Japan
+100664|Las Vegas, United States
+103645|Virginia Beach, United States
+102807|Ute, United States
+104936|Sabula, United States
+103294|Higbee, United States
+104053|STEPHENS ISLAND, Australia
+100438|Orogrande, United States
+100830|Diamond Point, United States
+103544|Skelton, United States
+103893|Owen Sound, Canada
+102260|Madison, United States
+101701|WALKAMIN, Australia
+101197|San Patricio, United States
+100023|Boalsburg, United States
+100049|Stockdale, United States
+100377|Hurley, United States
+103281|Charleroi, United States
+103584|Westboro, United States
+104422|Joshua Tree, United States
+104208|Ventura, United States
+104976|Safed, Israel
+102002|Murray, United States
+100185|Oxley, Australia
+104585|Vernon, United States
+102139|Fairfax Station, United States
+103780|Winfield, United States
+102817|Nellis AFB, United States
+104468|Monterey, United States
+103005|Hamar, Norway
+100335|Killeen, United States
+101359|Neptune, United States
+100504|Burton, United States
+103521|Philadelphia, United States
+101238|Lyons Falls, United States
+102401|Jamestown, United States
+100677|Llano, United States
+100144|Columbia, United States
+104966|Ma Ma Creek, Australia
+104587|Glasgo, United States
+101038|Bradford, United States
+100466|Olivia, United States
+103185|Key Biscayne, United States
+101526|Maia, Portugal
+102088|Lowland, United States
+100410|Poortugaal, Netherlands
+104577|Granger, United States
+100269|Nocatee, United States
+101039|Minnesota City, United States
+103722|Windsor, United States
+103872|Ostrava, Czech Republic
+102060|Kendall, United States
+104523|Dallas, United States
+102974|Fairmount City, United States
+103455|Passage Fort, Jamaica
+103404|Linch, United States
+102806|Kristianstad, Sweden
+104823|Reidsville, United States
+104896|Torquay, Australia
+102334|Hoffman, United States
+101838|Mount Lofty, Australia
+100198|Broadus, United States
+104645|Hillsboro, United States
+102950|New Hampshire, United States
+100389|Selma, United States
+103918|HERBERTON, Australia
+103784|Perry, United States
+100449|Shawnee, United States
+101468|Chidester, United States
+100615|Sandy Creek, Australia
+104142|Carupano, Venezuela
+103787|Burrum, Australia
+100753|Dorotea, Sweden
+101042|Sciota, United States
+103028|Rumney, United States
+102347|Lagos, Portugal
+102451|Davie, United States
+101784|Page, United States
+100349|Ralston, United States
+103246|Warda, United States
+102725|Saharanpur, India
+101217|Magee, United States
+102142|Sandakan, Malaysia
+104207|Hurghada, Egypt
+101771|Vestaburg, United States
+101445|Matawan, United States
+103535|Round Hill, United States
+103552|Wapwallopen, United States
+104661|Ada, United States
+104727|Mendota, United States
+101161|Cuttingsville, United States
+104652|Manilla, United States
+101636|Pickens, United States
+103890|Kingsville, United States
+103543|Mancos, United States
+101150|Brownfield, United States
+102396|Hamilton, United States
+103338|Brantwood, United States
+100075|Caroleen, United States
+103873|Manhattan, United States
+101558|Raipur, India
+104644|GLEN RUTH, Australia
+104712|Bristol, United States
+104157|Wood, United States
+104866|Wishek, United States
+100109|Wicklow, Ireland
+104862|Windham, United States
+101807|Chino Hills, United States
+103927|Lowville, United States
+100883|Wells Bridge, United States
+103004|Fox River Grove, United States
+102724|Salt Spring, Jamaica
+100929|Marlborough, United Kingdom
+103445|Barnett, United States
+100499|Nobby, Australia
+102017|South Shore, United States
+104696|Argyle, United States
+103685|Grand Portage, United States
+100570|Rawlins, United States
+103099|Mount Rascal, Australia
+100497|Cuzco, Peru
+102716|Cambridge, United States
+102977|Mountain View, United States
+102078|Sandy Ridge, United States
+101460|Paia, United States
+101563|Lindale, United States
+101431|St Andrews, United Kingdom
+102498|Liberty, United States
+103677|Linyi, China
+101390|Fitzgibbon, Australia
+100162|Cortland, United States
+104347|Alto Pass, United States
+101786|Odense, Denmark
+104161|New Caney, United States
+100444|Wondunna, Australia
+101195|Harvard, United States
+101416|Karur, India
+100710|Wyandotte, United States
+102375|Pocono Pines, United States
+104831|Avon, United States
+100507|Mount Sterling, United States
+104146|New Holland, United States
+102934|Paradise, United States
+101441|Ogden, United States
+102497|Vestal, United States
+101398|Long Key, United States
+100210|Pucallpa, Peru
+102015|Wallins Creek, United States
+102714|Mount Gay, United States
+103883|Somers, United States
+103466|Fredericktown, United States
+104345|Sauk City, United States
+103359|Posen, United States
+103656|Manokin, United States
+103767|West Newbury, United States
+100048|Roberts, United States
+103735|Garden City, United States
+103699|Debary, United States
+100990|Warren, United States
+101647|Harlingen, United States
+103621|Nanjing Jiangsu, China
+103576|Accomac, United States
+104085|Odanah, United States
+101818|Ideal, United States
+103197|Greenleaf, United States
+104160|Black Rock, United States
+104124|Orwell, United States
+100238|Djurdjevac, Croatia
+103045|Sedan, United States
+102405|Start, United States
+102083|Yushe, China
+102948|Gushi, China
+103829|Meadow Bridge, United States
+104859|Argyle, United States
+104835|Mount Maria, Australia
+103642|Cobleskill, United States
+104271|Peck, United States
+102994|Salem, United States
+104092|Bozrah, United States
+101164|Phillipsburg, United States
+103592|Boulder, United States
+101720|El Arrayan, Chile
+102568|Raleigh, United States
+101675|Housatonic, United States
+104042|Holy Cross, United States
+104392|Mangum, United States
+101659|Bullhead City, United States
+101374|Darlington, United States
+100211|Martha, United States
+103492|Montrose, United States
+100858|Rumford, United States
+104957|Jewell, United States
+103235|Coalinga, United States
+104041|Blockton, United States
+100960|Spencerville, United States
+102448|Morvin, United States
+101379|Motherwell, United Kingdom
+104420|Lindsay, Canada
+102167|Flinton, Australia
+100693|Rosario, Argentina
+103502|Lexington, United States
+101421|Milano, United States
+104057|Leticia, Colombia
+104832|Lampertheim, Germany
+103386|Valley Mills, United States
+104368|Pinewood, United States
+100456|Kaibara, Japan
+101805|Martinsville, United States
+100385|Pomona, United States
+101384|Merton, United States
+104356|Keswick, United States
+102814|Willisville, United States
+103162|Rosedale, United States
+103048|Barbeau, United States
+101918|El Segundo, United States
+101783|Arnprior, Canada
+100574|Westwood, United States
+102059|Danville, United States
+103855|Haiyang, China
+104492|Toddville, United States
+100042|Tonto Basin, United States
+102552|Kenton, United States
+100510|Riceboro, United States
+102455|Abbeywood, Australia
+104921|True, United States
+102363|Munds Park, United States
+103256|Anuppur, India
+100393|Hutsonville, United States
+102602|Sapele, Nigeria
+103364|Rock Island, United States
+103420|Inver Grove Heights, United States
+103832|Penn Yan, United States
+104905|Auke Bay, United States
+101089|Arivaca, United States
+104098|Victor, United States
+101055|Erenhot, China
+101627|Hameln, Germany
+103906|Nancy, France
+102694|Ebenezer, Australia
+104408|Dickinson, United States
+102937|Benld, United States
+101979|Butternut, United States
+100634|Gordon, United States
+102833|Marion, United States
+101107|Decatur, United States
+103714|Calabasas, United States
+101158|Indian Head, United States
+103463|Chilcoot, United States
+101194|Sri Aman, Malaysia
+102077|Martin, United States
+102853|Small Point, United States
+103195|Tekoa, United States
+104277|Duchesne, United States
+104046|Calhoun, United States
+102258|Lakeview, United States
+103862|Ontonagon, United States
+101869|Paddington, Australia
+102596|Dholka, India
+104056|Allendale, United States
+103891|Edwall, United States
+102663|Morris, United States
+103173|Macy, United States
+100021|Ferndale, United States
+100036|Lucerne Valley, United States
+103968|Hatboro, United States
+104541|David, Panama
+102985|Dry Ridge, United States
+104458|Sutter, United States
+101958|Bedford, United States
+104710|Beaufort, United States
+103998|Roachdale, United States
+101707|Gandeeville, United States
+101570|Cecil, United States
+103245|EAST BARRON, Australia
+102980|Long Branch, United States
+102688|Willowbrook, United States
+104752|Wheaton, United States
+101012|Reisterstown, United States
+104908|Victor, United States
+101291|Umhlanga, South Africa
+104481|Cumberland Foreside, United States
+101209|Prophetstown, United States
+104229|Pullman, United States
+102765|Glasgow, United States
+104707|Humble, United States
+102533|Marysville, United States
+103467|MSN TV, United States
+101143|Rockland, United States
+100053|Mount Emlyn, Australia
+104381|Hillsboro, United States
+101418|Covington, United States
+104463|Anacortes, United States
+104998|Ford Cliff, United States
+100114|Blackpool, United Kingdom
+100224|Pauma Valley, United States
+101189|Creston, United States
+103413|Slocomb, United States
+101146|Shirley, United States
+101436|Powers Lake, United States
+101513|Lemon Springs, United States
+100869|Vinemont, United States
+102771|Long Island, United States
+104767|Fyffe, United States
+104783|Hereford, United States
+104595|Georgetown, United States
+100590|Tracyton, United States
+101749|Sarajevo, Bosnia and Herzegovina
+104749|Mill City, United States
+101292|Ferriday, United States
+104588|Pilot Mound, Canada
+101748|Carrizales, Venezuela
+100230|Cokercreek, United States
+103422|Thicket, United States
+101433|Newton Center, United States
+103588|Ransom, United States
+103327|Lodz, Poland
+100123|Renault, United States
+102571|Brake, Germany
+104273|Moron, Mongolia
+104951|Clay Springs, United States
+102172|Frankfort, United States
+100232|Deerfield, United States
+101280|Ovalo, United States
+104110|Songpan, China
+100346|Caroline, United States
+104358|Pegram, United States
+103035|Reddick, United States
+100598|Wauconda, United States
+103251|Trenton, United States
+102181|Indian Head, United States
+103847|Upper Dawson, Australia
+101219|Burkeville, United States
+100917|Bentree, United States
+102539|West Copake, United States
+100300|Martin, United States
+100060|Galt, United States
+102014|Chuxiong, China
+103732|Dacono, United States
+101136|Emmalena, United States
+101009|Lowland, United States
+101002|Peravia, Dominican Republic
+103249|Fackler, United States
+104818|Hardinsburg, United States
+104619|Lueders, United States
+102335|Bitung, Indonesia
+103839|Cummings, United States
+100479|Hysham, United States
+100654|Gouldsboro, United States
+101927|Wauchula, United States
+104212|Vigo, Spain
+103865|Shelby, United States
+101361|Cornwall, United States
+100521|Bartonsville, United States
+103546|Roseville, United States
+100066|Raven, United States
+104626|Verona, United States
+103672|Williamstown, United States
+104868|Haldwani, India
+102597|Moss, United States
+100464|Horse Creek, United States
+103346|Uniontown, United States
+101524|Plaquemine, United States
+100264|Somers Point, United States
+100528|Hutto, United States
+100006|Fredrikstad, Norway
+103591|Dumaguete City, Philippines
+102270|Manzanita, United States
+102763|Spencer, United States
+104370|North Adams, United States
+103626|Loughman, United States
+100003|Rosmalen, Netherlands
+102704|Youngstown, United States
+104557|Morganza, United States
+101622|Redhead, Trinidad and Tobago
+101489|Hickory Flat, United States
+103130|Rajkot, India
+103798|Porta Westfalica, Germany
+102953|Orangeville, United States
+104796|Layland, United States
+102423|Milligan College, United States
+100644|Elmwood, United States
+103170|Wilber, United States
+103106|La Fayette, United States
+104847|Unity Hall, Jamaica
+102665|Crum, United States
+104787|Friendswood, United States
+102672|Woodhull, United States
+104583|Bruner, United States
+100820|Petersburg, United States
+102106|Westchester, United States
+103706|Petersburg, United States
+100226|Siofok, Hungary
+100962|Woodworth, United States
+100420|Foothill Ranch, United States
+101260|Copperas Cove, United States
+104419|Cascade, United States
+101045|Shrigonda, India
+100819|West Liberty, United States
+104937|Coulters, United States
+102330|Barnwell, United States
+100955|Melrose, United States
+104904|Dougherty, United States
+103307|Arendonk, Belgium
+100699|Artigas, Uruguay
+104177|China, United States
+103449|Pelican Creek, Australia
+103644|Kimball, United States
+104073|Bayard, United States
+104721|Orillia, Canada
+103456|Paeonian Springs, United States
+101350|Fort Sheridan, United States
+102768|Begonia, Australia
+102085|Wellesley Hills, United States
+103438|Schaghticoke, United States
+101603|Bennettsville, United States
+103041|Camden, United States
+103073|Nunoa, Chile
+101212|Christiansburg, United States
+100002|Anamosa, United States
+101820|Lebanon, United States
+103470|Miramonte, United States
+102038|Clayton, United States
+102903|Eminence, United States
+104609|Vinton, United States
+102513|Dalby, Australia
+104498|Peace Valley, United States
+102507|Fort Ogden, United States
+101130|Kenvil, United States
+103471|Copake Falls, United States
+100073|Broxton, United States
+102621|Ocean City, United States
+101593|Ramona, United States
+100136|Rupert, United States
+101479|Appleton, United States
+101656|Rancho Santa Fe, United States
+100031|Adger, United States
+103132|Vanceboro, United States
+103509|Garden City, United States
+101101|Fairfield Bay, United States
+100723|Saint Francis, United States
+101836|Zarasai, Lithuania
+104526|Oakland Mills, United States
+104909|Charlotte Court House, United States
+104550|Manor, United States
+103964|Southport, United States
+101567|Schuyler Lake, United States
+103374|Kennebec, United States
+104318|Ford City, United States
+101790|Oyoko, Ghana
+102958|Mikawa, Japan
+103357|Hamlet, United States
+101945|Kent City, United States
+103283|Melfa, United States
+103879|Mahomet, United States
+100919|Clearwater, United States
+103360|Brevig Mission, United States
+104778|Pagegiai, Lithuania
+103211|Ironton, United States
+103500|Hawley, United States
+104803|Haskins, United States
+101562|Corral, United States
+100801|Rankin, United States
+100274|Birchleaf, United States
+102010|Markleysburg, United States
+104378|Hinesville, United States
+101279|Jena, United States
+102473|Tappahannock, United States
+103819|Jalalabad, India
+100700|Geronimo, United States
+103909|Glen Hope, United States
+101336|Sunny Side, United States
+102633|Browerville, United States
+102143|Huntingburg, United States
+100423|Marshfield, United States
+103259|Sandston, United States
+104222|Earlysville, United States
+100014|Sheffield, United States
+104205|Hodges, United States
+102306|Islamorada, United States
+101357|Gardner, United States
+101522|Weston, United States
+104738|Camp Pendleton, United States
+100514|Mill Valley, United States
+100340|Witts Springs, United States
+100977|Wiesloch, Germany
+100609|Merano, Italy
+101490|Yandina, Australia
+104657|Allen Junction, United States
+104744|Oswego, United States
+101250|Leander, United States
+100181|Elwood, United States
+101848|Glady, United States
+100248|Islesford, United States
+104434|McAdoo, United States
+100288|Maribel, United States
+102624|Mc Connellsburg, United States
+104579|Hahnville, United States
+102616|San Juan Pueblo, United States
+100612|West Lebanon, United States
+101050|Trento, Italy
+104982|Sleetmute, United States
+103142|Marcos Jurez, Argentina
+101078|Aquilla, United States
+100356|Vaughan, United States
+104002|Fryeburg, United States
+101732|Muleshoe, United States
+102357|Washington, United States
+101505|Pierre Part, United States
+104994|YUSHU, China
+104597|Perryville, United States
+102610|Plainby, Australia
+100008|Lavallette, United States
+100397|Hollister, United States
+103758|Vendor, United States
+100524|O Fallon, United States
+101552|Port Republic, United States
+102372|Beaune, France
+103068|Boston, United States
+102986|Sweet Home, United States
+104017|Senecaville, United States
+104603|Leting, China
+101316|Meadow, United States
+100000|CAPE TRIBULATION, Australia
+101162|Waldron, United States
+103452|Dalton, United States
+101298|Margate, Australia
+102101|Vedbaek, Denmark
+100891|Eagle, United States
+104376|Goodyears Bar, United States
+101919|Water Valley, United States
+100188|Erhard, United States
+101220|Leisenring, United States
+101177|Helm, United States
+104428|Rincon, Puerto Rico
+104514|Changuinola, Panama
+101282|Piedmont, United States
+100453|Holmes, United States
+100399|Cabins, United States
+100262|Cascadia, United States
+104276|Vergas, United States
+100127|Chatsworth, United States
+103003|West Point, United States
+104446|Silas, United States
+100434|Modiin, Israel
+102023|St Ruth, Australia
+101215|Walhalla, United States
+103515|Auburndale, United States
+102308|Ray Brook, United States
+101729|Alexandra, New Zealand
+100244|Cochiti Lake, United States
+101584|Danbury, United States
+103151|Las Animas, United States
+104337|Saltillo, Mexico
+102701|Manchester, United States
+103609|Norwich, United States
+104094|Covina, United States
+101581|Secor, United States
+100741|stersund, Sweden
+103801|Saint Anthony, United States
+103771|Ocean City, United States
+102784|Hamilton, United States
+100317|Francis Creek, United States
+100650|Moorland, Australia
+100364|Ashland, United States
+102758|CLARAVILLE, Australia
+102868|GROGANVILLE, Australia
+104902|Berkshire, United States
+103640|Sharpsburg, United States
+102938|Chester, United Kingdom
+103806|Cleveland, United States
+103721|Delaware, United States
+101084|Port Arthur, United States
+103703|Kaiserslautern, Germany
+100186|Abbeville, United States
+100059|Enoree, United States
+101321|Middleport, United States
+100156|Hopewell, United States
+104768|Van Wyck, United States
+100848|Bellmore, United States
+100105|Bessemer, United States
+101225|Arlington, United States
+102230|Azua De Compostela, Dominican Republic
+100797|Deuchar, Australia
+100722|Davis, United States
+100670|Voca, United States
+101142|Bastian, United States
+103485|Juda, United States
+104821|Wutul, Australia
+104008|Bishopville, United States
+104133|Raymondville, United States
+100939|Jameson, United States
+101145|Annandale on Hudson, United States
+104180|Peak, United States
+102040|Wilderville, United States
+104307|Walland, United States
+102944|Gunnison, United States
+100447|Alligator Creek, Australia
+100068|Orange, United States
+103766|Kooskia, United States
+104681|Moorefield, United States
+102242|Selayang Jaya, Malaysia
+101752|Melrose, United States
+100922|Cambridgeport, United States
+102137|Cincinnatus, United States
+100413|Onarga, United States
+100227|Balia, India
+104842|Lanesboro, United States
+100835|St Helens, Australia
+100440|Kimberton, United States
+102921|Birmingham, United States
+104798|Lloyd, United States
+101187|Austin, United States
+101236|Cando, United States
+104713|Harmony, United States
+101761|French Village, United States
+100418|Pelican Rapids, United States
+102512|Thida, United States
+103272|Cape Ann&#8206;, United States
+103540|Carr, United States
+103845|North Branch, United States
+104547|Bruin, United States
+100802|Kyle, United States
+101276|Stroh, United States
+102952|Akron, United States
+104651|Munbura, Australia
+103545|Covert, United States
+100814|Rio Tercero, Argentina
+102185|Weimar, United States
+101665|Lankin, United States
+100419|Little Falls, United States
+103615|Holmgrd, Sweden
+101977|Axtell, United States
+100799|Notre Dame, United States
+104174|Ledger, United States
+103177|Arriba, United States
+104665|La Veta, United States
+102902|Convoy, United States
+102998|Atalissa, United States
+101908|Clayton, United States
+102228|Hamilton, United States
+100707|Hagar Shores, United States
+102350|Koper, Slovenia
+101894|Taberg, United States
+104140|Lynx, United States
+103668|Woongoolba, Australia
+100422|Disputanta, United States
+103524|Stephentown, United States
+103097|Rudyard, United States
+104313|Livermore, United States
+101199|Scranton, United States
+100713|Renesse, Netherlands
+104019|Kinderhook, United States
+102097|Andover, United States
+100459|Pleystowe, Australia
+102722|Mattawan, United States
+103405|Ridgway, United States
+100686|Braggs, United States
+101829|Gresham, United States
+104466|Plantersville, United States
+103956|Glen Ellen, United States
+102485|Energy, United States
+103402|Happy Camp, United States
+101920|Berryton, United States
+101060|Lowell, United States
+104873|Morehead, United States
+104968|West Point, United States
+100712|Mechanic Falls, United States
+104590|Wilton, United States
+103459|Porto Nacional, Brazil
+100568|Newport, United States
+102480|Charleston, United States
+103762|COMOON LOOP, Australia
+102189|Benton, United States
+103436|Houma, United States
+104232|Saint Charles, United States
+102431|Astoria, United States
+100616|Upland, United States
+101897|Bolgatanga, Ghana
+101833|Brisbane, United States
+102692|Ridgefield, United States
+104033|Berkhamsted, United Kingdom
+104464|Westhope, United States
+103570|Vinton, United States
+102408|Maniago, Italy
+100661|Etna Green, United States
+103303|Cookson, United States
+102079|Henryton, United States
+102420|Loveland, United States
+103450|Many Farms, United States
+100981|Duquesne, United States
+101252|Fontana, United States
+101008|Falmouth, United States
+103679|Silver Lake, United States
+101527|Teaberry, United States
+100682|Yuanling, China
+103127|Clarksville, United States
+102690|Marysville, United States
+103034|Corona del mar, United States
+102581|Edwards, United States
+102598|Smithfield, United States
+101478|De Kalb, United States
+101470|Payette, United States
+100062|Etawah, India
+104412|Nairobi, Kenya
+100374|Government Camp, United States
+104139|Nova, United States
+103285|Sarona, United States
+102894|Fort Towson, United States
+100218|Bunn, United States
+101426|Colts Neck, United States
+101543|Poughquag, United States
+103431|Sonoma, United States
+104112|Boleslawiec, Poland
+103376|Linz, Austria
+100786|Bethlehem, United States
+101351|Industrial, United States
+103911|Estevan, Canada
+101516|Mississauga, Canada
+103587|Makeevka, Ukraine
+104863|Wiesbaden, Germany
+102430|Glenpool, United States
+104052|Melrose, United States
+103914|Eldon, United States
+101706|Haines Falls, United States
+100619|Loveland, United States
+100166|Bori Kh, India
+104011|Mathura, India
+102245|Amargosa Valley, United States
+104586|Smila, Ukraine
+104240|Douglas, United States
+103590|Champion, United States
+104278|Metaline Falls, United States
+101525|Sutton, United States
+101841|Mizpah, United States
+100704|Reading, United States
+101110|Massena, United States
+102327|Fossil, United States
+104319|Stayton, United States
+104520|Kinsman, United States
+104143|West Baldwin, United States
+104158|Kolding, Denmark
+104882|Darjeeling, India
+103288|Belle Mead, United States
+102586|Conasauga, United States
+101216|Fulton, United States
+101171|Coffs Harbour, Australia
+100029|Watkinsville, United States
+102717|Montezuma, United States
+101306|Teller, United States
+100994|Tillson, United States
+104236|Yuanmou, China
+101501|Wellborn, United States
+101487|Maroon, Australia
+101056|A Corua, Spain
+103186|Suamico, United States
+103694|Alpha, United States
+100103|Kastrup, Denmark
+103976|Hillview, United States
+102206|Natalia, United States
+101540|Salcininkai, Lithuania
+104980|Granville, United States
+102468|The Colony, United States
+101797|Big Cabin, United States
+103657|Dover, United Kingdom
+104326|Spring Church, United States
+103380|Lutz, United States
+101307|Guadalupe, United States
+104145|Souris, United States
+101769|Kilbourne, United States
+103085|New Freeport, United States
+104955|Old Fields, United States
+100330|Medway, United States
+104261|Clayfield, Australia
+102852|Mc Graw, United States
+100779|Owensville, United States
+103442|Aspinwall, United States
+103122|Cactus, United States
+104546|Crete, United States
+102441|Wing, United States
+101546|ERUB, Australia
+101203|Encino, United States
+102477|New Milford, United States
+102445|Mrsta, Sweden
+102395|Cave Junction, United States
+103344|Pingwu, China
+102249|DARADGEE, Australia
+100855|Waldron, United States
+104983|Gayville, United States
+101096|P'yongt'aek, Korea
+104038|Bodrum, Turkey
+102478|Laurel, United States
+103705|Whittaker, United States
+104096|Marfa, United States
+104883|Crandall, United States
+101131|Greensboro Bend, United States
+103586|Spivey, United States
+104548|Edenville, United States
+102447|Elkton, United States
+100076|El Cajon, United States
+104793|Hong Kong, Hong Kong (SAR)
+100303|Kings Bay, United States
+104800|Lecompte, United States
+104639|Burlington, United States
+104972|Kamay, United States
+102871|Sharjah , United Arab Emirates
+101995|Hoyt, United States
+102452|Marshall, United States
+100200|Craignish, Australia
+102268|Sylvania, United States
+101764|Vandalia, United States
+104001|Bardon, Australia
+101120|Bethel, United States
+100662|Algonac, United States
+102305|Medina, United States
+104686|Holly Ridge, United States
+100938|Richland, United States
+100970|Minooka, United States
+100280|Ipswich, United Kingdom
+102747|Danville, United States
+102061|Woodford, United States
+101289|New Haven, United States
+104753|Hebron, Palestinian Territory
+102133|Port Hedland, Australia
+102990|Oilton, United States
+101852|Gigoomgan, Australia
+101694|Litchfield, United States
+103308|Delhi, India
+100737|Vievis, Lithuania
+101855|Redford, United States
+100725|Farwell, United States
+101019|Bethpage, United States
+100509|Powhatan, United States
+102443|Stanmore, United Kingdom
+102275|Macheng, China
+103660|Punalur, India
+102307|Davin, United States
+102187|Bringalily, Australia
+100137|North Monmouth, United States
+101412|Knox, United States
+100256|Hoyt Lakes, United States
+103933|Dover, United States
+102756|Colquitt, United States
+102664|Dixon, United States
+100490|Drybranch, United States
+100862|Nyeri, Kenya
+104251|Fort Davis, United States
+100534|Kingston, United States
+101583|Whitehall, United States
+103580|Shishmaref, United States
+100259|Urbandale, United States
+103805|Helsinki, Finland
+104855|Marshfield Hills, United States
+102719|Autryville, United States
+104671|Manassas, United States
+102321|Scotts Valley, United States
+100247|Caneyville, United States
+104106|Genesee, United States
+102116|Schurz, United States
+100880|Stanberry Grove, Jamaica
+103058|Moore, United States
+103168|Greenfield, United States
+102103|South Bend, United States
+100475|Woodbridge, United States
+104659|Gardnerville, United States
+100325|Manchester, United States
+102826|El Portal, United States
+100320|Richville, United States
+104892|Morrow, United States
+101713|Burson, United States
+102483|Harrisburg, United States
+102627|Carnelian Bay, United States
+103029|Griffithville, United States
+104804|Aabyhoj, Denmark
+104030|Sutton, United Kingdom
+104987|Beaver City, United States
+103284|Shinhopple, United States
+103854|Shelby, United States
+104455|Norville, Australia
+101494|Lawnton, Australia
+102865|Finspng, Sweden
+100738|Syracuse, United States
+100367|Ascot Vale, Australia
+100032|Minsk, Belarus
+100454|Newburyport, United States
+102874|Naples, United States
+101190|Plevna, United States
+100065|Utrecht, Netherlands
+101987|Armorel, United States
+103715|Wakefield, Canada
+103560|Thathawata, India
+101679|Hudson, United States
+102781|Logan Village, Australia
+103007|Abington, United States
+100228|Sheridan, United States
+100859|De Soto, United States
+103266|Southampton, United Kingdom
+100308|Woodlawn, United States
+101139|Natal, Brazil
+101890|Salley, United States
+101005|Dunbar, United Kingdom
+100886|Benowa, Australia
+104344|Paterson, United States
+100719|Netcong, United States
+101687|Tamarac, United States
+102554|Plymouth, United States
+101214|Adams, United States
+101466|Exmore, United States
+102527|Montverde, United States
+103856|Dewitt, United States
+104258|Springville, United States
+102179|Offerman, United States
+101613|Buffalo Mills, United States
+100527|Elsberry, United States
+104230|Banksia Beach, Australia
+102599|Viersen, Germany
+104156|Ravenna, United States
+100896|Fayetteville, United States
+101268|Dallas, United States
+103807|George, South Africa
+100078|Central Square, United States
+100058|Priddy, United States
+102177|Karlsruhe, Germany
+102118|Elkhorn City, United States
+100116|Southfield, United States
+100746|Lincolnton, United States
+101272|Milford Square, United States
+104339|Green Lake, United States
+101821|Burns, United States
+104625|Scott, United States
+100717|Cornell, United States
+104975|Montesano, United States
+104168|Marsteller, United States
+104036|Gerton, United States
+101598|Marengo, United States
+102947|Blanding, United States
+103999|Beverly, United States
+103432|Fairfield, United States
+103205|Friedberg, Germany
+104427|Ransom, United States
+104197|Ruffin, United States
+103629|La Ceiba, Honduras
+100706|San Juan, Argentina
+101241|Lawton, United States
+102528|Dilliner, United States
+102582|Glarus, Switzerland
+101817|Post Mills, United States
+100380|Arcadia, United States
+100947|Amalia, United States
+102331|Sugartown, United States
+103090|Tinana, Australia
+100864|Harris, United States
+101342|Pardeesville, United States
+102147|Fort Klamath, United States
+101672|Gallarate, Italy
+104764|Shenandoah, United States
+104717|Philomont, United States
+101362|Jemez Pueblo, United States
+104789|Old Crow, Canada
+100487|Joanna, United States
+104704|Villeurbanne, France
+101368|White River, South Africa
+100657|Muir, United States
+102361|Bellvehi, Spain
+100901|Chatawa, United States
+101204|Roscoe, United States
+102618|Fairview, United States
+100818|Moira, United States
+101503|Gillett, United States
+102213|Mowrystown, United States
+101001|Morris Plains, United States
+104138|Lansdowne, United States
+100601|Carrickfergus, United Kingdom
+102685|Maben, United States
+103646|Northford, United States
+104926|Destrehan, United States
+102400|Byron, United States
+101929|Paya Lebar, Singapore
+102601|Melsungen, Germany
+104479|Lyndonville, United States
+102906|Everton Park, Australia
+104416|May City, United States
+101939|Dumont, United States
+102223|West Kill, United States
+101188|Luverne, United States
+101604|Brndby, Denmark
+103510|West Farmington, United States
+102887|Amboy, United States
+104714|Mount Laurel, United States
+102125|Plano, United States
+100077|Bororen, Australia
+100878|De Mossville, United States
+102975|Cincinnati, United States
+103671|Labadie, United States
+103709|Rockledge, United States
+102905|Swindon, United Kingdom
+103664|Salisbury Mills, United States
+100829|Sturdivant, United States
+104390|Ladera Ranch, United States
+104817|Metamora, United States
+101256|Lynbrook, United States
+103551|Cragford, United States
+101057|Scioto Furnace, United States
+103548|Forest Hill, South Africa
+104679|Glencoe, United States
+101037|Edinburg, United States
+101541|Dispur, India
+104320|Lancaster, United States
+104484|Jamaica, United States
+102353|Belton, United States
+103313|Meru, Kenya
+102588|Blackwell, United States
+101480|Alsea, United States
+104448|New Canaan, United States
+100329|London Mills, United States
+101662|Helmetta, United States
+100406|Williamsfield, United States
+104334|Lawnside, United States
+100791|Barrett, United States
+103060|Huntington, United States
+102635|Nesbit, United States
+104518|Hestand, United States
+101824|Charlotte, United States
+103603|Doss, United States
+100302|Amagansett, United States
+101683|Weston, United States
+100701|Westmoreland, United States
+102257|Chisholm, United States
+102029|Girdler, United States
+103480|State Road, United States
+103814|Newkirk, United States
+100222|Dudley, United States
+102039|Assaria, United States
+103194|Hazelton, United States
+101773|D'Aguilar, Australia
+104869|Petersburg, United States
+103733|Blackstock, United States
+101410|Independence, United States
+102250|Point Arkwright, Australia
+104807|Judson, United States
+104499|Torreon, United States
+103682|Stanley, United States
+102495|Rowe, United States
+103875|Norwich, United States
+103775|Fredericton, Canada
+103038|Uniontown, United States
+100282|Sturgeon, United States
+101812|Brownsville, United States
+100207|Bedminster, United States
+100750|MOUNT PETER, Australia
+100671|Vincentown, United States
+100494|Marthasville, United States
+103820|Utica, United States
+100511|Ames, United States
+100104|Whitewater, United States
+101458|Carlin, United States
+103100|Shaftsbury, United States
+101650|Hensley, United States
+100120|Cotton Center, United States
+100566|Labrador City, Canada
+103561|Steamboat Rock, United States
+102246|Savannah, United States
+102319|Three Mile Bay, United States
+103651|Xisha Dao, China
+100334|Martinsville, United States
+103698|Dayville, United States
+100289|Crow Agency, United States
+100999|Oral, United States
+100956|Fenton, United States
+101313|Top Camp, Australia
+102893|Vizianagaram, India
+101586|Scobey, United States
+101088|Cleo Springs, United States
+103098|De Kalb, United States
+104469|Saint Inigoes, United States
+100986|La Verkin, United States
+102252|Nenjiang, China
+102486|Cayuga, United States
+102073|Wabush, Canada
+104809|Mangualde, Portugal
+103212|Aroma Park, United States
+102099|Clover, United States
+103321|Oconee, United States
+101246|Pinamar, Argentina
+104409|Tarentum, United States
+100205|Xainza, China
+100549|Whitehorse, United States
+100887|Annaka, Japan
+104303|Palai, India
+101455|Bengaluru, India
+100241|Delmar, United States
+101754|Eureka, United States
+101642|Perth, United Kingdom
+103247|Eagles Mere, United States
+103697|Sugar City, United States
+103435|Quilpie, Australia
+102679|Mc Millan, United States
+104144|Jal, United States
+103562|Dublin, United States
+102221|Bagdad, United States
+103252|Danville, United States
+104366|Eggleston, United States
+101437|Christiansburg, United States
+104249|Ascutney, United States
+100085|Chestnut, United States
+100056|Tellico Plains, United States
+104496|Alborn, United States
+102922|Jersey Shore, United States
+102803|Milan, United States
+103556|Arbil, Iraq
+100246|Agawam, United States
+100332|Mount Vernon, United States
+102570|Uberaba, Brazil
+104706|Providence, United States
+102378|Java Village, United States
+100426|Vance, United States
+104254|Fulton, United States
+104093|Minto, United States
+103788|Biwabik, United States
+104494|Old Saybrook, United States
+101148|Weldona, United States
+104689|Adams, United States
+103579|McFaddin, United States
+100387|Kirkland Lake, Canada
+100102|Fort Defiance, United States
+100673|Qingjiang, China
+104743|Fredericksburg, United States
+101403|Middleboro, United States
+101591|Saint-Gaudens, France
+104238|North Fort Myers, United States
+101834|Atkinson, United States
+104170|Stoutland, United States
+101029|Leonardsville, United States
+101739|Ronan, United States
+102933|Dannemora, United States
+100519|Talihina, United States
+101149|Trenton, United States
+104999|Coplay, United States
+101875|Arad, Romania
+104650|Stoneville, United States
+103253|Bethany, United States
+104410|Tilton, United States
+102310|Doe Run, United States
+102358|Burt Lake, United States
+100191|Seaman, United States
+102573|Cedarvale, United States
+101346|Lamesa, United States
+101547|Shawneetown, United States
+103213|Vado, United States
+102160|Three Springs, United States
+104263|Weston, United States
+104055|Occidental, United States
+100022|Grand Isle, United States
+100043|Kenney, United States
+104530|Central, United States
+102749|Mather, United States
+101758|Nelson, Canada
+101122|Somerset, United States
+101928|Mesilla Park, United States
+101871|White Stone, United States
+101486|Yaritagua, Venezuela
+104311|San Ramon, Chile
+103526|Gambettola, Italy
+100474|Bovard, United States
+102888|Tecopa, United States
+102607|Jay, United States
+104606|Waverly, United States
+104383|Skanderborg, Denmark
+103851|Glen Rock, United States
+100826|Pioneer, United States
+100841|Lowell, United States
+104051|Ruby, United States
+104977|Fulks Run, United States
+102514|Greenfield Center, United States
+103199|Bilinga, Australia
+100775|Carter, United States
+104701|Treboda, Sweden
+101907|Irwin, United States
+100015|Monrovia, United States
+102886|Blythdale, Australia
+100167|Jay Em, United States
+103573|Mount Vernon, United States
+104854|Kirkland, United States
+102207|Amity, United States
+102201|Meacham, United States
+100982|Sarpsborg, Norway
+102212|Chatham, Jamaica
+102373|Lockhart, United States
+103961|Social Circle, United States
+104429|Spokane, United States
+104755|Halbur, United States
+102184|Angela, United States
+101207|Saint Benedict, United States
+104065|La Cygne, United States
+100553|Vermillion, United States
+102075|La Barca, Mexico
+102773|New River, United States
+104253|East Northport, United States
+100875|Angle Inlet, United States
+101733|White Rock, United States
+102924|Felton, United States
+100697|Brooker, United States
+101196|Elk Horn, United States
+100254|Soldier, United States
+104917|Hayden, United States
+102842|Borken, Germany
+101914|Spurger, United States
+100773|Hammond, United States
+102267|Richfield, United States
+100532|Donaldson, United States
+103228|Meally, United States
+101925|Easton, United States
+100647|Hemet, United States
+101072|Goodview, United States
+102971|Branscomb, United States
+101922|Pinetops, United States
+102214|Red Oak, United States
+102723|Hubbard Lake, United States
+102551|Little Mountain, Australia
+100372|Burns Flat, United States
+100287|Nezperce, United States
+101633|Colfax, United States
+101152|Augsburg, Germany
+101185|Santa Elena, United States
+100793|Alpignano, Italy
+104214|Philipsburg, United States
+101032|Uvalda, United States
+100272|Portage, United States
+104694|Barnes City, United States
+102462|Saint Francis, United States
+100698|Dover Plains, United States
+103678|Summersville, United States
+103059|Mentmore, United States
+102740|Rio Grande, United States
+104074|Vonge, Denmark
+101115|Danciger, United States
+101167|Poestenkill, United States
+103392|Loveland, United States
+101472|Grafenbach, Austria
+104089|Richmond, United States
+103419|Gibson, United States
+100709|Nakina, United States
+100428|North Oxford, United States
+103347|Zalaegerszeg, Hungary
+103669|Buchs, Switzerland
+104248|Turnerville, United States
+100134|Ekaterinburg, Russia
+102145|Brashear, United States
+100390|Sawyerville, United States
+102849|Carolina, United States
+102112|Gardendale, United States
+103030|Bigfork, United States
+101405|Elberon, United States
+103506|KupiSkis, Lithuania
+101751|Riddle, United States
+100324|Findley Lake, United States
+100953|Baldwin, United States
+102636|Trebloc, United States
+102966|Odder, Denmark
+104941|Guymon, United States
+101066|Ellsworth, United States
+103154|Okarche, United States
+101643|Valle De Bravo, Mexico
+104403|Evans, United States
+103169|Bessie, United States
+101765|Westminster, United States
+100842|Leamington, United States
+101248|Eakly, United States
+100013|Mountain View, United States
+100595|Clarksville, United States
+100025|West Haverstraw, United States
+100952|Pooler, United States
+100231|Brooklyn, United States
+101054|Elaman Creek, Australia
+103383|Red River, United States
+102283|Maidenhead, United Kingdom
+103221|Freeman, United States
+100223|Flekkefjord, Norway
+104501|Prospect, United States
+100486|Deagon, Australia
+100730|Chestnut Ridge, United States
+100651|East Saint Louis, United States
+101858|Murrayville, United States
+102425|Cayuga, United States
+102695|Beach Lake, United States
+104931|Ras al Khaymah, United Arab Emirates
+101632|Central Village, United States
+101444|Linton, United States
+103384|Vaughn, United States
+101896|Waveland, United States
+100794|Milwaukie, United States
+101809|P'yongyang, Korea
+103630|Liverpool, United States
+103583|South Mackay, Australia
+102847|Hamlet, United States
+103554|Smithville, United States
+103569|Riley, United States
+104039|Maracas Bay Village, Trinidad and Tobago
+102939|Greifswald, Germany
+100600|Sheyenne, United States
+103889|Virginia City, United States
+102084|Tuntutuliak, United States
+104397|Bethelsdorp, South Africa
+102064|Hinkle, United States
+102669|Elba, United States
+104150|Superior, United States
+103305|Capacho, Venezuela
+103593|Lillington, United States
+101200|Duduza, South Africa
+103887|Dixfield, United States
+102628|Swedeborg, United States
+100940|Carson City, United States
+101476|Shin Lin District, China
+104879|Coquitlam, Canada
+103271|Potwin, United States
+103605|Montbeliard, France
+103931|Newberry, United States
+103899|Eagle Bridge, United States
+103196|Yamauchi, Japan
+102550|Pawnee, United States
+104593|Olton, United States
+101601|Andrews, United States
+103330|West Henrietta, United States
+101978|Hico, United States
+102124|Bucheon City, Korea
+101358|Myakka City, United States
+101043|Edgemont, United States
+104456|Puurs, Belgium
+100094|Horntown, United States
+100221|Le Cannet, France
+102196|Knotts Island, United States
+102757|Dundee, United States
+100695|Charles City, United States
+103716|Waynoka, United States
+100135|Punata, Bolivia
+101206|Mount Warren Park, Australia
+104363|Whitethorn, United States
+104395|Sept-Iles, Canada
+103934|Long Island City, United States
+102049|Newstead, Australia
+103534|Fieldale, United States
+101868|Salem, United States
+100163|Saint Marys, United States
+103800|Florence, United States
+100173|Budennovsk, Russia
+102476|Saint Clairsville, United States
+104163|Springfield, United States
+103010|Gold Run, United States
+100726|Epworth, United States
+103884|Seminole, United States
+102065|Tontogany, United States
+100082|Bagdad, United States
+100469|Colton, United States
+103772|Mc Dowell, United States
+100913|Malines, Belgium
+101695|Rowena, United States
+104067|Lake Odessa, United States
+103761|Iselin, United States
+103904|Chazy, United States
+104032|Alamosa, United States
+104393|Strathmore, United States
+102141|Forksville, United States
+103993|Grand Valley, United States
+104770|Gilbert, United States
+100298|East Walpole, United States
+104095|Cooks, United States
+101657|Carter, United States
+103257|Catheys Valley, United States
+104391|Santa Rita, Venezuela
+103564|Mount Laguna, United States
+100562|Bellthorpe, Australia
+102682|Marble Rock, United States
+100815|Scranton, United States
+104801|Chiefland, United States
+101076|Huntingdon Valley, United States
+103243|Utica, United States
+101621|Otis, United States
+104996|Cornwall on Hudson, United States
+102219|Tyaskin, United States
+103129|Flint, United States
+104308|Summitville, United States
+104189|Marlborough, Australia
+103231|Tytuvenai, Lithuania
+103782|Moelv, Norway
+103665|Higginsport, United States
+101463|Grand Island, United States
+104782|Spindale, United States
+100606|Glencoe, United States
+101471|Creedmoor, United States
+101233|Washington, United States
+100392|Damascus, United States
+103262|Vevey, Switzerland
+101341|Spencer, United States
+104861|Columbiaville, United States
+101438|Newell, United States
+100561|Jilin, China
+102925|Hampstead, United States
+102259|Escalante, United States
+101058|Baring, United States
+102721|Duck River, United States
+101049|Bagley, United States
+102655|Atlanta, United States
+102927|Gray, United States
+100831|Shady Grove, United States
+103597|Grambling, United States
+103892|Cloverdale, United States
+102592|Paron, United States
+101728|Modena, Italy
+100146|Pokaran, India
+101464|Vero Beach, United States
+101668|Oregonia, United States
+101859|Hllviken, Sweden
+100091|Evansville, United States
+100856|Lewisburg, United States
+104175|Horse Branch, United States
+101933|Pishan, China
+100894|Sibley, United States
+102007|NORTHHEAD, Australia
+100283|Dededo, Guam
+100759|Clymer, United States
+102091|Austinville, United States
+101745|Standish, United States
+100465|Elbow Lake, United States
+102856|Wellington, United States
+100959|Wynona, United States
+102920|Bangor, United Kingdom
+103837|Terrel, United States
+100798|Redford, United States
+103326|Wonju, Korea
+102366|Cranberry Lake, United States
+101654|Ogallah, United States
+102844|Crosby, United States
+101802|Allred, United States
+104054|Nainital, India
+100051|Magnolia, United States
+102109|Darlington, United States
+103363|Flying Fish Cove, Christmas Island
+103617|Chewelah, United States
+100556|Welch, United States
+100708|Kinde, United States
+104534|Kaolack, Senegal
+100491|Middlesbrough, United Kingdom
+103519|Judibana, Venezuela
+104663|Coker, United States
+101623|Kazanlak, Bulgaria
+103145|Brady, United States
+104351|Wakayama, Japan
+102422|Brasstown, United States
+102238|The Hermitage, Australia
+103102|Big Stone City, United States
+104348|Collegeport, United States
+104333|Buford, United States
+101425|Summitville, United States
+104509|Niota, United States
+102343|Blacksburg, United States
+104274|Groton, United States
+101528|Montrose, United States
+102926|Vestmannaeyjar, Iceland
+103566|Rutherford, United States
+100140|Lambert Lake, United States
+104963|Wurtulla, Australia
+102034|Linville, United States
+100630|Ankara, Turkey
+101753|PETIONVILLE, Haiti
+103164|Taupo, New Zealand
+101574|Brookston, United States
+103248|Butler, United States
+101134|Kinston, United States
+103086|Cerro Punta, Panama
+102593|Irene, United States
+102848|Hull, United States
+104806|Leetsdale, United States
+102869|Lee, United States
+102105|Hazleton, United States
+101722|Busby, United States
+103316|Jerseyville, United States
+102222|Fifty Lakes, United States
+101735|North Chatham, United States
+104242|Arizona City, United States
+100495|Hillsdale, United States
+104423|Hampton, United States
+104210|Warren, United States
+102732|Akron, United States
+104871|Denbigh, Jamaica
+102041|Dieterich, United States
+102872|Timber Lake, United States
+102713|Otsego, United States
+102631|North Grosvenordale, United States
+102163|Arica, Chile
+100314|Idleyld Park, United States
+102414|Indore, India
+100217|Howes Cave, United States
+100684|Norris, United States
+100370|Hayesville, United States
+102816|Cheb, Czech Republic
+104841|Saint Charles, United States
+100720|New Braintree, United States
+101772|Georgetown, United States
+104460|Fairborn, United States
+100369|Osmond, United States
+103511|Keaau, United States
+102389|Channelview, United States
+104394|Charlton Depot, United States
+100910|Tannersville, United States
+100072|Mattapan, United States
+103403|Maysville, United States
+101956|Wilcoe, United States
+103439|Englewood, United States
+102095|White Sands Missile Range, United States
+102264|Ironia, United States
+100345|Playas del Coco, Costa Rica
+102367|Alabama, United States
+102578|Le Grand, United States
+102231|Overpeck, United States
+103160|Gualaca, Panama
+100483|Vandiver, United States
+103353|Dwight, United States
+104532|Lee, United States
+101386|Oak Forest, United States
+101118|Still River, United States
+100411|Lancaster, United States
+101867|Latur, India
+100800|Mouth of Wilson, United States
+103355|Grand Lake, United States
+102351|McClusky, United States
+100923|Spring Grove, United States
+102877|Baxter, United States
+101618|Dalton, United States
+100608|Leslie, United States
+101125|Solo, United States
+103541|Lock Haven, United States
+100148|Recluse, United States
+100299|Dinmore, Australia
+100328|Vallejo, United States
+103774|Saint James, United States
+100918|Whitharral, United States
+103311|Hilmar, United States
+100902|Franklin, United States
+101222|Henderson, United States
+102226|Walla Walla, United States
+102151|Dundas, United States
+104965|Driftwood, United States
+102548|Daly City, United States
+100667|Lindsborg, United States
+102121|Etterville, United States
+103713|Frakes, United States
+103234|Britton, United States
+103486|Redig, United States
+103926|Pender, United States
+103708|Laupahoehoe, United States
+104342|Jackson, United States
+100009|Marsa Alam, Egypt
+101917|Rocksprings, United States
+104165|Iron Belt, United States
+100618|Woodruff, United States
+100537|Nora, United States
+103846|Foster, United States
+102617|Allyn, United States
+104643|Chatfield, United States
+100639|Pinjarra Hills, Australia
+103738|Pittsburgh, United States
+102155|Jacksontown, United States
+104231|Oak Park, United States
+104099|Red Lodge, United States
+102681|Scotts, United States
+100407|Bledsoe, United States
+104016|Custer City, United States
+104399|Northfield, United States
+104732|Bucyrus, United States
+101793|Pushkar, India
+101091|Stevenson, United States
+103670|Saffell, United States
+102964|Bronxville, United States
+101602|Minersville, United States
+101474|Lamont, United States
+100415|Hollister, United States
+104865|Raccoon, United States
+101453|Latta, United States
+104944|Old Appleton, United States
+101696|Oakville, United States
+100386|Baltoji Voke, Lithuania
+101182|Dedham, United States
+104149|Elliott Heads, Australia
+104551|Rajnandgaon, India
+101191|Orofino, United States
+100668|Enola, United States
+102622|Newark, United States
+100154|Coldiron, United States
+102193|Pearl City, United States
+100983|Durgapur, India
+103406|Rzeszow, Poland
+104666|Gera, Germany
+101898|Monroe, United States
+101388|An Najaf, Iraq
+100731|Alvesta, Sweden
+104406|Bound Brook, United States
+101606|Noisy-le-Grand, France
+102830|Mostoles, Spain
+104637|Inverness, United Kingdom
+102107|Reconquista , Argentina
+101378|Bremerhaven, Germany
+102346|Fleming, United States
+100171|Eaton, United States
+104072|Bosque, United States
+103600|Dijon, France
+101123|Skykomish, United States
+104129|Norris City, United States
+100153|DAUAN ISLAND, Australia
+101536|Nagapattinam, India
+101345|Rossford, United States
+102493|Ellerslie, United States
+102696|Hayden, United States
+102857|Pinole, United States
+102458|Richfield, United States
+102534|Palisade, United States
+104280|Canajoharie, United States
+104628|Olsburg, United States
+101156|Iron Station, United States
+100122|Scottville, United States
+101692|San Miguel, United States
+102822|CLIFTON BEACH, Australia
+104058|Garrett, United States
+103595|Trumbull, United States
+102131|Chardon, United States
+102382|Atmore, United States
+101778|Umbarger, United States
+102169|Floyds Knobs, United States
+100881|Hemmant, Australia
+103737|Swift, United States
+101544|Blodgett Mills, United States
+101599|Rufe, United States
+100824|Clear, United States
+103903|Okazaki, Japan
+100607|Kermit, United States
+103460|Windsor, United States
+100233|Brighton, United Kingdom
+104217|Allenton, United States
+100734|Norris, United States
+104216|Chatsworth, United States
+100611|Sankt Gallen, Switzerland
+102286|Centerville, United States
+100275|Ontario Center, United States
+102538|Nogales, United States
+104323|Alpha, United States
+101763|Woodsville, United States
+101721|Ashville, United States
+103749|Grandy, United States
+101288|Hurley, United States
+101264|Amioun, Lebanon
+101325|Limekiln, United States
+102783|Orrington, United States
+100766|Alma, United States
+100833|Buckingham, Canada
+100949|Artesia, United States
+101083|Sharptown, United States
+100742|Lubec, United States
+100001|El Pino, Dominican Republic
+101660|Waldron, United States
+100565|Vishakhapatnam, India
+100151|Randall, United States
+104856|Rains, United States
+101569|Coila, United States
+100047|Angel Fire, United States
+103810|Fernwood, United States
+101853|Lule, Sweden
+103533|Salt Lick, United States
+104470|Eldred, United States
+104374|Esmond, United States
+103790|Waxhaw, United States
+104352|Perkins, United States
+100988|Loganlea, Australia
+101963|Silverdale, United States
+102561|Preston, United States
+103274|Tryon, United States
+101700|Kirksey, United States
+104672|McLean, United States
+102880|Rochelle, United States
+102965|Neumarkt, Germany
+103505|Big Prairie, United States
+104304|Humboldt, United States
+104678|Attalla, United States
+103203|Effingham, United States
+101430|Ecleto, United States
+104562|Bowmansville, United States
+101532|Nestor, Trinidad and Tobago
+101988|Vila do Conde, Portugal
+100529|Pingree, United States
+103977|Chandrapur, India
+102217|Knoxville, United States
+100437|Floris, United States
+103015|Otsu, Japan
+103254|Glen Campbell, United States
+104927|Quilcene, United States
+101718|Pamplico, United States
+103802|Sonnette, United States
+101383|New Century, United States
+101881|Bahia, Ecuador
+103387|Celestine, United States
+103049|Romford, United Kingdom
+100540|Osco, United States
+104724|Meadow, United States
+102956|Solebury, United States
+104075|Aikawa, Japan
+104022|Canones, United States
+102634|Kloten, Switzerland
+102345|Erie, United States
+103250|Fernley, United States
+102058|Trail, United States
+100614|Yakutsk, Russia
+102314|Williamsburg, United States
+101144|Vinita, United States
+103421|Mina, United States
+103012|Hazel Park, United States
+101734|Cuba, United States
+100796|Nanafalia, United States
+102542|Bovina, United States
+102216|Neosho Rapids, United States
+101044|Grosse Pointe, United States
+103483|Stafford, United States
+100100|Reserve, United States
+102271|Potts Grove, United States
+104417|Eddyville, United States
+101967|Sheep Station Creek, Australia
+100268|Madanapalle, India
+102793|Bilthoven, Netherlands
+100675|Portia, United States
+100957|Sumner, United States
+101768|Lake George, United States
+102466|Bolinas, United States
+103161|Lockrose, Australia
+103216|Hua-lien, Taiwan
+102122|Hinton, United States
+101983|Highgrove, Australia
+103897|Benoit, United States
+103361|Parsippany, United States
+104354|Tehama, United States
+101106|East Enterprise, United States
+104213|Bantam, United States
+103731|Arusha, Tanzania
+102547|Peterson, United States
+102263|Warren, United States
+102261|Yokohama, Japan
+103278|Pematangsiantar, Indonesia
+102323|Hartfield, United States
+100584|Poway, United States
+102446|Goshen, United States
+104759|Suring, United States
+103577|Forestburg, United States
+101523|Lambare, Paraguay
+104401|Leyland, United Kingdom
+103797|Millersville, United States
+100579|East Preston, United Kingdom
+101294|Palmyra, United States
+102341|Springfield, United States
+102421|Wilson, United States
+100772|Sandstone Point, Australia
+104336|Lewes, United States
+102371|Homerville, United States
+102434|Midway, United States
+102878|New Gretna, United States
+102197|Grand Falls, Canada
+104310|Roseland, United States
+101573|Wise River, United States
+100610|Ray, United States
+102845|Percy, United States
+100581|Yaphank, United States
+103022|Lowestoft, United Kingdom
+100674|Lakeland, United States
+104047|Pecks Mill, United States
+100204|Woodhill, Australia
+101605|Linxi, China
+104196|Warrington, United Kingdom
+104716|Canfield, United States
+100817|Gilman, United States
+100063|Stockton, United States
+103182|Trego, United States
+103786|Montrose, United Kingdom
+102707|Salem, United States
+100971|Speedwell, United States
+104018|Benton City, United States
+104515|Melton Mowbray, United Kingdom
+101102|Sneads Ferry, United States
+104123|Cedar River, United States
+103044|Roan Mountain, United States
+104918|Paradise, United States
+101030|Valier, United States
+101151|Paskenta, United States
+101893|Tenancingo, El Salvador
+100987|Guidonia, Italy
+103881|Lakeville, United States
+100888|Springfield, United States
+102999|St Helier, Jersey
+104932|Dera Ismail Khan, Pakistan
+101782|Hockingport, United States
+103922|Screven, United States
+102780|Mc Lean, United States
+100097|Downs, United States
+104737|Earling, United States
+101673|Camilla, United States
+103948|Antofagasta, Chile
+104135|Zortman, United States
+100812|Thornville, United States
+101984|Anamoose, United States
+101911|Bellaire, United States
+100271|Howell, United States
+102875|Caddo, United States
+103121|Niota, United States
+104995|Odawara, Japan
+102048|Verda, United States
+102093|Geneva, United States
+103684|Heidelberg, Germany
+103919|Evansville, United States
+103610|Long Beach, United States
+101904|Bristol, United States
+101612|Jefferson, United States
+102333|Springfield, United States
+102870|White Plains, United States
+102604|Southbridge, United States
+102100|Paris, United States
+101930|Chillan, Chile
+103611|Newton, United States
+103975|Sursee, Switzerland
+103356|Bern, United States
+104090|Lanzhou, China
+103997|Urbana, United States
+100301|Mont Clare, United States
+104614|Stantonsburg, United States
+101109|Andover, United States
+103730|Hettinger, United States
+102735|Centralia, United States
+101218|Creighton, United States
+101181|Deebing Heights, Australia
+100168|Beech Grove, United States
+101366|Osterburg, United States
+103781|Falls Village, United States
+104848|Fez, Morocco
+103547|Crailsheim, Germany
+101615|Katowice, Poland
+104799|Nashua, United States
+103727|Puerto Vallarta, Mexico
+101538|Chatham, United States
+102020|Berry Creek, United States
+102638|Bramwell, United States
+100541|Waterford Works, United States
+102715|Wood Dale, United States
+104488|Gaston, United States
+104722|West Islip, United States
+100877|Guamuchil, Mexico
+100179|Gatesville, United States
+100326|Harford, United States
+104858|Lecoma, United States
+100688|Bonham, United States
+102218|Uledi, United States
+101985|Mescalero, United States
+100236|Holland, Belgium
+103549|Lagunitas, United States
+103785|safjrur, Iceland
+101375|Addyston, United States
+102702|Vinegar Bend, United States
+102005|New Richland, United States
+100978|Crandall, United States
+101300|Warrenton, United States
+104974|Jasper, United States
+104531|Vasco, India
+103147|Mount Carmel, United States
+101271|Edward, United States
+103331|Yumenzhen, China
+103828|Lancang, China
+101154|Leckrone, United States
+103764|Taftville, United States
+100190|Waynesfield, United States
+101485|Kempton Park, South Africa
+101228|Downey, United States
+100169|Nobeoka, Japan
+103989|Lodge, United States
+103504|Juan Aldama, Mexico
+100751|Centerville, United States
+102281|Craley, United States
+104553|Emma, United States
+103414|Georgetown, United States
+102209|Spring Creek, United States
+101240|Fort Atkinson, United States
+100074|Vsters, Sweden
+103295|North Shore, New Zealand
+102989|Ashfield, United States
+101703|Bhavani, India
+104178|Yangon, Burma
+101520|RokiSkis, Lithuania
+103666|Grayridge, United States
+102808|Sontag, United States
+103748|Bates City, United States
+102036|Lutherstadt Wittenberg, Germany
+104668|North Grafton, United States
+104538|Monticello, United States
+100683|Reinbeck, United States
+103791|MARTISSANT, Haiti
+102963|Clayton, United States
+104834|Ljungbyhed, Sweden
+104528|Westbury, United States
+102709|Portage, United States
+103139|Driver, United States
+101794|New Laguna, United States
+104272|Kelowna, Canada
+101891|Carleton, United States
+103647|Sawyer, United States
+104591|Hayman Island, Australia
+104082|Camptown, United States
+102276|Hungerford, United States
+101184|Unalakleet, United States
+104967|High View, United States
+103175|South Pekin, United States
+102237|Conde, United States
+103765|Lovely, United States
+102114|Lancaster, United States
+103462|Estebania, Dominican Republic
+101475|Parlin, United States
+102120|FRESHWATER, Australia
+101053|Sherman, United States
+102839|Petersburg, United States
+101071|El Centro, Colombia
+100361|Ballard, United States
+104641|Merchantville, United States
+103453|Hmeenlinna, Finland
+102344|Manati, Puerto Rico
+100536|La Baie, Canada
+104006|Park Avenue, Australia
+102912|Circle, United States
+102479|Higuey, Dominican Republic
+102465|Tacna, United States
+103908|Forest Hill, United States
+104013|Sanborn, United States
+104624|Warne, United States
+104989|Copen, United States
+102171|Rogers, United States
+102562|Spot Valley, Jamaica
+104198|Suitland, United States
+104341|Youngsville, United States
+101392|Handley, United States
+101230|Millfield, United States
+100604|Ruby Valley, United States
+104270|Derby, United States
+100676|Buffalo, United States
+103746|West Van Lear, United States
+101877|Crane, United States
+102556|Macerata, Italy
+102615|Furman, United States
+102240|Padova, Italy
+101447|Sainte-Maxime, France
+104785|Kallangur, Australia
+101278|Lung Tang, Taiwan
+101579|Cushing, United States
+102710|Rombauer, United States
+104009|Eighty Four, United States
+101364|Narashino, Japan
+100666|Williston Park, United States
+103183|Dwight, United States
+102098|Unalaska, United States
+101259|Esk, Australia
+100362|Keavy, United States
+104777|Lepanto, United States
+100564|North Liberty, United States
+104169|Ratingen, Germany
+101018|Grace, United States
+103793|Mallory, United States
+103711|Hornbeck, United States
+102860|Wallback, United States
+104327|Foley, United States
+100809|Maywood, United States
+101035|Stranraer, United Kingdom
+104885|MORNINGTON ISLAND, Australia
+100343|Kendall, United States
+100762|Stovall, United States
+104103|Pittsburg, United States
+102769|Monte Rio, United States
+102435|Herndon, United States
+104421|Rosenthal Heights, Australia
+103116|Plymouth, United States
+102289|Pflugerville, United States
+101813|Sangerfield, United States
+101787|Eastlake Weir, United States
+101620|Bury, United Kingdom
+100551|Columbia Station, United States
+103808|Bessemer, United States
+102511|Steyr, Austria
+104791|Colorado Springs, United States
+104137|Iron Mountain, United States
+102063|Strattanville, United States
+102619|Drummond Island, United States
+104790|Rarden, United States
+101082|Zwettl , Austria
+104233|New Iberia, United States
+102354|Mikana, United States
+102929|Blanchard, United States
+102348|Paintsville, United States
+104889|Mavisdale, United States
+100331|Seiad Valley, United States
+102148|Pine Grove Mills, United States
+100851|Maytown, United States
+101717|Chesterfield, United States
+104950|Springfield Lakes, Australia
+103484|Santo Andr, Brazil
+102412|Cuttyhunk, United States
+104736|Meadows of Dan, United States
+100442|Arminto, United States
+100603|Altaville, United States
+103362|Lenexa, United States
+101126|Sun Lakes, United States
+102044|Mantua, United States
+104857|Noble, United States
+101163|Yimbun, Australia
+102718|Gtene, Sweden
+104118|Corinne, United States
+103469|Westmont, United States
+102388|Locust Grove, United States
+100538|West Middleton, United States
+103275|Trapper Creek, United States
+103598|Robesonia, United States
+103428|Mahto, United States
+102991|Chinju, Korea
+102492|Henrietta, United States
+100506|Onia, United States
+102987|Commissioners Flat, Australia
+102700|Gates, United States
+102081|STRATHMORE, Australia
+101023|Big Pine, United States
+102943|Waverly, United States
+100414|Creston, Canada
+104928|Magnolia, United States
+103825|Matlock, United States
+102988|New Cuyama, United States
+104465|Hezuo, China
+103827|Upper Wheatvale, Australia
+100622|Venice, Italy
+103652|Cresson, United States
+102407|Swanzey, United States
+100215|Dronten, Netherlands
+104688|Taegu, Korea
+102531|Saint-Germain-en-Laye, France
+104457|Podgorica, Yugoslavia
+103370|Richmond, United States
+104396|Lynnville, United States
+104664|Rock River, United States
+103928|San Lorenzo, Panama
+104107|Placerville, United States
+102608|Wakarusa, United States
+102128|Truxton, United States
+104634|Santa Margarita, United States
+100653|Keene, United States
+101111|Rhinelander, United States
+102976|Helena, United States
+103815|Martell, United States
+100732|Stamford, United States
+101635|Ashikaga, Japan
+103204|Gretna, United States
+103176|Winsford, United Kingdom
+103157|Mc Guffey, United States
+102759|Baggs, United States
+101243|Danese, United States
+103932|Vimercate, Italy
+104555|Richfield, United States
+101814|Bellefontaine, United States
+100242|Makhachkala, Russia
+100937|Ewing, United States
+102432|Lucasville, United States
+104613|Checotah, United States
+101931|Yandilla, Australia
+103093|Ivanhoe, United States
+102086|Golden Eagle, United States
+104125|Futtsu, Japan
+103710|Dale, United States
+104569|Hamlet, United States
+100513|Sebring, United States
+101103|Pajala, Sweden
+101303|Gujranwala, Pakistan
+101440|Anniston, United States
+102537|Leedey, United States
+100928|Shobonier, United States
+100199|Glorieta, United States
+100950|Bourbonnais, United States
+102569|Tecate, United States
+103740|Gorakhpur, India
+101499|University Park, United States
+101034|Oilton, United States
+101815|Owensville, United States
+100716|Hertford, United Kingdom
+101518|Huntersville, United States
+100141|Cali, Colombia
+103066|Belleville, United States
+100593|Puerto Villarroel, Bolivia
+101402|Pauls Valley, United States
+100145|Bassfield, United States
+102205|Bloomingdale, United States
+100893|Hudson, United States
+102338|Armenia, Colombia
+104444|Fogelsville, United States
+102410|Akiak, United States
+103754|Star, United States
+100347|Porus, Jamaica
+101165|Allerton, United States
+100915|Danielsville, United States
+100253|Cape Town, South Africa
+101744|Sardis, United States
+103736|Jennings, United States
+103861|Athens, United States
+102706|Pristina, Yugoslavia
+103724|LITTLE MULGRAVE, Australia
+103658|MCKINLAY, Australia
+100276|Brighton, Australia
+101347|Griffithsville, United States
+102982|Cardano al Campo, Italy
+103575|MANUNDA, Australia
+103719|Orosi, United States
+103337|Hazard, United States
+103314|Dennehotso, United States
+104608|Rocky, United States
+102491|Chester Springs, United States
+102712|Conewango Valley, United States
+100432|Gravette, United States
+100912|Continental Divide, United States
+101353|Tucson, United States
+102018|Prattville, United States
+103306|Almind, Denmark
+101227|VILLA NUEVA, Guatemala
+104535|Archerfield, Australia
+100451|Blackstone, Australia
+101495|De Graff, United States
+104730|Forsyth, United States
+102800|Meigs, United States
+103620|Searsboro, United States
+101451|Lombard, United States
+104179|Saint Peters, United States
+104300|Yukon, United States
+102315|Kaliningrad, Russia
+102795|Aberdeen, United States
+101355|Terry, United States
+101193|Tetovo, Macedonia
+100159|Stratford, United States
+102080|Salina, United States
+103860|Albany Creek, Australia
+101261|Stonington, United States
+102047|Bath, United States
+104970|JULATTEN, Australia
+102298|East Newport, United States
+103967|Victor, United States
+101756|Morven, Australia
+100991|Erwinna, United States
+103083|Brookfield, United States
+103108|Seymour, United States
+104772|Dallardsville, United States
+103372|Beverly Hills, United States
+102265|Puerto Juarez, Mexico
+101682|Sherwood, United States
+102919|Eastville, United States
+100297|Delano, United States
+103339|Creston, United States
+103320|Pyeongtaek, Korea
+104543|Peach Glen, United States
+100942|Boone, United States
+102643|Atascosa, United States
+103565|Temuco, Chile
+103655|Royalty, United States
+104923|Thargomindah, Australia
+102070|Natural Dam, United States
+104012|Brackenfell, South Africa
+100339|Jiexiu, China
+103921|Elkin, United States
+100692|Spanish Town, Jamaica
+103882|Homestead, United States
+101180|Shelton, United States
+103014|Litchfield, United States
+103153|Hamilton, United States
+102901|Lead, United States
+103745|Harkers Island, United States
+102907|Crockett, United States
+104485|Lavelle, Australia
+103639|Elphinstone, Australia
+103319|Lettsworth, United States
+104700|Vienna, United States
+103942|San Clemente, United States
+101477|Trelleborg, Sweden
+102182|Milaca, United States
+103214|Crane, United States
+103614|Yanchi, China
+101169|Spartansburg, United States
+103831|Forbestown, United States
+102129|Tikhvin, Russia
+102788|MINBUN, Australia
+100770|Foster City, United States
+104480|Patriot, United States
+102595|Prather, United States
+100350|Aabenraa, Denmark
+104930|Gays Creek, United States
+100293|North Tonawanda, United States
+101767|Hershey, United States
+104472|Claridge, United States
+103297|Lavalette, United States
+101461|Long Mott, United States
+100934|Bayfield, United States
+102882|Schiller Park, United States
+103957|Dunmore, United States
+102866|Columbia, United States
+103080|Nagqu, China
+104369|Takino, Japan
+104757|Belle Plaine, United States
+100463|Free Soil, United States
+102825|Cayucos, United States
+101020|Sevier, United States
+100559|Fremont, United States
+104786|Elmwood Park, United States
+100575|Maysville, United States
+104960|Lehigh Valley, United States
+101498|McBrides, United States
+102178|Dachen Dao, China
+104432|Whitlash, United States
+101121|Sidell, United States
+104878|Brooks, United States
+104607|Nazareth, United States
+100304|Burkes Garden, United States
+103496|Navarre, United States
+104559|Artesian, United States
+101095|Las Matas De Farfan, Dominican Republic
+100240|Odum, United States
+100342|Elberon, United States
+104763|Hollywood, United States
+102691|Newington, United States
+101247|Ibague, Colombia
+100273|Reading, United States
+102984|Gibbsboro, United States
+100669|Wabasha, United States
+100703|Novorossiisk, Russia
+104773|Darien, United States
+100131|Orefield, United States
+104097|Harlem Springs, United States
+103857|Stoneboro, United States
+102794|Wasco, United States
+103377|Cascais, Portugal
+100596|Grandville, United States
+102510|Taxco, Mexico
+100679|Knox, United States
+104367|Caney, United States
+101314|Bielsko-Biala, Poland
+104459|Prince Frederick, United States
+102092|Dayton, United States
+104522|Williamstown, United States
+104940|North Marshfield, United States
+103110|Von Ormy, United States
+100543|Lafitte, United States
+104495|Lucas, United States
+100252|Camden Wyoming, United States
+101237|Marne, United States
+104287|Milan, United States
+100646|Mapleton, United States
+103265|Ronneby, Sweden
+101652|Alakanuk, United States
+103345|Breckenridge, United States
+102954|Genesee, United States
+101512|Guilford, United States
+102519|Adams, United States
+101556|Wilberforce, United States
+104035|Fisher, United States
+103924|Richford, United States
+103076|Mianyang, China
+102332|Pope Valley, United States
+101016|Castleton, United States
+104433|Pune, India
+101112|Bentley, United States
+103398|Dutzow, United States
+104265|New Kensington, United States
+104948|Cumarebo, Venezuela
+100214|Middlesex, United States
+103081|Sala, Sweden
+102580|Wights Mountain, Australia
+103494|Nidda, Germany
+104698|Winterhaven, United States
+100727|Boonville, United States
+101415|Argyle, United States
+104493|Hankinson, United States
+103188|Eerwah Vale, Australia
+100503|Caldwell, United States
+103282|Lineville, United States
+102429|Naha, Japan
+101100|Princeville, United States
+104542|Dell Rapids, United States
+100045|Kingwood, United States
+100780|Blaxland, Australia
+101417|Orange, United States
+100560|Flinton, United States
+101743|Pleasant Dale, United States
+101393|Seventeen Seventy, Australia
+102437|Greenville, United States
+102764|Germantown, United States
+102936|Cavite City, Philippines
+101297|Chalk, United States
+104037|Morley, United States
+104153|San Diego, Venezuela
+102978|Fillmore, United States
+102821|Tsukuba, Japan
+104436|Salamonia, United States
+101302|Scotts Hill, United States
+102885|Shortsville, United States
+100680|Mountainhome, United States
+104723|Farwell, United States
+104943|Pollock Pines, United States
+101578|Weston, United States
+100892|Salem, United States
+103840|Greenwood, United States
+101323|Monteria, Colombia
+101293|Honey Creek, United States
+100599|Titusville, United States
+101473|Sanborn, United States
+102942|Axum, Ethiopia
+101666|Cody, United States
+101808|Leopold, United States
+104843|Waterford, United States
+102454|Yaxian, China
+104109|Elyria, United States
+100357|Eastport, United States
+104964|Caledonia, United States
+102253|Comendador, Dominican Republic
+100545|Reed City, United States
+100322|Piti, Guam
+104184|Redlands, United States
+101777|Tocaima, Colombia
+104190|Chaumont, United States
+103137|Pocahontas, United States
+104474|Atlanta, United States
+103174|Wisbech, United Kingdom
+101331|Vining, United States
+104729|Greencreek, United States
+104148|Plainville, United States
+104219|Kopperston, United States
+104475|Karlskrona, Sweden
+103065|Newton, United States
+102050|Varallo Sesia, Italy
+102272|Meadowbrook, United States
+102433|Nonantum, United States
+100711|Papaaloa, United States
+102292|Montgomeryville, United States
+100375|Rock Hill, United States
+102501|Nyanga, South Africa
+103255|Webster, United States
+101912|Loxley, United States
+100972|Boreen Point, Australia
+100095|Pence Springs, United States
+103451|Zevenaar, Netherlands
+100175|Maramec, United States
+104152|Patrai, Greece
+100663|Mount Gambier, Australia
+102236|Jenera, United States
+100471|Tell City, United States
+104235|Paint Rock, United States
+101465|Vine Grove, United States
+100107|Sturgeon, United States
+102087|Douglas, United States
+104268|Cedarton, Australia
+104819|North Bungunya, Australia
+104128|Blotzheim, France
+100847|Konya, Turkey
+104810|Maple Park, United States
+104825|Tohatchi, United States
+104899|Xifengzhen, China
+100467|East Peoria, United States
+102970|Aromas, United States
+100785|Fultonham, United States
+101810|Hopewell, United States
+102910|Lodge Grass, United States
+103871|Santaquin, United States
+100846|Falsterbo, Sweden
+103217|Loyal, United States
+104176|Canaan, United States
+102741|Springtown, United States
+102873|Southeastern, United States
+100209|Pennville, United States
+103037|Smiths Creek, United States
+102629|Rabun Gap, United States
+102200|Ternopil, Ukraine
+100197|Endicott, United States
+101168|Montville, United States
+104676|Schwyz, Switzerland
+101320|Pike, United States
+102090|Mapleton, United States
+102761|Sharon, United States
+103156|Dallas, United States
+104285|Enola, United States
+104440|Watkins Glen, United States
+101000|Winona, United States
+104298|Linwood, United States
+100306|Basom, United States
+102500|Oakland, United States
+103222|Rockland, United States
+100836|Ironton, United States
+102736|Cressey, United States
+103448|Key West, United States
+103589|Batu Pahat, Malaysia
+102668|Girardot, Colombia
+104784|Leland, United States
+100195|North Maleny, Australia
+101452|Woolloongabba, Australia
+100516|Simsbury, United States
+103803|Andrew, United States
+103054|Lynn Haven, United States
+104119|Alston, United States
+103623|Gassaway, United States
+102170|Dundalk, Canada
+103237|Sudan, United States
+101557|Circle Pines, United States
+101840|Troutman, United States
+104754|Dendron, United States
+103184|T'ai-chung, Taiwan
+104443|Edwards, United States
+101531|Martins Creek, United States
+104250|Parkers Prairie, United States
+102025|Folkston, United States
+104981|Nelson, United States
+104702|Matteson, United States
+102508|South Haven, United States
+100777|Miami, United States
+101286|New Baltimore, United States
+101249|Ambridge, United States
+102955|Port Gibson, United States
+101423|Dixon, United States
+101534|Glenn, United States
+100638|Lake Harbor, United States
+104922|Ivanhoe, United States
+101408|Wolf Lake, United States
+100660|Kumla, Sweden
+101880|Palmer, United States
+103717|Liguori, United States
+104040|Cherry Fork, United States
+101899|Galesburg, United States
+104751|Chilton, United States
+104747|Navajo, United States
+101377|Electra, United States
+104568|Pacific City, United States
+100307|Crane, United States
+102812|East Greenville, United States
+101469|Mecklenburg, United States
+101676|Bradley, United States
+103312|Murray City, United States
+101077|Napo, China
+100900|Concrete, United States
+100620|Tully, United States
+100201|Halcottsville, United States
+102755|Wolbach, United States
+101832|Carcross, Canada
+101133|Port Ludlow, United States
+102033|Assonet, United States
+100125|verkalix, Sweden
+102673|Ida Grove, United States
+103193|Lynchburg, United States
+103729|Ivanhoe, United States
+101685|Tucker, United States
+102674|Westbrook, United States
+102818|Bonaire, United States
+100696|Lisbon, United States
+100781|Rosemount, Australia
+101429|Donnelly, United States
+100694|Farmington, United States
+102011|Millom, United Kingdom
+101244|Belfast, United States
+103367|Geneseo, United States
+103461|Hermann, United States
+102760|Grand Meadow, United States
+104580|Hazledean, Australia
+100535|Scott Bar, United States
+102057|Badin, United States
+104985|Dorton, United States
+100435|West Lebanon, United States
+103215|Zhaotong, China
+103477|Wainwright, Canada
+103481|Patricksburg, United States
+101872|Fairlee, United States
+103542|Arlington, United States
+103971|Georgetown, Canada
+104202|Greens Farms, United States
+100672|Gilford, United States
+101844|Tipton, United States
+103159|Centerburg, United States
+101159|Hinesburg, United States
+103662|Anatone, United States
+100925|Medway, United States
+100980|Gibsonville, United States
+102805|Pondicherry, India
+103138|Hilltown, United States
+101517|Macfarlan, United States
+101087|Comilla, Bangladesh
+100926|Rosalie, United States
+101067|Castleton, United States
+100309|Eckelson, United States
+104573|Winona, United States
+101553|Lukeville, United States
+103126|Eldorado, United States
+100176|Taloga, United States
+102406|Lumberville, United States
+104267|North Candon, United States
+103823|Gainesville, United States
+100588|Broomfield, United Kingdom
+104648|Adkins, United States
+102444|Salton City, United States
+100070|Clarington, United States
+102841|Stella, United States
+100333|Hancock, United States
+100656|Riverdale, United States
+104100|Clifton, United States
+104292|Eielson AFB, United States
+104756|Pikeville, United States
+104537|Martinsdale, United States
+104136|Yacolt, United States
+104194|Kesley, United States
+102678|Ping-Tung City, China
+104365|Conway, United States
+104638|Enochs, United States
+100178|Saint David, United States
+104779|Franklin, United States
+103634|Pekin, United States
+102734|Peru, United States
+101208|Cross Junction, United States
+103025|Seaforth, Australia
+103613|Loop, United States
+103300|Debrecen, Hungary
+101842|Pomeroy, United States
+104007|Ransom, United States
+103418|Durant, United States
+103648|Williamston, United States
+101968|Drayton, Australia
+102779|Pittsburg, United States
+101629|Harrison, United States
+101990|Cedarville, United States
+102752|Locustdale, United States
+102689|Jennings, United States
+102644|Panaca, United States
+102972|Boulevard, United States
+104596|Hermitage, United States
+101311|Gssing, Austria
+102540|Compton, United States
+100485|Forest, United States
+101235|Pilgrim, United States
+103763|Bristol, United States
+103268|Laurel Bloomery, United States
+104556|Middleville, United States
+103082|Townsend, United States
+104400|Hot Springs Village, United States
+100379|Labelle, United States
+100828|Stafford, United States
+101964|Purwokerto, Indonesia
+104594|Castro Valley, United States
+103340|Westfield Center, United States
+104330|Silver Plume, United States
+101750|Crawford, United States
+103299|Dover, United States
+101545|Vista, United States
+103728|Cantu, Italy
+102300|Mantua, United States
+101938|Rice, United States
+102603|Wingdale, United States
+100484|Sentinel Butte, United States
+104997|Westville, United States
+103055|Crown King, United States
+102654|Qinzhou, China
+103704|Kingsford, United States
+101730|Sarina Beach, Australia
+101934|Merritt Island, United States
+103896|CURRAJONG, Australia
+101265|Manns Choice, United States
+100963|Antoine, United States
+103512|Drummond, United States
+102426|Mount Sterling, United States
+101903|HERMIT PARK, Australia
+104188|Fairfield, United States
+103464|Hennepin, United States
+101788|Endeavor, United States
+101496|Redwood City, United States
+103895|Groton, United States
+104973|Fresh Meadows, United States
+101646|Lime Ridge, United States
+101226|Cochrane, United States
+102820|Greenwood, Australia
+103202|Dante, United States
+103042|Ernest, United States
+101372|Hoskins, Papua New Guinea
+101407|Vendome, France
+101137|Conran, United States
+103876|Uxbridge, Canada
+102946|Spring Vale, Jamaica
+101114|Kortrijk, Belgium
+102360|Goessel, United States
+102992|Spring Valley, United States
+102884|Scarborough, United States
+101432|Tustin, United States
+104934|Elgin, United Kingdom
+104833|Kentville, Canada
+102365|Merzig, Germany
+102277|Willow Springs, United States
+100946|Palmetto, United States
+102413|Rappahannock Academy, United States
+100011|Wyaconda, United States
+103430|Sardis, United States
+103571|Spooner, United States
+104846|Lamington, Australia
+100255|Mc Donald, United States
+101211|Warner, United States
+104322|Clearfield, United States
+103479|Gdansk, Poland
+102930|Julita, Sweden
+103375|Ciudad Del Carmen, Mexico
+101775|Alden, United States
+100557|Shirley, United States
+101864|Onalaska, United States
+100412|ZIBO, China
+104629|Lima, United States
+102671|Smyrna, United States
+100229|Prairieton, United States
+104228|Mosby, United States
+103824|Kiamba, Australia
+100351|Tuckerton, United States
+104919|Dilley, United States
+100101|Salina, United States
+103531|Pitesti, Romania
+100482|Berkeley, United States
+102439|Lithonia, United States
+104601|Louviers, United States
+102935|Moss, United States
+104068|De Ruyter, United States
+101010|Evangeline, United States
+101597|Mount Berry, United States
+101845|Andover, United States
+102293|Jurong, Singapore
+103925|Mount Royal, United States
+103171|Statham, United States
+102645|Walnut Grove, United States
+102328|Los Banos, United States
+102174|Charter Oak, United States
+102450|Mawothi, South Africa
+101448|Pelentri, Cyprus
+104087|Pusan-Kuso-2-dong, Korea
+102459|Port Gamble, United States
+103585|Reserve, United States
+101500|Rancho Sante Fe, United States
+101806|Landing, United States
+103653|Vance, United States
+102202|Oxbow, United States
+103371|Ernul, United States
+101301|Index, United States
+101781|Deedsville, United States
+101140|Elephant Butte, United States
+100788|Kalyan, India
+103178|Center Point, United States
+102642|Hayes Center, United States
+101270|Smyrna, United States
+102661|Visaginas, Lithuania
+100225|Hallsville, United States
+103503|Lafferty, United States
+104043|Volin, United States
+100130|Avon, United States
+103198|Sugarloaf, United States
+101823|Jamestown, United States
+103218|Utica, United States
+103443|Timmins, Canada
+101013|Oakville, United States
+103341|Wolcottville, United States
+100290|Virum, Denmark
+103009|Bozeman, United States
+103849|Vxtorp, Sweden
+104331|Perryville, United States
+104618|Bar, Yugoslavia
+102427|Imola, Italy
+103963|Yosemite National Park, United States
+103158|Olympic Valley, United States
+104687|North Bergen, United States
+100172|Pultneyville, United States
+101031|Pakruojis, Lithuania
+100954|Hi Hat, United States
+102442|Warner Robins, United States
+101789|Kennan, United States
+100251|Olivia, United States
+102612|Blackwell, United States
+101905|Hepzibah, United States
+101776|Rose Lodge, United States
+102211|Jacumba, United States
+104200|Ofterdingen, Germany
+102509|Massillon, United States
+102324|Startex, United States
+104703|Roosevelt, United States
+103277|Solsville, United States
+100429|San Ysidro, United States
+102605|Agana, Guam
+104539|Phillipsburg, United States
+100126|Urbach, Germany
+104255|Stoneville, United States
+100808|Boelus, United States
+101577|Cooperstown, United States
+102470|West Liberty, United States
+100839|Browning, United States
+100508|Saint Clair, United States
+102104|Statenville, United States
+104486|Hartsel, United States
+103853|Shawinigan, Canada
+104373|Hearst, Canada
+101991|Chappaqua, United States
+104195|Paris, United States
+100837|Au Train, United States
+100473|Richmond, United States
+100936|Eagleville, United States
+101825|Fayetteville, United States
+101424|Spoleto, Italy
+102132|Greens Fork, United States
+103867|Wilsondale, United States
+102313|Tiplersville, United States
+101658|Mount Croghan, United States
+104361|Star Tannery, United States
+102744|Salvisa, United States
+102376|Coaldale, United States
+104445|Wallace, United States
+104612|Muzaffarnagar, India
+100517|Nanterre, France
+104874|Bigelow, United States
+100658|Hackett, United States
+100995|Stockton, United States
+103226|Hardwick, United States
+104774|Beerwah, Australia
+103898|Clio, United States
+103032|Huletts Landing, United States
+104454|Desoto, United States
+101360|Mackinaw City, United States
+103280|Sperryville, United States
+102505|Moncure, United States
+102666|Saint Avold, France
+100526|Philmont, United States
+100997|Neola, United States
+102119|Middletown, United States
+104447|Copan, United States
+102016|Scott Depot, United States
+101653|Shoshoni, United States
+102463|Brookston, United States
+103008|Young America, United States
+101548|Grover Beach, United States
+102515|Paramaribo, Suriname
+104080|Takarazuka, Japan
+104853|Warwick, United States
+102630|South Tamworth, United States
+100745|Tussy, United States
+104162|Booker, United States
+104478|Fleetwood, United States
+102244|Givelda, Australia
+102225|Arlington, United States
+103877|Batangas, Philippines
+101726|Hennuyeres, Belgium
+101508|Cotton, United States
+102899|Isesaki, Japan
+104384|Tyler, United States
+100360|Powhatan, United States
+104026|Mc Clave, United States
+104453|Whyalla, Australia
+100243|Altona, Canada
+102215|Sedalia, United States
+104636|Mapleton, Australia
+104430|Chebanse, United States
+101509|Old Forge, United States
+102055|Grover, United States
+102352|Holdingford, United States
+102199|Aneth, United States
+102392|Thurman, United States
+102660|Ibadan, Nigeria
+103900|Fairplay, United States
+103947|Green Pond, United States
+100315|New Woodstock, United States
+102693|Leigh, United States
+104745|Youngtown, United States
+102967|Fort Johnson, United States
+100161|Lydia, United States
+103289|Emerado, United States
+100090|Defiance, United States
+101395|Kashi, China
+104792|Olbia, Italy
+104616|Little Lake, United States
+104604|Letha, United States
+100416|Olathe, United States
+102224|Atlanta, United States
+104091|Kailua-Kona, United States
+100235|Coventry, United States
+100081|Modoc, United States
+102914|Kaibito, United States
+103741|Ferndale, United States
+103637|Raymond, United States
+101555|Wheaton, United States
+102653|Rypin, Poland
+100640|Elvaston, United States
+101080|Saint Augustine, United States
+102096|Worthington, United States
+104425|Henrietta, United States
+104929|Waveland, United States
+103334|North Hero, United States
+102585|Juliaetta, United States
+103019|Savage, United States
+100035|Carter, United States
+101710|Rutherford, United States
+101565|Milford, United States
+103944|Melvin, United States
+104360|Batson, United States
+104685|Watford City, United States
+102584|Hamilton, United States
+103267|Sharon Springs, United States
+101953|Grand Mound, United States
+101600|Yuleba, Australia
+104424|Granby, United States
+100989|Wodonga, Australia
+103491|Homelake, United States
+104734|Edmonds, United States
+104990|Peterboro, United States
+102567|Wabaningo, United States
+104332|Newcastle, United States
+101213|Lengerich, Germany
+100933|Wheeling, United States
+103938|Northcote, Australia
+103779|Sulphur Springs, United States
+104504|Marion, United States
+101971|Nandurbar, India
+103966|Benton, United States
+101481|Epworth, United States
+101664|Haddon Heights, United States
+103292|Haileyville, United States
+104256|Glenwood, United States
+100924|Pipestem, United States
+103240|Valinhos, Brazil
+104554|La Crescent, United States
+101381|Baker, United States
+100861|Crawfordville, United States
+101484|Las Guaranas, Dominican Republic
+102254|South Fulton, United States
+101827|Maywood, United States
+100336|Randall, United States
+100004|Akasia, South Africa
+103325|Bay Saint. Louis, United States
+100702|Dauphin, United States
+100789|Waynesburg, United States
+103063|Nashville, United States
+101365|Salem, India
+100448|Kenyon, United States
+100089|Kingsburg, United States
+102138|Boiling Springs, United States
+103385|Conception Junction, United States
+103369|Lamar, United States
+103870|Forestville, United States
+100979|La Plata, Argentina
+104005|Byron, United States
+104877|Boucherville, Canada
+100868|Holly Grove, United States
+104000|Laravale, Australia
+100395|Orbisonia, United States
+101254|Zephyrhills, United States
+102831|Newberry, United States
+104511|Barco, United States
+101723|Pruwelz, Belgium
+102464|Mohawk, United States
+100747|Sebastian, United States
+101626|Oracle, United States
+103770|Westover, United States
+100860|Flaxton, United States
+100208|Springfield, United States
+100294|Bardwell, United States
+103983|Athens, United States
+104592|Lorane, United States
+104829|Radford, United States
+104924|Union, United States
+103077|Coolin, United States
+102546|Ary, United States
+100124|Dunmor, United States
+101766|District Heights, United States
+103475|Chrisman, United States
+103923|coconut creek, United States
+100160|Joppa, United States
+102195|Loviisa, Finland
+101147|Mer Rouge, United States
+101352|Noorindoo, Australia
+104171|Fond Du Lac, United States
+104503|Nagasaki, Japan
+103329|Renwick, United States
+103298|Chadron, United States
+104720|Dallas Center, United States
+104683|Heroica Caborca, Mexico
+103051|Elk Horn, United States
+100194|Welch, United States
+102386|Chatham, United States
+103913|Taylorsville, United States
+103984|Cheektowaga, United States
+101174|Five Points, United States
+101178|Glendora, United States
+102013|Rechovot, Israel
+103830|Oak Creek, United States
+104049|Fredericksburg, United States
+102296|Rockport, United States
+103915|Mudgee, Australia
+100450|Richland Springs, United States
+101202|Fairview, United States
+101116|Thompson Falls, United States
+104284|DIMBULAH, Australia
+102461|Dutton, United States
+104312|De Lancey, United States
+104938|Tatum, United States
+101422|Parsons, United States
+101757|Beechgrove, United States
+104291|Branch, United States
+104441|Woodward, United States
+103539|Northome, United States
+100113|Mountain Top, United States
+103799|Columboola, Australia
+104795|Wheatley, United States
+104599|Uniontown, United States
+103411|Applegate, United States
+102858|Taft, United States
+101924|Clark, United States
+104766|Crowder, United States
+103412|La Coste, United States
+101760|Thomaston, United States
+101014|Elancourt, France
+100355|Nova Iguau, Brazil
+102705|Thisted, Denmark
+101943|Little Rock Air Force Base, United States
+102626|Quitaque, United States
+101232|Somers, United States
+103388|Belpre, United States
+102557|Bedfordview, South Africa
+102840|HOLLOWAYS BEACH, Australia
+101655|Delta, United States
+104451|Hartland, United States
+104512|Escazu, Costa Rica
+100041|Dodgeville, United States
+102867|Cripple Creek, United States
+101119|Garden Valley, United States
+101678|Metter, United States
+101913|Aspen, United States
+101007|East Springfield, United States
+102667|Geronimo, United States
+104627|Miao-Li County, China
+103696|Tai-Nan City, China
+101811|Waspan, Nicaragua
+103148|Raigarh, India
+100870|Kewaunee, United States
+104776|Hollins, United States
+101671|Taos, United States
+103750|Camden, United States
+103425|Gorlovka, Ukraine
+100518|Scarborough, Australia
+103559|Jaisalmer, India
+103792|Goshen, United States
+102881|Adelaide, Australia
+101691|Redgranite, United States
+102251|Aguadilla, Puerto Rico
+102923|Hugo, United States
+100774|Ralston, United States
+104502|Upper Black Eddy, United States
+101892|Westley, United States
+103348|Los Altos, United States
+103986|Portofino, Italy
+100879|Hathorne, United States
+101290|Cunningham, United States
+104045|Marshfield, United States
+104656|Ridgeville Corners, United States
+101277|Windyville, United States
+101025|Whitehall, United States
+101502|Cottonwood, United States
+100421|Freetown, The Bahamas
+101304|Baraga, United States
+101409|Oldtown, United States
+104315|Alliance, United States
+103912|Diyarbakir, Turkey
+100245|Walterboro, United States
+103812|Qijiaojing, China
+101319|West Finley, United States
+100493|Lewis Run, United States
+100445|Natural Bridge, United States
+104837|Geneva, United States
+100079|Dellroy, United States
+102115|Amalfi, Italy
+104316|Wileyville, United States
+102481|Luebbering, United States
+100973|Krk, Croatia
+103789|Erie, United States
+104346|Southside, United States
+100096|Forest Ridge, Australia
+101205|Homosassa Springs, United States
+100327|Herning, Denmark
+101923|Genemuiden, Netherlands
+103031|Rhodhiss, United States
+103444|Higashimurayama, Japan
+103742|Molina, United States
+100115|Port Clyde, United States
+101959|Riverdale, United States
+101073|Northville, United States
+100969|Lizella, United States
+100567|So Leopoldo, Brazil
+101172|Old Monroe, United States
+100806|Nazareth Illit, Israel
+103529|Greenfield, United States
+101966|Nebo, United States
+102940|Zeehan, Australia
+101492|Newbury Park, United States
+102782|Greenland, United States
+101901|Caledon, Canada
+102158|Cropwell, United States
+100943|Afton, United States
+104204|Sulphur Springs, United States
+102590|Hobro, Denmark
+103067|Claudville, United States
+100778|Waterloo, United States
+103181|Alloway, Australia
+100642|Cataula, United States
+102517|Tehachapi, United States
+102530|Butlerville, United States
+102577|Dixons Mills, United States
+100690|Montrose, United States
+102648|Balta, United States
+101736|Walkervale, Australia
+103087|Udon Thani, Thailand
+101385|BOOGAN, Australia
+100117|Saint Johns, Antigua and Barbuda
+102402|Conrad, United States
+103095|Fort Myers, United States
+104076|Mountain Home, United States
+100637|Warren, United States
+103859|North Olmsted, United States
+103233|Roxie, United States
+104243|London, United States
+103996|Toyonaka, Japan
+102487|Clairview, Australia
+103723|Monroeville, United States
+102297|Maarssen, Netherlands
+100502|Goodspring, United States
+101974|Kirkwood, United States
+104104|Marthaville, United States
+101413|Chester, United States
+100237|Saint Michaels, United States
+103833|West Sand Lake, United States
+104719|Bee Spring, United States
+101628|Bernville, United States
+103472|Chiba, Japan
+102809|Simla, India
+101738|Novgorod, Russia
+100488|Mountain Home, United States
+104452|Spruce Creek, United States
+102767|Dural, Australia
+101851|Dharan, Nepal
+100649|Rio Grande City, United States
+100239|Staplehurst, United States
+103581|Raton, United States
+100914|Muqdisho, Somalia
+102522|Dubna, Russia
+104906|Bynum, United States
+100578|Depauw, United States
+102370|Commerce City, United States
+103474|Herceg-Novi, Yugoslavia
+103818|Ingonish, Canada
+100480|Okahumpka, United States
+102411|Sherman, United States
+101596|Cathedral City, United States
+101779|Kemp, United States
+103365|Elizabeth, United States
+100729|Cape Neddick, United States
+103006|Gapville, United States
+101715|Evansville, United States
+101521|Heltonville, United States
+101690|Fennimore, United States
+102457|Otterbein, United States
+102566|Kutztown, United States
+101506|Olga, United States
+102662|Cumby, United States
+102676|Wendel, United States
+103152|Castelvetrano, Italy
+101339|Otwell, United States
+104247|Oxford, United States
+103189|Belgrade Lakes, United States
+104491|Greeneville, United States
+102931|Macedonia, United States
+101804|Woodstock, Canada
+101910|Conchali, Chile
+104646|Sale, Australia
+102383|Wagner, United States
+101075|Westville, United States
+104893|Spinnerstown, United States
+104852|Trondheim, Norway
+102288|Dmitrov, Russia
+102836|Leming, United States
+101081|Watton, United States
+100352|Annawan, United States
+104186|Mongo, United States
+104450|Plover, United States
+101021|Larsen, United States
+101033|Edmonson, United States
+101157|timika, Indonesia
+104690|Smithville, United States
+104797|Millington, United States
+100425|Sparta, United States
+103638|Grover, United States
+101697|Kilmichael, United States
+101699|Cushman, United States
+104192|Golf, United States
+102369|Monticello, United States
+101497|Weston, United States
+103985|Mankato, United States
+103726|Lucas, United States
+102962|East Baldwin, United States
+103712|Pelham, United States
+104956|Gahanna, United States
+103972|Thornfield, United States
+100763|Spraggs, United States
+100585|Palmyra, United States
+104225|Bellville, United States
+102687|Hurricane, United States
+101434|Ionia, United States
+102239|Ryan, United States
+101865|Calhoun, United States
+104630|Lytle, United States
+102560|Lake Cicott, United States
+104840|Edison, United States
+101791|Coraopolis, United States
+100755|Harvey, United States
+101677|Paterno, Italy
+100771|Saint Francis, United States
+104132|Ylivieska, Finland
+101826|Bushnell, United States
+102243|East Otto, United States
+100409|Greenville, United States
+104708|Mosquera, Colombia
+103659|Warm Springs, United States
+102787|Edwards, United States
+100337|Allston, United States
+103109|Hunnewell, United States
+103625|Langhorne, United States
+102908|San Luis Rio Colorado, Mexico
+100832|Sanger, United States
+101572|Port Alsworth, United States
+100050|Hannover, Germany
+101926|Hemphill, United States
+102176|Simaoi, China
+101427|Port Murray, United States
+100496|Fairplay, United States
+103433|Colton, United States
+104794|Dighton, United States
+104891|Allison, United States
+104731|Brandon, United States
+100744|East Prospect, United States
+100769|Sharon, United States
+100648|Overton, United States
+104912|Little Valley, United States
+103111|East Wilton, United States
+104329|Catron, United States
+101576|CAPE CLEVELAND, Australia
+103916|Martinsburg, United States
+101363|Dwarka, India
+103465|Roundup, United States
+103843|Evarts, United States
+101951|Mc Adenville, United States
+104935|La Jara, United States
+101394|Darien, United States
+103692|Tryon, United States
+104647|Harrisville, Australia
+101740|Lower Hutt, New Zealand
+104876|Lathrop, United States
+100571|Vassalboro, United States
+100736|Lambert, United States
+103530|Wilmore, United States
+100975|Provo, United States
+104808|Cambridge, United States
+102658|Imatra, Finland
+102650|Staffordsville, United States
+101283|Wildwood, United States
+104881|Fort Stanton, United States
+104476|Morrisonville, United States
+100632|Jrpeland, Norway
+104715|Chase City, United States
+104257|Unity, United States
+104237|Hartline, United States
+101998|Linguere, Senegal
+103838|Sorocaba, Brazil
+104078|Upper Hutt, New Zealand
+102572|Tiraspol, Moldova
+104748|Wilsey, United States
+102489|Fairfax, United States
+103079|Maryborough, Australia
+104564|Collingwood Park, Australia
+102248|Genk, Belgium
+104529|Harmony, United States
+102416|Collinsville, United States
+102625|Woods Cross Roads, United States
+101704|West Sayville, United States
+100341|Olmitz, United States
+102774|Groves, United States
+102837|Duncan Village, South Africa
+104578|HOLROYD RIVER, Australia
+103225|El Tocuyo, Venezuela
+103074|Hartford, United States
+101582|Monticello, United States
+103016|Scarness, Australia
+101702|Camanche, United States
+101770|North Henderson, United States
+102355|Reynolds, United States
+101681|Katonah, United States
+104742|Arcadia, United States
+103140|Ellenwood, United States
+101322|Mooloolaba, Australia
+104576|Grubbs, United States
+102156|Laird Hill, United States
+101404|Skive, Denmark
+104699|Emmen, Netherlands
+103490|Gackle, United States
+100906|Higashiosaka, Japan
+104246|Toponas, United States
+103720|Trout Lake, United States
+103980|Alpine, United States
+102846|Northport, United States
+102153|Tutwiler, United States
+100285|Sandia, United States
+103287|Orient, United States
+100086|New Liskeard, Canada
+100810|Paxinos, United States
+103052|Sankt Plten, Austria
+100457|Winchester, United States
+103136|Evergreen, Australia
+103396|Amarillo, United States
+101048|Waite, United States
+103242|Los Olivos, United States
+102770|Pixley, United States
+101954|Westboro, United States
+101327|Gilgit, Pakistan
+102827|Fort McDowell, United States
+102945|Hardoi, India
+103601|Fence Lake, United States
+104519|Kelvin Grove, Australia
+100974|Msaken, Tunisia
+101093|Ooralea, Australia
+101435|Helotes, United States
+103718|Stratford-Upon-Avon, United Kingdom
+102166|Goshen, United States
+104077|Roxana, United States
+100966|Barrackville, United States
+101879|Chadwick, United States
+103053|Rowley, United States
+100071|Beech Grove, United States
+104633|Tummaville, Australia
+103429|Franklin, United States
+100920|Keysville, United States
+100498|Gruver, United States
+101263|Severnlea, Australia
+104953|Whitwell, United States
+101022|Blue River, United States
+104181|Peabody, United States
+103131|Evaton, South Africa
+100890|Valparaiso, Chile
+104845|Rossville, United States
+102165|Lake Benton, United States
+103700|Chapman Ranch, United States
+101354|Mechanicsville, United States
+104669|Hollandale, United States
+100572|Manson, United States
+100743|Benedicta, United States
+101017|New Washington, United States
+103427|Indooroopilly, Australia
+101108|Camp Hill, Australia
+104621|Wingett Run, United States
+101003|Oreana, United States
+104414|Aydlett, United States
+100187|Mc Clure, United States
+104954|Sikar, India
+103091|New Market, United States
+103112|Hornick, United States
+101312|Chitre, Panama
+100133|Gonzalez, United States
+101337|Loco Hills, United States
+101575|Paupack, United States
+102284|Ivy, United States
+102911|Poynor, United States
+102110|Dublin, Ireland
+101616|Archangelsk, Russia
+102484|Harlan, United States
+102960|Western, United States
+100811|Matanzas, Dominican Republic
+104765|Sendai, Japan
+104266|Cedarville, United States
+100408|Jaffrey, United States
+102850|Eden, United States
+101693|Strathmere, United States
+103115|Poltava, Ukraine
+104325|Spencer, United States
+101099|Duncan, United States
+101724|Bountiful, United States
+104490|Mc Causland, United States
+101063|Conroe, United States
+100523|Ismay, United States
+100266|Kings Beach, United States
+103816|Treviglio, Italy
+100932|Coolspring, United States
+100705|Mountainburg, United States
+102813|Luke AFB, United States
+100037|Zell am See, Austria
+104314|San Mateo, Venezuela
+103047|Barnesville, United States
+100019|Pleasant Grove, United States
+102751|Hinton, United States
+101175|Elgin, United States
+100874|Manchaca, United States
+102210|merauke, Indonesia
+101299|Coleville, United States
+100624|Fort Collins, United States
+103945|Bringhurst, United States
+104898|Wainui, Australia
+100295|Tatamy, United States
+103424|New Paris, United States
+100174|Puxico, United States
+100617|Lehighton, United States
+102000|Marvel, United States
+104154|Kurten, United States
+104117|Middletown, United States
+103880|Plymouth Meeting, United States
+103817|Belmont, United States
+104631|Houston, United States
+102587|Stratford, United States
+101275|Palmerston North, New Zealand
+101937|Washington Boro, United States
+101449|Arcade, United States
+100424|Barnsley, United Kingdom
+102154|Bhiwandi, India
+103619|Newman, Australia
+103333|Upatoi, United States
+102191|Tensed, United States
+102042|Shannon, United States
+101902|Haviland, United States
+101507|Burlington, Canada
+100867|Berrysburg, United States
+104389|EAST CREEK, Australia
+102317|Teays, United States
+102417|Wild Rose, United States
+103223|Sherwood, United States
+102318|Titusville, United States
+103936|Milora, Australia
+100768|San Elizario, United States
+100539|Shreveport, United States
+100055|Constable, United States
+101401|Newhall, United States
+104167|Blackwater, Australia
+102832|La Salle, United States
+102456|Three Rivers, United States
+101411|Pennington, United States
+103701|Belmont, United States
+100748|Dagupan City, Philippines
+104335|Brookfield, United States
+103057|Smithville, United States
+100757|Binjei, Indonesia
+101132|Cedar Grove, United States
+101644|Bracknell, United Kingdom
+103572|Colonial Beach, United States
+103241|Capitola, United States
+100312|Castello di Cisterna, Italy
+101539|Presque Isle, United States
+103190|Mc Connelsville, United States
+102127|Valtournenche, Italy
+100030|East Saint Johnsbury, United States
+104102|Greensburg, United States
+101843|Nazareth, United States
+104185|Pie Town, United States
+104510|Deep Gap, United States
+103673|Emporia, United States
+103885|Montenegro, Brazil
+104565|Stapleton, United States
+100310|Richlandtown, United States
+102460|Dallesport, United States
+101488|Tyner, United States
+100132|Gas, United States
+103811|Ladysmith, United States
+101129|Landau, Germany
+100365|Shiyan, China
+100263|Marion, United States
+103607|West Newbury, United States
+101609|Boodua, Australia
+101344|Perryville, United States
+102775|Great Bend, United States
+100865|Chunchula, United States
+101047|Fultonham, United States
+100641|FINLAY VALE, Australia
+100631|Indian Lake Estates, United States
+103978|Rathdrum, United States
+103263|Leesburg, United States
+100384|Soka, Japan
+100636|State Farm, United States
+101514|Cherryvale, United States
+102819|Bryant, United States
+102113|Patrick AFB, United States
+101895|Addison, United States
+101549|Violet Hill, United States
+101957|Isfjorden, Norway
+100687|Cazenovia, United States
+100501|Warnock, United States
+102266|Aarschot, Belgium
+101800|Lyndon, United States
+100061|DukStas, Lithuania
+100605|Drakes Branch, United States
+102799|Kalkaska, United States
+104062|Jasra, Bahrain
+103759|Round Lake, United States
+100904|Jackson, United States
+103309|Brant, United States
+104355|Clinton, United States
+104775|Scotts, United States
+102983|Skopje, Macedonia
+100721|Zillmere, Australia
+101634|Tillery, United States
+104771|Empire, United States
+104746|Whitewater, United States
+101258|Gilead, United States
+101641|Severy, United States
+100715|Smithfield, United States
+101515|Skyland, United States
+102720|Missouri City, United States
+102062|Jefferson, United States
+102440|Woensdrecht, Netherlands
+101947|Ozona, United States
+103291|Gaines, United States
+101625|Rosemont, United States
+100897|Nijmegen, Netherlands
+104820|Petersburg, United States
+103622|Northbridge, United States
+101611|Wiley, United States
+104127|La Grange, United States
+101997|Cost, United States
+103408|Montmorency, France
+104962|Mount Auburn, United States
+102536|Torre Pellice, Italy
+100338|Jamao Al Norte, Dominican Republic
+101340|Healy, United States
+101348|Goodman, United States
+103368|Newbern, United States
+104880|Armagh, United States
+101462|Non Buri , Thailand
+104693|Etta, United States
+104187|Quemado, United States
+101759|Remington, United States
+100961|Cummings, United States
+103994|Wentworth, United States
+102247|Ladysmith, United States
+104164|Hanalei, United States
+103230|Shark Bay, Australia
+102516|Salem, United States
+103062|Bantry, United States
+102657|Ringkobing, Denmark
+100866|Mahoba, India
+104986|Hartman, United States
+100305|Lake Huntington, United States
