@@ -5,20 +5,20 @@
  */
 package proyectoedd2_claudioangesagas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
  */
 public class Arbol {
-    NodoArbol raiz;
-    int grado = 4;
+   private NodoArbol raiz;
+    private int orden;
+  
 
-    public Arbol() {
-    }
-
-    public Arbol(NodoArbol raiz, int grado) {
-        this.raiz = raiz;
-        this.grado = grado;
+    public Arbol(int orden) {
+        this.raiz = null;
+        this.orden = orden;
     }
 
     public NodoArbol getRaiz() {
@@ -29,65 +29,82 @@ public class Arbol {
         this.raiz = raiz;
     }
 
-    public int getGrado() {
-        return grado;
+    public int getOrden() {
+        return orden;
     }
 
-    public void setGrado(int grado) {
-        this.grado = grado;
+    public void setOrden(int orden) {
+        this.orden = orden;
     }
-    
-    
-    
-    public void intertar(Llave nueva){
-        if (raiz==null) {
-            raiz = new NodoArbol(true,grado);
-            raiz.getLlaves()[0] =  nueva;
-            raiz.setNumeroLlaves(1);
-            
-        }else if(raiz.getNumeroLlaves()==(grado-1)){
-            NodoArbol asubir = new NodoArbol(false,grado);
-                asubir.getHijos()[0] = raiz;
-                asubir.hacerSplit(0, raiz,nueva);
+
+    public void traverse() {
+        if (raiz != null) {
+            raiz.traverse();
+        }
+    }
+
+    public NodoArbol search(Llave k) {
+        if (raiz == null) {
+            return null;
+        } else {
+            return raiz.search(k);
+        }
+    }
+
+    public void insert(Llave k) {
+        if (raiz == null) {
+            raiz = new NodoArbol(orden, true);
+            raiz.getKeys()[0] = k;
+            raiz.setKeyNumber(1);
+        } else {
+            if (raiz.getKeyNumber() == (orden - 1)) {
+                NodoArbol s = new NodoArbol(orden, false);
+                s.getChildren()[0] = raiz;
+                s.splitChild(0, raiz);
                 int i = 0;
-                if (comparoLLave(asubir.getLlaves()[0].getLlave(), nueva.getLlave()).equals("Menor")) {
+                if (comparacion(s.getKeys()[0].getLlave(), k.getLlave()).equals("Menor")) {
                     i++;
                 }
-                asubir.getHijos()[i].insertarEnHoja(nueva);
-                raiz = asubir;
-        
-        }else{
-          raiz.insertarEnHoja(nueva);
-        
+                s.getChildren()[i].insertNonFull(k);
+                raiz = s;
+            } else {
+                raiz.insertNonFull(k);
+            }
         }
-    
     }
-    public NodoArbol buscar(String llave){
-        if (raiz ==null) {
-            return null;
-        }else{
-        
-        return raiz.buscar(llave);
+
+    public void remove(Llave k) {
+        if (raiz == null) {
+            JOptionPane.showMessageDialog(null, "No hay registros", "Información", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            raiz.remove(k);
+            if (raiz.getKeyNumber() == 0) {
+                if (raiz.isLeaf()) {
+                    raiz = null;
+                } else {
+                    raiz = raiz.getChildren()[0];
+                }
+            }
         }
-    
     }
-   public String comparoLLave(String llave1, String llave2) {
+
+    public String comparacion(String dato1, String dato2) {
         boolean sigue = true;
         int i = 0;
-        if (llave1.length() > llave2.length()) {
+        if (dato1.length() > dato2.length()) {
             return "Mayor";
         }
-        if (llave1.length() < llave2.length()) {
+        if (dato1.length() < dato2.length()) {
             return "Menor";
         }
         while (sigue) {
-            if (llave1.charAt(i) == llave2.charAt(i)) {
+            if (dato1.charAt(i) == dato2.charAt(i)) {
                 i++;
-                if (i >= llave1.length() || i >= llave2.length()) {
+                if (i >= dato1.length() || i >= dato2.length()) {
                     return "Iguales";
                 }
             } else {
-                if (llave1.charAt(i) > llave2.charAt(i)) {
+                if (dato1.charAt(i) > dato2.charAt(i)) {
                     return "Mayor";
                 } else {
                     return "Menor";
@@ -95,32 +112,12 @@ public class Arbol {
             }
 
         }
-        return "No se pudo procesar";
+        return "";
     }
-    public void imprimir(){    
-        for (int i = 0; i < raiz.getLlaves().length; i++) {
-            System.out.print(raiz.getLlaves()[i].getLlave()+"|");   
-        }
-    }
-     public void imprimirB(NodoArbol nodoImprimir) {
-         if (!nodoImprimir.esHojaf()) {
-             System.out.print("      ");
-         }
-        nodoImprimir.imprimir();
-         if (!nodoImprimir.esHojaf()) {
-             System.out.println("");
-         }
 
-        //miro si no es hoja para recorrer sus hijos, de lo contrario no tiene sentido entrar
-        if (!nodoImprimir.esHojaf()) {
-            //recorre los nodos para saber si tiene hijos
-            for (int j = 0; j <= nodoImprimir.numeroLLaves; j++) {
-                if(nodoImprimir.getHijos()[j] != null) {                  
-                    imprimirB(nodoImprimir.getHijos()[j]);//vuelvo a imprimir pero ahora en el contexto de su hijo en la posicion del bucle
-                }
-            }
-        }
+    @Override
+    public String toString() {
+        return "BTree[" + "\nraiz=" + raiz + "\n]";
     }
-    
     
 }

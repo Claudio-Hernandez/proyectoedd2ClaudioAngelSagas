@@ -684,9 +684,10 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoFiltro)
-                    .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textoFiltro)))
                 .addContainerGap(135, Short.MAX_VALUE))
         );
 
@@ -2343,7 +2344,7 @@ public class Principal extends javax.swing.JFrame {
     File file = new File(rutaArchivo);//el archivo al que vamos a guardar
     Metadata metadata = new Metadata();
     String ubicacionActual = "";
-    Arbol arbolB = new Arbol(null, 6);
+    Arbol arbolB = new Arbol(6);
     Llave llaveactual = null;
     RandomAccessFile archivoAhorita;
     long posicionArchivo;
