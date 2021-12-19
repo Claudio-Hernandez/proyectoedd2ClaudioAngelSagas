@@ -13,59 +13,59 @@ import java.util.Arrays;
  */
 public class NodoArbol {
 
-     private int keyNumber;
-    private Llave[] keys;
-    private boolean leaf;
-    private NodoArbol[] children;
+     private int nLlaves;
+    private Llave[] llaves;
+    private boolean esHoja;
+    private NodoArbol[] hijos;
     private int t;
 
     private static final long SerialVersionUID = 1008l;
 
     public NodoArbol(int orden, boolean leaf) {
-        this.leaf = leaf;
+        this.esHoja = leaf;
         this.t = orden;
-        this.keys = new Llave[t - 1];
+        this.llaves = new Llave[t - 1];
         llenarArreglo();
-        this.children = new NodoArbol[t];
-        this.keyNumber = 0;
+        this.hijos = new NodoArbol[t];
+        this.nLlaves = 0;
     }
 
     private void llenarArreglo() {
         for (int i = 0; i < t - 1; i++) {
-            keys[i] = new Llave();
+            llaves[i] = new Llave();
         }
     }
 
-    public int getKeyNumber() {
-        return keyNumber;
+    public int getnLlaves() {
+        return nLlaves;
     }
 
-    public void setKeyNumber(int keyNumber) {
-        this.keyNumber = keyNumber;
+    public void setnLlaves(int nLlaves) {
+        this.nLlaves = nLlaves;
     }
 
-    public boolean isLeaf() {
-        return leaf;
+    public boolean isEsHoja() {
+        return esHoja;
     }
 
-    public void setLeaf(boolean leaf) {
-        this.leaf = leaf;
+    public void setEsHoja(boolean esHoja) {
+        this.esHoja = esHoja;
     }
 
-    public Llave[] getKeys() {
-        return keys;
+    public Llave[] getLlaves() {
+        return llaves;
     }
 
-    public void setKeys(Llave[] keys) {
-        this.keys = keys;
+    public void setLlaves(Llave[] llaves) {
+        this.llaves = llaves;
     }
 
-    public NodoArbol[] getChildren() {
-        return children;
+    public NodoArbol[] getHijos() {
+        return hijos;
     }
 
-    public void setChildren(NodoArbol[] children) {
-        this.children = children;
+    public void setHijos(NodoArbol[] hijos) {
+        this.hijos = hijos;
     }
 
     public int getT() {
@@ -76,7 +76,7 @@ public class NodoArbol {
         this.t = t;
     }
 
-    public String comparacion(String dato1, String dato2) {
+    public String compararLlaves(String dato1, String dato2) {
         boolean sigue = true;
         int i = 0;
         if (dato1.length() > dato2.length()) {
@@ -103,280 +103,280 @@ public class NodoArbol {
         return "";
     }
 
-    private int findKey(Llave k) {
+    private int encontrarLlave(Llave k) {
         int index = 0;
-        while (index < keyNumber && comparacion(keys[index].getLlave(), k.getLlave()).equals("Menor")) {
+        while (index < nLlaves && compararLlaves(llaves[index].getLlave(), k.getLlave()).equals("Menor")) {
             index++;
         }
         return index;
     }
 
     public void remove(Llave k) {
-        int index = findKey(k);
+        int index = encontrarLlave(k);
 
-        if (index < keyNumber && keys[index].getLlave().equals(k.getLlave())) {
+        if (index < nLlaves && llaves[index].getLlave().equals(k.getLlave())) {
 
-            if (leaf) {
-                removeFromLeaf(index);
+            if (esHoja) {
+                removerDeHoja(index);
             } else {
-                removeFromNonLeaf(index);
+                removerDeUnaHoja(index);
             }
         } else {
 
-            if (!leaf) {
+            if (!esHoja) {
                 boolean flag = false;
-                if (index == keyNumber) {
+                if (index == nLlaves) {
                     flag = true;
                 }
 
-                if (children[index].getKeyNumber() < (t / 2)) {
-                    fill(index);
+                if (hijos[index].getnLlaves() < (t / 2)) {
+                    llenar(index);
                 }
 
-                if (flag && index > keyNumber) {
-                    children[index - 1].remove(k);
+                if (flag && index > nLlaves) {
+                    hijos[index - 1].remove(k);
                 } else {
-                    children[index].remove(k);
+                    hijos[index].remove(k);
                 }
             }
         }
     }
 
-    private void removeFromLeaf(int index) {
-        for (int i = index + 1; i < keyNumber; i++) {
-            keys[i - 1] = keys[i];
+    private void removerDeHoja(int index) {
+        for (int i = index + 1; i < nLlaves; i++) {
+            llaves[i - 1] = llaves[i];
         }
-        keyNumber--;
+        nLlaves--;
     }
 
-    private void removeFromNonLeaf(int index) {
-        Llave k = keys[index];
+    private void removerDeUnaHoja(int index) {
+        Llave k = llaves[index];
 
-        if (children[index].getKeyNumber() >= (t / 2)) {
-            Llave pred = getPred(index);
-            keys[index] = pred;
-            children[index].remove(pred);
+        if (hijos[index].getnLlaves() >= (t / 2)) {
+            Llave pred = llaveAnterior(index);
+            llaves[index] = pred;
+            hijos[index].remove(pred);
         } else {
-            if (children[index + 1].getKeyNumber() >= (t / 2)) {
-                Llave succ = getSucc(index);
-                keys[index] = succ;
-                children[index + 1].remove(succ);
+            if (hijos[index + 1].getnLlaves() >= (t / 2)) {
+                Llave succ = llaveSiguiente(index);
+                llaves[index] = succ;
+                hijos[index + 1].remove(succ);
             } else {
 
-                merge(index);
-                children[index].remove(k);
+                hacerMerge(index);
+                hijos[index].remove(k);
             }
         }
     }
 
-    private Llave getPred(int index) {
-        NodoArbol cur = children[index];
-        while (!cur.isLeaf()) {
-            cur = cur.getChildren()[cur.getKeyNumber()];
+    private Llave llaveAnterior(int index) {
+        NodoArbol cur = hijos[index];
+        while (!cur.isEsHoja()) {
+            cur = cur.getHijos()[cur.getnLlaves()];
         }
-        return cur.getKeys()[cur.getKeyNumber() - 1];
+        return cur.getLlaves()[cur.getnLlaves() - 1];
     }
 
-    private Llave getSucc(int index) {
-        NodoArbol cur = children[index + 1];
-        while (!cur.isLeaf()) {
-            cur = cur.getChildren()[0];
+    private Llave llaveSiguiente(int index) {
+        NodoArbol cur = hijos[index + 1];
+        while (!cur.isEsHoja()) {
+            cur = cur.getHijos()[0];
         }
-        return cur.getKeys()[0];
+        return cur.getLlaves()[0];
     }
 
-    private void fill(int index) {
-        if (index != 0 && children[index - 1].getKeyNumber() >= (t / 2)) {
+    private void llenar(int index) {
+        if (index != 0 && hijos[index - 1].getnLlaves() >= (t / 2)) {
             borrowFromPrev(index);
         } else {
-            if (index != keyNumber && children[index + 1].getKeyNumber() >= (t / 2)) {
-                borrowFromNext(index);
+            if (index != nLlaves && hijos[index + 1].getnLlaves() >= (t / 2)) {
+                tomarDeSiguiente(index);
             } else {
-                if (index != keyNumber) {
-                    merge(index);
+                if (index != nLlaves) {
+                    hacerMerge(index);
                 } else {
-                    merge(index - 1);
+                    hacerMerge(index - 1);
                 }
             }
         }
     }
 
     private void borrowFromPrev(int index) {
-        NodoArbol child = children[index];
-        NodoArbol sibling = children[index - 1];
+        NodoArbol child = hijos[index];
+        NodoArbol sibling = hijos[index - 1];
 
-        for (int i = child.getKeyNumber() - 1; i >= 0; i--) {
-            child.getKeys()[i + 1] = child.getKeys()[i];
+        for (int i = child.getnLlaves() - 1; i >= 0; i--) {
+            child.getLlaves()[i + 1] = child.getLlaves()[i];
         }
 
-        if (!child.isLeaf()) {
-            for (int i = child.getKeyNumber(); i >= 0; i--) {
-                child.getChildren()[i + 1] = child.getChildren()[i];
+        if (!child.isEsHoja()) {
+            for (int i = child.getnLlaves(); i >= 0; i--) {
+                child.getHijos()[i + 1] = child.getHijos()[i];
             }
         }
 
-        child.getKeys()[0] = keys[index - 1];
+        child.getLlaves()[0] = llaves[index - 1];
 
-        if (!child.isLeaf()) {
-            child.getChildren()[0] = sibling.getChildren()[sibling.getKeyNumber()];
+        if (!child.isEsHoja()) {
+            child.getHijos()[0] = sibling.getHijos()[sibling.getnLlaves()];
         }
 
-        keys[index - 1] = sibling.getKeys()[sibling.getKeyNumber() - 1];
+        llaves[index - 1] = sibling.getLlaves()[sibling.getnLlaves() - 1];
 
-        child.setKeyNumber(child.getKeyNumber() + 1);
-        sibling.setKeyNumber(sibling.getKeyNumber() - 1);
+        child.setnLlaves(child.getnLlaves() + 1);
+        sibling.setnLlaves(sibling.getnLlaves() - 1);
     }
 
-    private void borrowFromNext(int index) {
-        NodoArbol child = children[index];
-        NodoArbol sibling = children[index + 1];
+    private void tomarDeSiguiente(int index) {
+        NodoArbol hijo = hijos[index];
+        NodoArbol hermanos = hijos[index + 1];
 
-        child.getKeys()[child.getKeyNumber()] = keys[index];
+        hijo.getLlaves()[hijo.getnLlaves()] = llaves[index];
 
-        if (!child.isLeaf()) {
-            child.getChildren()[child.getKeyNumber() + 1] = sibling.getChildren()[0];
+        if (!hijo.isEsHoja()) {
+            hijo.getHijos()[hijo.getnLlaves() + 1] = hermanos.getHijos()[0];
         }
 
-        keys[index] = sibling.getKeys()[0];
+        llaves[index] = hermanos.getLlaves()[0];
 
-        for (int i = 1; i < sibling.getKeyNumber(); i++) {
-            sibling.getKeys()[i - 1] = sibling.getKeys()[i];
+        for (int i = 1; i < hermanos.getnLlaves(); i++) {
+            hermanos.getLlaves()[i - 1] = hermanos.getLlaves()[i];
         }
 
-        if (!sibling.isLeaf()) {
-            for (int i = 1; i <= sibling.getKeyNumber(); i++) {
-                sibling.getChildren()[i - 1] = sibling.getChildren()[i];
+        if (!hermanos.isEsHoja()) {
+            for (int i = 1; i <= hermanos.getnLlaves(); i++) {
+                hermanos.getHijos()[i - 1] = hermanos.getHijos()[i];
             }
         }
 
-        child.setKeyNumber(child.getKeyNumber() + 1);
-        sibling.setKeyNumber(sibling.getKeyNumber() - 1);
+        hijo.setnLlaves(hijo.getnLlaves() + 1);
+        hermanos.setnLlaves(hermanos.getnLlaves() - 1);
     }
 
-    private void merge(int index) {
-        NodoArbol child = children[index];
-        NodoArbol sibling = children[index + 1];
+    private void hacerMerge(int index) {
+        NodoArbol hijo = hijos[index];
+        NodoArbol hermanos = hijos[index + 1];
 
-        child.getKeys()[t / 2 - 1] = keys[index];
+        hijo.getLlaves()[t / 2 - 1] = llaves[index];
 
-        for (int i = 0; i < sibling.getKeyNumber(); i++) {
-            child.getKeys()[i + t / 2] = sibling.getKeys()[i];
+        for (int i = 0; i < hermanos.getnLlaves(); i++) {
+            hijo.getLlaves()[i + t / 2] = hermanos.getLlaves()[i];
         }
 
-        if (!child.isLeaf()) {
-            for (int i = 0; i <= sibling.getKeyNumber(); i++) {
-                child.getChildren()[i + t / 2] = sibling.getChildren()[i];
+        if (!hijo.isEsHoja()) {
+            for (int i = 0; i <= hermanos.getnLlaves(); i++) {
+                hijo.getHijos()[i + t / 2] = hermanos.getHijos()[i];
             }
         }
 
-        for (int i = index + 1; i < keyNumber; i++) {
-            keys[i - 1] = keys[i];
+        for (int i = index + 1; i < nLlaves; i++) {
+            llaves[i - 1] = llaves[i];
         }
 
-        for (int i = index + 2; i <= keyNumber; i++) {
-            children[i - 1] = children[i];
+        for (int i = index + 2; i <= nLlaves; i++) {
+            hijos[i - 1] = hijos[i];
         }
 
-        child.setKeyNumber(child.getKeyNumber() + sibling.getKeyNumber() + 1);
-        keyNumber--;
+        hijo.setnLlaves(hijo.getnLlaves() + hermanos.getnLlaves() + 1);
+        nLlaves--;
     }
 
     public void insertNonFull(Llave k) {
-        int i = keyNumber - 1;
-        if (leaf) {
-            while (i >= 0 && comparacion(keys[i].getLlave(), k.getLlave()).equals("Mayor")) {
-                keys[i + 1] = keys[i];
+        int i = nLlaves - 1;
+        if (esHoja) {
+            while (i >= 0 && compararLlaves(llaves[i].getLlave(), k.getLlave()).equals("Mayor")) {
+                llaves[i + 1] = llaves[i];
                 i--;
             }
-            keys[i + 1] = k;
-            keyNumber++;
+            llaves[i + 1] = k;
+            nLlaves++;
         } else {
-            while (i >= 0 && comparacion(keys[i].getLlave(), k.getLlave()).equals("Mayor")) {
+            while (i >= 0 && compararLlaves(llaves[i].getLlave(), k.getLlave()).equals("Mayor")) {
                 i--;
             }
 
-            if (children[i + 1].getKeyNumber() == (t - 1)) {
+            if (hijos[i + 1].getnLlaves() == (t - 1)) {
 
-                splitChild(i + 1, children[i + 1]);
-                if (comparacion(keys[i + 1].getLlave(), k.getLlave()).equals("Menor")) {
+                splitHijo(i + 1, hijos[i + 1]);
+                if (compararLlaves(llaves[i + 1].getLlave(), k.getLlave()).equals("Menor")) {
                     i++;
                 }
             }
-            children[i + 1].insertNonFull(k);
+            hijos[i + 1].insertNonFull(k);
         }
     }
 
-    public void splitChild(int i, NodoArbol y) {
-        NodoArbol z = new NodoArbol(y.getT(), y.isLeaf());
-        z.setKeyNumber((t - 1) / 2);
+    public void splitHijo(int i, NodoArbol y) {
+        NodoArbol z = new NodoArbol(y.getT(), y.isEsHoja());
+        z.setnLlaves((t - 1) / 2);
 
         for (int j = 0; j < (t - 1) / 2; j++) {
-            z.getKeys()[j] = y.getKeys()[j + t / 2];
+            z.getLlaves()[j] = y.getLlaves()[j + t / 2];
         }
 
-        if (!y.isLeaf()) {
+        if (!y.isEsHoja()) {
             for (int j = 0; j < (t / 2); j++) {
-                z.getChildren()[j] = y.getChildren()[j + t / 2];
+                z.getHijos()[j] = y.getHijos()[j + t / 2];
             }
         }
 
-        y.setKeyNumber(((t - 1) / 2));
+        y.setnLlaves(((t - 1) / 2));
 
-        for (int j = keyNumber; j >= i + 1; j--) {
-            children[j + 1] = children[j];
+        for (int j = nLlaves; j >= i + 1; j--) {
+            hijos[j + 1] = hijos[j];
         }
 
-        children[i + 1] = z;
+        hijos[i + 1] = z;
 
-        for (int j = keyNumber - 1; j >= i; j--) {
-            keys[j + 1] = keys[j];
+        for (int j = nLlaves - 1; j >= i; j--) {
+            llaves[j + 1] = llaves[j];
         }
 
-        keys[i] = y.getKeys()[(t - 1) / 2];
+        llaves[i] = y.getLlaves()[(t - 1) / 2];
 
-        keyNumber++;
+        nLlaves++;
     }
 
-    public NodoArbol search(Llave k) {
+    public NodoArbol buscar(Llave k) {
         int i = 0;
-        while (i < keyNumber && comparacion(k.getLlave(), keys[i].getLlave()).equals("Mayor")) {
+        while (i < nLlaves && compararLlaves(k.getLlave(), llaves[i].getLlave()).equals("Mayor")) {
             i++;
         }
-        if (keys[i].getLlave().equals(k.getLlave())) {
+        if (llaves[i].getLlave().equals(k.getLlave())) {
             return this;
         }
-        if (leaf) {
+        if (esHoja) {
             return null;
         }
-        return children[i].search(k);
+        return hijos[i].buscar(k);
     }
 
     public Llave[] traverse() {
         int i;
         int pos = 0;
         Llave[] llaves = new Llave[10];
-        for (i = 0; i < keyNumber; i++) {
-            if (!leaf) {
-                children[i].traverse();
+        for (i = 0; i < nLlaves; i++) {
+            if (!esHoja) {
+                hijos[i].traverse();
             }
             if (pos <= 9) {
-                llaves[pos] = keys[i];
+                llaves[pos] = this.llaves[i];
                 pos++;
             }
 
-            if (pos > 9 || i == keyNumber - 1) {
+            if (pos > 9 || i == nLlaves - 1) {
                 return llaves;
             }
         }
-        if (!leaf) {
-            children[i].traverse();
+        if (!esHoja) {
+            hijos[i].traverse();
         }
         return llaves;
     }
 
     @Override
     public String toString() {
-        return "{keys=" + Arrays.toString(keys) + ", children=" + Arrays.toString(children) + '}';
+        return "{keys=" + Arrays.toString(llaves) + ", children=" + Arrays.toString(hijos) + '}';
     }
 
 }

@@ -1,2 +1,0 @@
-Cedula:int[4]1;Nombre:String[8]0;Genero:char[1]0;
-@@@

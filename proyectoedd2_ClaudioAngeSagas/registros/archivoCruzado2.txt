@@ -1,2 +1,0 @@
-personId:int[4]1;cityId:int[4]0;Genero:char[1]0;Cedula:int[4]0;Edad:int[4]0;
-@@@
