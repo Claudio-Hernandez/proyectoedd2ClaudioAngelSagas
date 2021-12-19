@@ -45,6 +45,11 @@ public class Campos {
     public void setLlavePrimaria(boolean llavePrimaria) {
         this.llavePrimaria = llavePrimaria;
     }
+
+    @Override
+    public String toString() {
+        return "nombre=" + nombre + ", tipo=" + tipo + ", byteoffset=" + byteoffset + ", llavePrimaria=" + llavePrimaria + '}';
+    }
     
     
 }

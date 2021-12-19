@@ -1,0 +1,2 @@
+Cedula:int[4]1;Nombre:String[8]0;cityName:String[10]0;cityId:int[4]0;
+@@@

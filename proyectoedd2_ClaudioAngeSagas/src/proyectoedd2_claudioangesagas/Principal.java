@@ -47,6 +47,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 //import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -173,6 +175,18 @@ public class Principal extends javax.swing.JFrame {
         jButton15 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
+        jd_archivoCruzar = new javax.swing.JDialog();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jt_campos1 = new javax.swing.JTable();
+        jButton30 = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jt_campos2 = new javax.swing.JTable();
+        jButton31 = new javax.swing.JButton();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jt_camposCruzados = new javax.swing.JTable();
+        jButton32 = new javax.swing.JButton();
+        pop_camposMenu = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -181,6 +195,7 @@ public class Principal extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
 
         campos.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
@@ -1072,6 +1087,133 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jd_archivoCruzar.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                jd_archivoCruzarWindowClosing(evt);
+            }
+        });
+
+        jt_campos1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Campos Archivo Actual"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane8.setViewportView(jt_campos1);
+
+        jButton30.setText("Cruzar Archivos");
+        jButton30.setEnabled(false);
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton30ActionPerformed(evt);
+            }
+        });
+
+        jt_campos2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Campos Archivo 2"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane9.setViewportView(jt_campos2);
+
+        jButton31.setText("Seleccionar Archivo");
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton31ActionPerformed(evt);
+            }
+        });
+
+        jt_camposCruzados.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Campos Cruzados"
+            }
+        ));
+        jt_camposCruzados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_camposCruzadosMouseClicked(evt);
+            }
+        });
+        jScrollPane10.setViewportView(jt_camposCruzados);
+
+        jButton32.setText("Agregar Campo a Campos Cruzados");
+        jButton32.setEnabled(false);
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton32ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_archivoCruzarLayout = new javax.swing.GroupLayout(jd_archivoCruzar.getContentPane());
+        jd_archivoCruzar.getContentPane().setLayout(jd_archivoCruzarLayout);
+        jd_archivoCruzarLayout.setHorizontalGroup(
+            jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_archivoCruzarLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jButton31, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
+                .addGap(80, 80, 80)
+                .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jButton32, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))
+                .addGap(67, 67, 67))
+        );
+        jd_archivoCruzarLayout.setVerticalGroup(
+            jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_archivoCruzarLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_archivoCruzarLayout.createSequentialGroup()
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton32))
+                    .addGroup(jd_archivoCruzarLayout.createSequentialGroup()
+                        .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton31)
+                            .addComponent(jButton30))))
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        jMenuItem1.setText("Eliminar Campo");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        pop_camposMenu.add(jMenuItem1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -1140,6 +1282,15 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton29.setBackground(new java.awt.Color(78, 17, 132));
+        jButton29.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton29.setText("Cruzar Archivos");
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton29ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1156,34 +1307,36 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(143, 143, 143)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 223, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
+                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                    .addComponent(jButton29, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(113, 113, 113))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(319, 319, 319)
-                .addComponent(jButton9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
                 .addComponent(jButton12)
                 .addGap(25, 25, 25))
         );
@@ -1466,13 +1619,16 @@ public class Principal extends javax.swing.JFrame {
 
             Scanner myReader = new Scanner(new File(ubicacionActual));
             DefaultTableModel modelo = (DefaultTableModel) jtable_campos.getModel();
+            DefaultTableModel modelo1 = (DefaultTableModel) jt_campos1.getModel();
 
             borrarElementosTabla();//Limpiar tabla
             metadata.getCampos().clear();//Se limpia todo lo que pueda haber en la metadata
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String[] camposLinea = data.split(";");
+
                 for (String Campo : camposLinea) {
+
                     //Conseguir el nombre
                     try {
 
@@ -1499,10 +1655,19 @@ public class Principal extends javax.swing.JFrame {
                             nom, tipo, len, getLlave
                         };
 
+                        String temp = nom + ":" + tipo + "[" + len + "]" + split[1];
+                        //Agregar a la tabla
+                        Object[] newrow2 = {
+                            temp
+                        };
+
+                        modelo1.addRow(newrow2);
+
                         metadata.getCampos().add(new Campos(nom, tipo, len, getLlave));
 
                         //Ojo cambiar como saber si es llaveprimaria
                         modelo.addRow(newrow);
+
                     } catch (ArrayIndexOutOfBoundsException ex) {
                     }
                 }
@@ -2585,9 +2750,9 @@ public class Principal extends javax.swing.JFrame {
         for (int i = 0; i < modeloTablaRegistros.getRowCount(); i++) {
             for (int k = 0; k < modeloTablaRegistros.getColumnCount(); k++) {
                 if (modeloTablaRegistros.getValueAt(i, k) == null) {
-                    
+
                     flag = false;
-                        break;
+                    break;
 
                 } else {
                     if (modeloTablaRegistros.getColumnCount() - k == 1) {
@@ -2641,24 +2806,23 @@ public class Principal extends javax.swing.JFrame {
                                 archivoAhorita.seek(llaveresultante.getByteoffset());
                                 archivoAhorita.writeBytes(registroTemp);
                                 metadata.getAvaiList().suprimir(p2);
-                                
 
                             } catch (IOException ex) {
                                 Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
                             }
 
                         } else {
-                            
+
                             try {
-                                posArchivo =  archivoAhorita.length();
+                                posArchivo = archivoAhorita.length();
                                 archivoAhorita.seek(posArchivo);
-                                 llave.setByteoffset(posArchivo);
-                            llaves.add(llave);
-                            archivoAhorita.writeBytes(registroTemp);
+                                llave.setByteoffset(posArchivo);
+                                llaves.add(llave);
+                                archivoAhorita.writeBytes(registroTemp);
                             } catch (IOException ex) {
                                 Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
                             }
-                           
+
                         }
 
                     }
@@ -2679,6 +2843,307 @@ public class Principal extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+
+        jd_archivoCruzar.pack();
+        jd_archivoCruzar.setLocationRelativeTo(this);
+        jd_archivoCruzar.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton29ActionPerformed
+
+    private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
+        // Cruzar Archivos
+        int contLlaves = 0;
+        String out = "";
+        for (int i = 0; i < metaDataCruzada.getCampos().size(); i++) {
+            if (metaDataCruzada.getCampos().get(i).isLlavePrimaria()) {
+                contLlaves++;
+                out += i + "- " + metaDataCruzada.getCampos().get(i).toString() + "\n";
+            }
+        }
+
+        int op = 0;
+        if (contLlaves > 1) {
+            try {
+                op = Integer.parseInt(JOptionPane.showInputDialog("Hay mas de una llave primaria, debe elejir solo una: " + "\n" + out));
+            } catch (NumberFormatException ex) {
+                System.out.println("No selecciona nada, abortando operacion...");
+            }
+
+            for (int i = 0; i < metaDataCruzada.getCampos().size(); i++) {
+                if (i != op) {
+                    metaDataCruzada.getCampos().get(i).setLlavePrimaria(false);
+                }
+            }
+
+            escribirMetadaCampos(metaDataCruzada);
+
+        } else if (contLlaves == 0) {//Sino hay ninguna llave primaria
+            try {
+
+                out = "";
+                for (int i = 0; i < metaDataCruzada.getCampos().size(); i++) {
+                    out += i + "- " + metaDataCruzada.getCampos().get(i).toString() + "\n";
+                }
+
+                op = Integer.parseInt(JOptionPane.showInputDialog("No hay ninguna llave primaria, debe elejir solo una: " + "\n" + out));
+
+                metaDataCruzada.getCampos().get(op).setLlavePrimaria(true);
+
+                escribirMetadaCampos(metaDataCruzada);
+
+            } catch (NumberFormatException ex) {
+                System.out.println("No selecciona nada, abortando operacion...");
+            }
+
+        } else {
+            escribirMetadaCampos(metaDataCruzada);
+        }
+
+        DefaultTableModel model = (DefaultTableModel) jt_camposCruzados.getModel();
+        model.setRowCount(0);
+
+    }//GEN-LAST:event_jButton30ActionPerformed
+
+    public void escribirMetadaCampos(Metadata metadata) {
+        try {
+            String nombre = JOptionPane.showInputDialog("Ingrese el nombre del nuevo archivo");
+            if (new File("./registros/" + nombre + ".txt").exists()) {
+                while (new File("./registros/" + nombre + ".txt").exists()) {
+                    nombre = JOptionPane.showInputDialog("Ese archivo ya existe cambie el nombre edel archivo");
+                }
+                metadata.escribirCampos(new File("./registros/" + nombre + ".txt"));
+                JOptionPane.showMessageDialog(jd_archivoCruzar, "Archivo Cruzado Creado");
+            } else {
+                metadata.escribirCampos(new File("./registros/" + nombre + ".txt"));
+                JOptionPane.showMessageDialog(jd_archivoCruzar, "Archivo Cruzado Creado");
+            }
+
+        } catch (IOException ex) {
+        }
+    }
+
+    private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
+        archivoCruzar = null;
+        JFileChooser jfc = new JFileChooser("./");
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Archivos de Texto", "txt");
+        jfc.addChoosableFileFilter(filtro);
+        jfc.setAcceptAllFileFilterUsed(false);
+        int seleccion = jfc.showOpenDialog(this);
+        String pathArchivoCruzar = "";
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            try {
+                archivoCruzar = new RandomAccessFile(jfc.getSelectedFile(), "rw");
+            } catch (FileNotFoundException ex) {
+            }
+            pathArchivoCruzar = jfc.getSelectedFile().getAbsolutePath();
+
+            pathArchivoCruzar = pathArchivoCruzar.substring(0, pathArchivoCruzar.length() - 4);
+            JOptionPane.showMessageDialog(jd_archivoCruzar, "El archivo se ha abierto exitosamente", "Información", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        metaData2 = new Metadata();
+        metaDataCruzada = new Metadata();
+        try {
+            pathArchivoCruzar += ".txt";
+            File temp = new File(pathArchivoCruzar);
+            if (temp.exists()) {
+                Scanner myReader = new Scanner(new File(pathArchivoCruzar));
+                DefaultTableModel modelo = (DefaultTableModel) jt_campos2.getModel();
+
+                borrarElementosTabla();//Limpiar tabla
+                metaData2.getCampos().clear();//Se limpia todo lo que pueda haber en la metadata
+                while (myReader.hasNextLine()) {
+                    String data = myReader.nextLine();
+                    String[] camposLinea = data.split(";");
+
+                    for (String Campo : camposLinea) {
+
+                        //Conseguir el nombre
+                        try {
+
+                            String[] campSpLit = Campo.split(":"); //Nombre:Tipo[num] = (Nombre)(Tipo[num]llave)
+                            String nom = campSpLit[0];
+                            String tipo = "";
+
+                            //Conseguir el tipo
+                            String[] typeSplit = campSpLit[1].split("\\[");// Tipo[Num] = (Tipo)(num]llave)
+                            tipo = typeSplit[0];
+
+                            //Conseguir llave primaria
+                            String[] split = typeSplit[1].split("]");
+
+                            boolean getLlave = false;
+                            if (split[1].equals("1")) {
+                                getLlave = true;
+                            }
+
+                            int len = Integer.parseInt(split[0]);
+
+                            String temp1 = nom + ":" + tipo + "[" + len + "]" + split[1];
+                            //Agregar a la tabla
+                            Object[] newrow2 = {
+                                temp1
+                            };
+
+                            metaData2.getCampos().add(new Campos(nom, tipo, len, getLlave));
+
+                            //Ojo cambiar como saber si es llaveprimaria
+                            modelo.addRow(newrow2);
+
+                        } catch (ArrayIndexOutOfBoundsException ex) {
+                        }
+                    }
+                }
+                jtable_campos.setModel(modelo);
+
+            }
+            jButton32.setEnabled(true);
+
+        } catch (NullPointerException ex) {
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jButton31ActionPerformed
+
+    private void jt_camposCruzadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_camposCruzadosMouseClicked
+        if (evt.isMetaDown()) {
+            pop_camposMenu.show(evt.getComponent(),
+                    evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jt_camposCruzadosMouseClicked
+
+    private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
+        //Agregar Campo a campos cruzados
+        int row = jt_campos1.getSelectedRow();
+        int row1 = jt_campos2.getSelectedRow();
+        if (row != -1) {//Si selecciono un campo de la tabla 1
+            DefaultTableModel model = (DefaultTableModel) jt_camposCruzados.getModel();
+            String value = jt_campos1.getModel().getValueAt(row, 0).toString();
+
+            //Agregar a La metadata de campos cruzada
+            String[] camposLinea = value.split(";");
+
+            for (String Campo : camposLinea) {
+
+                //Conseguir el nombre
+                try {
+
+                    String[] campSpLit = Campo.split(":"); //Nombre:Tipo[num] = (Nombre)(Tipo[num]llave)
+                    String nom = campSpLit[0];
+                    String tipo = "";
+
+                    //Conseguir el tipo
+                    String[] typeSplit = campSpLit[1].split("\\[");// Tipo[Num] = (Tipo)(num]llave)
+                    tipo = typeSplit[0];
+
+                    //Conseguir llave primaria
+                    String[] split = typeSplit[1].split("]");
+
+                    boolean getLlave = false;
+                    if (split[1].equals("1")) {
+                        getLlave = true;
+                    }
+
+                    int len = Integer.parseInt(split[0]);
+
+                    metaDataCruzada.getCampos().add(new Campos(nom, tipo, len, getLlave));
+
+                } catch (ArrayIndexOutOfBoundsException ex) {
+                }
+            }
+
+            //Agregar a la tabla
+            Object[] newrow = {
+                value
+            };
+            model.addRow(newrow);
+            JOptionPane.showMessageDialog(jd_archivoCruzar, "Campo agregado a CamposCruzados");
+        } else if (row1 != -1) {
+            DefaultTableModel model = (DefaultTableModel) jt_camposCruzados.getModel();
+            String value = jt_campos2.getModel().getValueAt(row1, 0).toString();
+
+            //Agregar a La metadata de campos cruzada
+            String[] camposLinea = value.split(";");
+
+            for (String Campo : camposLinea) {
+
+                //Conseguir el nombre
+                try {
+
+                    String[] campSpLit = Campo.split(":"); //Nombre:Tipo[num] = (Nombre)(Tipo[num]llave)
+                    String nom = campSpLit[0];
+                    String tipo = "";
+
+                    //Conseguir el tipo
+                    String[] typeSplit = campSpLit[1].split("\\[");// Tipo[Num] = (Tipo)(num]llave)
+                    tipo = typeSplit[0];
+
+                    //Conseguir llave primaria
+                    String[] split = typeSplit[1].split("]");
+
+                    boolean getLlave = false;
+                    if (split[1].equals("1")) {
+                        getLlave = true;
+                    }
+
+                    int len = Integer.parseInt(split[0]);
+
+                    metaDataCruzada.getCampos().add(new Campos(nom, tipo, len, getLlave));
+
+                } catch (ArrayIndexOutOfBoundsException ex) {
+                }
+            }
+
+            Object[] newrow = {
+                value
+            };
+            model.addRow(newrow);
+            JOptionPane.showMessageDialog(jd_archivoCruzar, "Campo agregado a CamposCruzados");
+        }
+
+        jt_campos1.clearSelection();
+        jt_campos2.clearSelection();
+
+        if (jt_camposCruzados.getRowCount() >= 1) {
+            jButton30.setEnabled(true);
+        }
+
+    }//GEN-LAST:event_jButton32ActionPerformed
+
+    private void jd_archivoCruzarWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_jd_archivoCruzarWindowClosing
+        jd_archivoCruzar.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_jd_archivoCruzarWindowClosing
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        //Eliminar campo de camposCruzados
+        int getSelectedRowForDeletion = jt_camposCruzados.getSelectedRow();
+        //Check if their is a row selected
+        if (getSelectedRowForDeletion != -1) {
+            String value = jt_camposCruzados.getModel().getValueAt(getSelectedRowForDeletion, 0).toString();
+
+            ((DefaultTableModel) jt_camposCruzados.getModel()).removeRow(getSelectedRowForDeletion);
+
+            String[] campSpLit = value.split(":"); //Nombre:Tipo[num] = (Nombre)(Tipo[num]llave)
+            String nom = campSpLit[0];
+
+            int index = buscarCampoCruzado(nom);
+
+            metaDataCruzada.getCampos().remove(index);
+            if (jt_camposCruzados.getRowCount() == 1) {
+
+                jButton30.setEnabled(false);
+            }
+
+            JOptionPane.showMessageDialog(null, "Campo eliminado");
+        } else {
+            JOptionPane.showMessageDialog(null, "No Hay campo seleccionado");
+        }
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
     public void actualizarTablaRegistros() {
         // cargarRegistros();
         registros_gui.dispose();
@@ -2691,6 +3156,17 @@ public class Principal extends javax.swing.JFrame {
     public void vaciarTabla() {
         DefaultTableModel modeloRegistros = (DefaultTableModel) tablaguardarRegistros.getModel();
         modeloRegistros.setRowCount(0);
+    }
+
+    public int buscarCampoCruzado(String nombre) {
+        int index = 0;
+        for (int i = 0; i < metaDataCruzada.getCampos().size(); i++) {
+            if (metaDataCruzada.getCampos().get(i).getNombre().equals(nombre)) {
+                return i;
+            }
+        }
+
+        return index;
     }
 
     public void guardarRegistroEnArchivo() throws FileNotFoundException, IOException {
@@ -3080,6 +3556,12 @@ public class Principal extends javax.swing.JFrame {
     String rutaArchivo = "./registros/";
     File file = new File(rutaArchivo);//el archivo al que vamos a guardar
     Metadata metadata = new Metadata();
+
+    RandomAccessFile archivoCruzar;
+    Metadata metaData2;
+    Arbol arbolBCruzar = new Arbol(6);
+    Metadata metaDataCruzada;
+
     String ubicacionActual = "";
     Arbol arbolB = new Arbol(6);
     Llave llaveactual = null;
@@ -3129,7 +3611,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -3147,24 +3633,33 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JDialog jd_archivoCruzar;
     private javax.swing.JTextField jt_archivoActual;
+    private javax.swing.JTable jt_campos1;
+    private javax.swing.JTable jt_campos2;
+    private javax.swing.JTable jt_camposCruzados;
     private javax.swing.JTable jt_reindexar;
     private javax.swing.JTable jtable_campos;
     private javax.swing.JDialog misArchivos;
+    private javax.swing.JPopupMenu pop_camposMenu;
     private javax.swing.JRadioButton rb_no;
     private javax.swing.JRadioButton rb_si;
     private javax.swing.JDialog registros_gui;

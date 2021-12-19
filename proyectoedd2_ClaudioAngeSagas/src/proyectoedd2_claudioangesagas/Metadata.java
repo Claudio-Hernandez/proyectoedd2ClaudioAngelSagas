@@ -20,15 +20,27 @@ public class Metadata {
         FileWriter fw = new FileWriter(file, false);
         BufferedWriter bw = new BufferedWriter(fw);
         PrintWriter pw = new PrintWriter(bw);
-        
-        
+
+        //Escribir primero la llave Primaria
         for (Campos temp : campos) {
-            int llave = 0;
-            if (temp.isLlavePrimaria()==true) {
-                llave = 1;
+            if (temp.isLlavePrimaria() == true) {
+                int llave = 0;
+                if (temp.isLlavePrimaria() == true) {
+                    llave = 1;
+                }
+                pw.print(temp.getNombre() + ":" + temp.getTipo() + "[" + temp.getByteoffset() + "]" + llave + ";");
             }
-            pw.print(temp.getNombre() + ":" + temp.getTipo() + "[" + temp.getByteoffset() + "]"+llave + ";");
         }
+
+        for (Campos temp : campos) {
+            if (temp.isLlavePrimaria() == false) {
+                int llave = 0;
+                pw.print(temp.getNombre() + ":" + temp.getTipo() + "[" + temp.getByteoffset() + "]" + llave + ";");
+            }
+        }
+
+        pw.println();
+        pw.print("@@@");
         pw.println();
         pw.flush();
         pw.close();
@@ -53,7 +65,7 @@ public class Metadata {
     public void setAvaiList(Lista avaiList) {
         this.avaiList = avaiList;
     }
-    
+
     public int getPosAvailList() {
         return posAvailList;
     }
