@@ -897,12 +897,12 @@ public class Principal extends javax.swing.JFrame {
             guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(guiModificarRegistroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, guiModificarRegistroLayout.createSequentialGroup()
+                .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(guiModificarRegistroLayout.createSequentialGroup()
                         .addComponent(textoFiltro2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(170, 170, 170)
                         .addComponent(campoFiltro2, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 876, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 876, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
@@ -921,11 +921,11 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(campoFiltro2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(textoFiltro2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campoFiltro2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textoFiltro2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         tabla_registro3.setModel(new javax.swing.table.DefaultTableModel(
@@ -1681,7 +1681,7 @@ public class Principal extends javax.swing.JFrame {
                 System.out.println(registroTemp);
 
                 if (flag) {
-                   
+
                     Llave llave = new Llave();
                     String llavePrimaria = modeloTablaRegistros.getValueAt(i, 0).toString();
                     llave.setLlave(llavePrimaria);
@@ -1945,6 +1945,46 @@ public class Principal extends javax.swing.JFrame {
         File archivoCargar = new File(archivo);
 
         if (archivoCargar.exists()) {
+            FileReader fr = null;
+            BufferedReader br = null;
+            try {
+                fr = new FileReader(archivoCargar);
+                br = new BufferedReader(fr);
+                String linea = "";
+                while ((linea = br.readLine()) != null) {
+                    String[] registro = linea.split("[|]");
+                    int tamanoLlave = 0;
+                    for (int i = 0; i < registro.length; i++) {
+                        tamanoLlave += registro[i].length();
+                    }
+                    Llave llave = new Llave();
+                    llave.setLlave(registro[0]);
+                    llave.setTamanio(tamanoLlave);
+                    registros.add(linea);
+//                    System.out.println("La llave que se va agregar tiene: "+llave.getLlave());
+                    llaves.add(llave);
+                }
+
+                guardarRegistroEnArchivo();
+                botonBuscarRegistro.setEnabled(true);
+                botonEliminarRegistro.setEnabled(true);
+                registros_gui.dispose();
+                registros_gui.pack();
+                registros_gui.setLocationRelativeTo(null);
+                registros_gui.setVisible(true);
+                JOptionPane.showMessageDialog(this, "Se ha cargado el archivo exitosamente", "Información", JOptionPane.INFORMATION_MESSAGE);
+            } catch (Exception e) {
+            }
+            try {
+                br.close();
+                fr.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        /*
+        if (archivoCargar.exists()) {
 
             FileReader fr = null;
             BufferedReader br = null;
@@ -1961,7 +2001,7 @@ public class Principal extends javax.swing.JFrame {
                     Llave llave = new Llave();
                     llave.setLlave(registro[0]);
                     //System.out.println(registro[0]);
-                    llave.setTamanio(tamanoLlave+3);
+                    llave.setTamanio(tamanoLlave + 3);
                     registros.add(linea);
                     llaves.add(llave);
                 }
@@ -1988,12 +2028,12 @@ public class Principal extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "El archivo no se pudo encontrar");
 
-        }
+        }*/
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void botonEliminarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarRegistroActionPerformed
         // borrar
-          DefaultTableModel modelotablaCampos = (DefaultTableModel) jtable_campos.getModel();
+        DefaultTableModel modelotablaCampos = (DefaultTableModel) jtable_campos.getModel();
         int numerodeColumnas = modelotablaCampos.getRowCount();
         ArrayList<Class> types = new ArrayList();
         for (int i = 0; i < modelotablaCampos.getRowCount(); i++) {
@@ -2049,9 +2089,9 @@ public class Principal extends javax.swing.JFrame {
 
         }
         tabla_registro3.setModel(modelopersonalizado);
-       guiBorrarRegistro.pack();
-       guiBorrarRegistro.setLocationRelativeTo(null);
-       guiBorrarRegistro.setVisible(true);
+        guiBorrarRegistro.pack();
+        guiBorrarRegistro.setLocationRelativeTo(null);
+        guiBorrarRegistro.setVisible(true);
 
 
     }//GEN-LAST:event_botonEliminarRegistroActionPerformed
@@ -2160,6 +2200,28 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+
+        if (campoFiltro2.getText().equals("")) {
+            JOptionPane.showMessageDialog(guiModificarRegistro, "No puede estar vacío el campo", "Información", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            Llave temp = new Llave();
+            temp.setLlave(campoFiltro2.getText());
+            //NodoArbol nodo = arbolB.search(temp);
+            temp=encontrarLlave(campoFiltro2.getText());
+            if (temp == null) {
+                JOptionPane.showMessageDialog(guiModificarRegistro, "No se encontró la llave", "Información", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                //temp = buscarKey(campoFiltro2.getText(), nodo);
+                llaveActual = temp;
+                try {
+                    llenarTabla(tabla_registro2, temp);
+                } catch (IOException ex) {
+                    Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+
+        /*
         String llaveBuscar = campoFiltro2.getText();
         Llave llaveTemporal = new Llave();
         llaveTemporal.setLlave(llaveBuscar);
@@ -2185,9 +2247,83 @@ public class Principal extends javax.swing.JFrame {
             DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro2.getModel();
 
         }
-
+         */
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
+
+    public Llave encontrarLlave(String text){
+        System.out.println("El tamaño de las llaves es: "+llaves.size());
+        for (int i = 0; i < llaves.size(); i++) {
+            System.out.println();
+            if (llaves.get(i).getLlave().equals(text)) {
+                System.out.println("LA ENCONTREEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+                return llaves.get(i);
+            }
+        }
+        
+        return null;
+         
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public Llave buscarKey(String llave, NodoArbol nodo) {
+        for (int i = 0; i < nodo.getKeys().length; i++) {
+            if (nodo.getKeys()[i].getLlave().equals(llave)) {
+                
+                return nodo.getKeys()[i];
+            }
+            
+        }
+        return null;
+    }
+
+    public void llenarTabla(JTable tabla, Llave llave) throws IOException {
+
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{}
+        ));
+        DefaultTableModel modeloT = (DefaultTableModel) tabla.getModel();
+        String cabezas[] = new String[metadata.getCampos().size()];
+        for (int i = 0; i < cabezas.length; i++) {
+            cabezas[i] = metadata.getCampos().get(i).getNombre();
+        }
+        for (Object a : cabezas) {
+            modeloT.addColumn(a);
+        }
+        tabla.setModel(modeloT);
+
+        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
+        String row[] = new String[metadata.getCampos().size()];
+        byte[] temp = new byte[300];
+        int pos = 0;
+        for (long i = llave.getByteoffset(); i < (llave.getByteoffset() + llave.getTamanio()); i++) {
+            archivoAhorita.seek(i);
+            temp[pos] = archivoAhorita.readByte();
+            pos++;
+        }
+        String tempString = new String(temp);
+        String[] registro = tempString.split("[|]");
+        for (int i = 0; i < row.length; i++) {
+            row[i] = registro[i];
+        }
+        modelo.addRow(row);
+        tabla.setModel(modelo);
+    }
+
     public void llenarTablaModificacion(Llave llave) throws IOException {
         archivoAhorita.seek(llave.getByteoffset());
         String linea;
@@ -2205,6 +2341,7 @@ public class Principal extends javax.swing.JFrame {
         }
 
     }
+
     public void llenarTablaBorrar(Llave llave) throws IOException {
         archivoAhorita.seek(llave.getByteoffset());
         String linea;
@@ -2222,7 +2359,6 @@ public class Principal extends javax.swing.JFrame {
         }
 
     }
-    
 
     public Llave ObtenerLLave(Llave buscar) {
 
@@ -2251,7 +2387,7 @@ public class Principal extends javax.swing.JFrame {
                 } else {
                     temporal.setLlave(modeloRegistros.getValueAt(0, 0).toString());
                     System.out.println(temporal.getLlave());
-                    if (arbolB.search(temporal) == null) {
+                    if (encontrarLlave(temporal.getLlave()) == null) {
                         JOptionPane.showMessageDialog(guiModificarRegistro, "No puedes modificar la llave primaria");
                         flag = false;
                         break;
@@ -2261,8 +2397,9 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         }
-        if (flag==true) {
-            temporal = ObtenerLLave(temporal);
+        if (flag == true) {
+            
+            temporal = encontrarLlave(modeloRegistros.getValueAt(0, 0).toString());
             String nuevoRegistro = "";
             for (int i = 0; i < modeloRegistros.getColumnCount(); i++) {
                 if (modeloRegistros.getColumnCount() - i == 1) {
@@ -2277,9 +2414,18 @@ public class Principal extends javax.swing.JFrame {
             }
             try {
                 archivoAhorita.seek(temporal.getByteoffset());
-                archivoAhorita.write(nuevoRegistro.getBytes());
-                archivoAhorita.write("\n".getBytes());
-                posicionArchivo++;
+                if (archivoAhorita.readLine().length()>=nuevoRegistro.length()) {
+                    archivoAhorita.seek(temporal.getByteoffset());
+                    int resta=archivoAhorita.readLine().length()-nuevoRegistro.length();
+                    for (int i = 0; i < resta; i++) {
+                        nuevoRegistro+=" ";
+                    }
+                }
+               archivoAhorita.seek(temporal.getByteoffset());
+               archivoAhorita.writeBytes(nuevoRegistro);
+                System.out.println("El byteOffset es: "+temporal.getByteoffset());
+               //archivoAhorita.write("\n".getBytes());
+               // posicionArchivo++;
                 JOptionPane.showMessageDialog(guiModificarRegistro, "Registro modificado");
 
             } catch (IOException ex) {
@@ -2296,7 +2442,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_campoFiltro2ActionPerformed
 
     private void botonBuscarRegistroBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarRegistroBorrarActionPerformed
-         String llaveBuscar = campoFiltro3.getText();
+        String llaveBuscar = campoFiltro3.getText();
         Llave llaveTemporal = new Llave();
         llaveTemporal.setLlave(llaveBuscar);
         if (arbolB.search(llaveTemporal) != null) {
@@ -2318,8 +2464,7 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
 
-           // DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro3.getModel();
-
+            // DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro3.getModel();
         }
 
         // TODO add your handling code here:
@@ -2327,28 +2472,25 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         //boton borrar registro guiborrar
-          DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro3.getModel();
+        DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro3.getModel();
 
         Llave temporal = new Llave();
-         temporal.setLlave(modeloRegistros.getValueAt(0, 0).toString());
-       
-            temporal = ObtenerLLave(temporal);
-            String marca  = "";
-            for (int i = 0; i <temporal.getTamanio(); i++) {
-             marca+="*";
-             }
-            try {
-                archivoAhorita.seek(temporal.getByteoffset());
-                 archivoAhorita.write(marca.getBytes());
-                posicionArchivo++;
-                JOptionPane.showMessageDialog(guiModificarRegistro, "Registro modificado");
+        temporal.setLlave(modeloRegistros.getValueAt(0, 0).toString());
 
-            } catch (IOException ex) {
-                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        temporal = ObtenerLLave(temporal);
+        String marca = "";
+        for (int i = 0; i < temporal.getTamanio(); i++) {
+            marca += "*";
+        }
+        try {
+            archivoAhorita.seek(temporal.getByteoffset());
+            archivoAhorita.write(marca.getBytes());
+            posicionArchivo++;
+            JOptionPane.showMessageDialog(guiModificarRegistro, "Registro modificado");
 
-        
-        
+        } catch (IOException ex) {
+            Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton27ActionPerformed
@@ -2372,6 +2514,90 @@ public class Principal extends javax.swing.JFrame {
 
     public void guardarRegistroEnArchivo() throws FileNotFoundException, IOException {
         archivoAhorita = new RandomAccessFile(new File(ubicacionActual), "rw");
+        String saltoLinea = "\n";
+        posArchivo = archivoAhorita.length();
+        boolean flag = false;
+        
+        for (int i = 0; i < registros.size(); i++) {
+            try {
+                if (!metadata.getAvaiList().estaVacia()) {
+                    int j;
+                    Llave temp = new Llave();
+                    for (j = 1; j <= metadata.getAvaiList().tamanio; j++) {
+                        if (metadata.getAvaiList().elementoPosicion(j).getTamanio() >= registros.get(i).length()) {
+                            flag = true;
+                            break;
+                        }
+                    }
+                    temp = metadata.getAvaiList().elementoPosicion(j);
+                    posArchivo = metadata.getAvaiList().elementoPosicion(j).getByteoffset();
+                    if (flag) {
+                        if (j == 1 && j != metadata.getAvaiList().tamanio) {
+                            archivoAhorita.seek(metadata.getPosAvailList());
+                            Llave tempSiguiente = metadata.getAvaiList().elementoPosicion(j + 1);
+                            String nuevoPosAvail = tempSiguiente.getByteoffset() + "$" + tempSiguiente.getTamanio();
+                            archivoAhorita.write(nuevoPosAvail.getBytes());
+                        }
+                        if (j == 1 && j == metadata.getAvaiList().tamanio) {
+                            archivoAhorita.seek(metadata.getPosAvailList());
+                            String espacios = "      ";
+                            archivoAhorita.write(espacios.getBytes());
+
+                        } else {
+                            if (j == metadata.getAvaiList().tamanio) {
+                                Llave tempAnterior = metadata.getAvaiList().elementoPosicion(j - 1);
+                                archivoAhorita.seek(tempAnterior.getByteoffset());
+                                String nuevoPosAvail = "*-1$" + tempAnterior.getTamanio() + "*";
+                                archivoAhorita.write(nuevoPosAvail.getBytes());
+                            }
+                        }
+
+                        if (j > 1 && j < metadata.getAvaiList().tamanio) {
+                            Llave tempAnterior = metadata.getAvaiList().elementoPosicion(j - 1);
+                            Llave tempSiguiente = metadata.getAvaiList().elementoPosicion(j + 1);
+                            archivoAhorita.seek(tempAnterior.getByteoffset());
+                            String nuevoPosAvail = "*" + tempSiguiente.getByteoffset() + "$" + tempAnterior.getTamanio() + "*";
+                            archivoAhorita.write(nuevoPosAvail.getBytes());
+                        }
+                    }
+                    metadata.getAvaiList().suprimir(j);
+                }
+                
+                llaves.get(i).setByteoffset(posArchivo);
+                arbolB.insert(llaves.get(i));
+                archivoAhorita.seek(posArchivo);
+                long posTemp = posArchivo;
+                archivoAhorita.write(registros.get(i).getBytes());
+                posArchivo += registros.get(i).length();
+                archivoAhorita.seek(posArchivo);
+                archivoAhorita.write(saltoLinea.getBytes());
+                posArchivo++;
+//                int acum = 0;
+//                for (long j = posTemp; j >= 0; j--) {
+//                    archivoAhorita.seek(j);
+//                    byte[] temp = {archivoAhorita.readByte()};
+//                    String tempString = new String(temp);
+//                    if (tempString.equals("\n")) {
+//                        j = -1;
+//                    } else {
+//                        acum++;
+//                    }
+//                }
+//                if (acum >= 50) {
+//                    archivoAhorita.seek(posArchivo);
+//                    archivoAhorita.write(saltoLinea.getBytes());
+//                    posArchivo++;
+//                }
+            } catch (IOException ex) {
+                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        System.out.println("La posicion del archivo es: "+posArchivo);
+
+
+        // XDFDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+        /*
+        archivoAhorita = new RandomAccessFile(new File(ubicacionActual), "rw");
         posicionArchivo = archivoAhorita.length();
         for (int i = 0; i < registros.size(); i++) {
             llaves.get(i).setByteoffset(posicionArchivo);
@@ -2385,8 +2611,7 @@ public class Principal extends javax.swing.JFrame {
             posicionArchivo+=salto.length();
            
 
-        }
-
+        }*/
     }
 
     public void cargarRegistros() {
@@ -2765,5 +2990,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel textoFiltro2;
     private javax.swing.JLabel textoFiltro3;
     // End of variables declaration//GEN-END:variables
-
+    // ojo
+    long posArchivo;
+    Llave llaveActual = null;
 }

@@ -14,7 +14,7 @@ public class Metadata {
 
     private ArrayList<Campos> campos = new ArrayList<>();
     private Lista avaiList = new Lista();
-    
+    private int posAvailList = 0;
 
     public void escribirCampos(File file) throws IOException {
         FileWriter fw = new FileWriter(file, false);
@@ -54,5 +54,12 @@ public class Metadata {
         this.avaiList = avaiList;
     }
     
+    public int getPosAvailList() {
+        return posAvailList;
+    }
+
+    public void setPosAvailList(int posAvailList) {
+        this.posAvailList = posAvailList;
+    }
 
 }

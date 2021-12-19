@@ -13,6 +13,7 @@ public class Llave {
     private String llave;
     private long byteoffset;
     private int tamanio;
+    
     public Llave(){}
 
     public long getByteoffset() {
