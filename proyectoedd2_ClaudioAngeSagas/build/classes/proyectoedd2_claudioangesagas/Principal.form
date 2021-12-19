@@ -1150,6 +1150,9 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="guiAgregarRegistro">
+      <Properties>
+        <Property name="undecorated" type="boolean" value="true"/>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">

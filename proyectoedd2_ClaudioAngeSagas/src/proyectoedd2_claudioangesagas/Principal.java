@@ -1010,6 +1010,8 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(115, Short.MAX_VALUE))
         );
 
+        guiAgregarRegistro.setUndecorated(true);
+
         tablaguardarRegistros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1702,6 +1704,8 @@ public class Principal extends javax.swing.JFrame {
                 adar.cargarArchivo();
                 arbolB = adar.getArbol();
             }
+            registros.clear();
+            llaves.clear();
 
         } catch (NullPointerException ex) {//Si no
             JOptionPane.showMessageDialog(campos, "Archivo no seleccionado");
@@ -1879,11 +1883,14 @@ public class Principal extends javax.swing.JFrame {
         DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro.getModel();
 
         this.setVisible(false);
-        botonBuscarRegistro.setEnabled(false);
+        if (registros.isEmpty()) {
+             botonBuscarRegistro.setEnabled(false);
         botonEliminarRegistro.setEnabled(false);
         //  botonAgregarEspacio.setEnabled(false);
         botonGuardarRegistros.setEnabled(false);
         botonModificarRegistro.setEnabled(false);
+        }
+       
         cargarRegistros();
         registros_gui.pack();
         registros_gui.setLocationRelativeTo(this);
@@ -2096,6 +2103,7 @@ public class Principal extends javax.swing.JFrame {
     private void jButton23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MouseClicked
         // Crear Indices
         if (arbolB.getRaiz() != null) {
+            System.out.println("tiene raiz");
             AdminArbol adar = new AdminArbol("./registros/" + "Arbol.indices");
             adar.setArbol(arbolB);
             adar.escribirArchivo();
@@ -2443,7 +2451,7 @@ public class Principal extends javax.swing.JFrame {
             if (temp == null) {
                 JOptionPane.showMessageDialog(guiModificarRegistro, "No se encontró la llave", "Información", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                //temp = buscarKey(campoFiltro2.getText(), nodo);
+                //temp = buscarLlave(campoFiltro2.getText(), nodo);
                 llaveActual = temp;
                 try {
                     llenarTabla(tabla_registro2, temp);
@@ -2453,42 +2461,14 @@ public class Principal extends javax.swing.JFrame {
             }
         }
 
-        /*
-        String llaveBuscar = campoFiltro2.getText();
-        Llave llaveTemporal = new Llave();
-        llaveTemporal.setLlave(llaveBuscar);
-        if (arbolB.search(llaveTemporal) != null) {
-            System.out.println("lo encontro");
-            NodoArbol n = arbolB.search(llaveTemporal);
-
-            for (int i = 0; i < n.getKeys().length; i++) {
-                if (n.getKeys()[i].getLlave().equals(llaveBuscar)) {
-                    llaveTemporal = n.getKeys()[i];
-                    JOptionPane.showMessageDialog(guiModificarRegistro, "Registro encontrado");
-                    try {
-                        llenarTablaModificacion(llaveTemporal);
-                    } catch (IOException ex) {
-                        Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    //System.out.println(arbolB.search(llaveTemporal).getKeys()[i].getByteoffset());
-
-                    break;
-                }
-            }
-
-            DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro2.getModel();
-
-        }
-         */
-        // TODO add your handling code here:
     }//GEN-LAST:event_jButton16ActionPerformed
 
     public Llave encontrarLlave(String text) {
-        System.out.println("El tamaño de las llaves es: " + llaves.size());
+       
         for (int i = 0; i < llaves.size(); i++) {
-            System.out.println();
+            
             if (llaves.get(i).getLlave().equals(text)) {
-                System.out.println("LA ENCONTREEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+              
                 return llaves.get(i);
             }
         }
@@ -2497,7 +2477,7 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
-    public Llave buscarKey(String llave, NodoArbol nodo) {
+    public Llave buscarLlave(String llave, NodoArbol nodo) {
         for (int i = 0; i < nodo.getKeys().length; i++) {
             if (nodo.getKeys()[i].getLlave().equals(llave)) {
 
@@ -2578,7 +2558,7 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
-    public Llave ObtenerLLave(Llave buscar) {
+    public Llave recuperaLLave(Llave buscar) {
 
         NodoArbol n = arbolB.search(buscar);
         for (int i = 0; i < n.getKeys().length; i++) {
@@ -2766,7 +2746,7 @@ public class Principal extends javax.swing.JFrame {
                 }
 
             }
-            System.out.println(registroTemp);
+            //System.out.println(registroTemp);
 
             if (flag) {
 
@@ -2802,9 +2782,10 @@ public class Principal extends javax.swing.JFrame {
                                         registroTemp += " ";
                                     }
                                 }
+                                llaveresultante.setLlave(llavePrimaria);
                                 llaves.add(llaveresultante);
                                 archivoAhorita.seek(llaveresultante.getByteoffset());
-                                archivoAhorita.writeBytes(registroTemp);
+                                archivoAhorita.write(registroTemp.getBytes());
                                 metadata.getAvaiList().suprimir(p2);
 
                             } catch (IOException ex) {
@@ -2818,14 +2799,28 @@ public class Principal extends javax.swing.JFrame {
                                 archivoAhorita.seek(posArchivo);
                                 llave.setByteoffset(posArchivo);
                                 llaves.add(llave);
-                                archivoAhorita.writeBytes(registroTemp);
+                                archivoAhorita.write(registroTemp.getBytes());
+                                //System.out.println(registroTemp);
                             } catch (IOException ex) {
                                 Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
                             }
 
                         }
 
+                    }else{
+                         try {
+                                posArchivo = archivoAhorita.length();
+                                archivoAhorita.seek(posArchivo);
+                                llave.setByteoffset(posArchivo);
+                                llaves.add(llave);
+                                archivoAhorita.write(registroTemp.getBytes());
+                               
+                            } catch (IOException ex) {
+                                Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                    
                     }
+                    
                     registros.add(registroTemp);
 
                 }
@@ -2996,7 +2991,7 @@ public class Principal extends javax.swing.JFrame {
                         }
                     }
                 }
-                jtable_campos.setModel(modelo);
+                jt_campos2.setModel(modelo);
 
             }
             jButton32.setEnabled(true);
