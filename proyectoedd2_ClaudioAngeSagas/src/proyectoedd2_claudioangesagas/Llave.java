@@ -11,7 +11,7 @@ package proyectoedd2_claudioangesagas;
  */
 public class Llave {
     private String llave;
-    private long byteoffset;
+    private long byteoffset=0;
     private int tamanio;
     
     public Llave(){}

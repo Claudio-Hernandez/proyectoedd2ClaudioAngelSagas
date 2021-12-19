@@ -42,11 +42,6 @@ public class Lista {
           nodo tmp = new nodo();
         if (posicion >= 1 && posicion <= tamanio) {
             tmp = cabeza;
-//            if (posicion == size) {
-//                for (int i = 1; i <=posicion - 1; i++) {
-//                    tmp = tmp.getSiguiente();
-//                }
-//            }
                 for (int i = 1; i <=posicion-1; i++) {
                     tmp = tmp.getSiguiente();
                 }
