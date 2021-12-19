@@ -574,9 +574,12 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jPanel4.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel4.setBackground(new java.awt.Color(0, 102, 153));
         jPanel4.setForeground(new java.awt.Color(0, 102, 102));
 
+        botonGuardarRegistros.setBackground(new java.awt.Color(51, 0, 102));
+        botonGuardarRegistros.setForeground(new java.awt.Color(255, 255, 255));
+        botonGuardarRegistros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/disquete.png"))); // NOI18N
         botonGuardarRegistros.setText("Guardar Registros");
         botonGuardarRegistros.setEnabled(false);
         botonGuardarRegistros.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -590,6 +593,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        botonBuscarRegistro.setBackground(new java.awt.Color(51, 0, 102));
+        botonBuscarRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        botonBuscarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscarusar.png"))); // NOI18N
         botonBuscarRegistro.setText("BuscarRegistro");
         botonBuscarRegistro.setEnabled(false);
         botonBuscarRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -598,6 +604,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        botonEliminarRegistro.setBackground(new java.awt.Color(51, 0, 102));
+        botonEliminarRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        botonEliminarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/borrar.png"))); // NOI18N
         botonEliminarRegistro.setText("Borrar Registros");
         botonEliminarRegistro.setEnabled(false);
         botonEliminarRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -616,6 +625,7 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tabla_registro);
 
+        jButton17.setBackground(new java.awt.Color(0, 204, 102));
         jButton17.setText("Atras");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -633,6 +643,9 @@ public class Principal extends javax.swing.JFrame {
         textoFiltro.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         textoFiltro.setText("Buscar registro con  ");
 
+        jButton26.setBackground(new java.awt.Color(51, 0, 102));
+        jButton26.setForeground(new java.awt.Color(255, 255, 255));
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/galeria.png"))); // NOI18N
         jButton26.setText("Cargar registros");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -640,6 +653,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        botonModificarRegistro.setBackground(new java.awt.Color(51, 0, 102));
+        botonModificarRegistro.setForeground(new java.awt.Color(255, 255, 255));
+        botonModificarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/modificar(1).png"))); // NOI18N
         botonModificarRegistro.setText("Modificar");
         botonModificarRegistro.setEnabled(false);
         botonModificarRegistro.addActionListener(new java.awt.event.ActionListener() {
@@ -666,17 +682,17 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(textoFiltro)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1086, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botonGuardarRegistros, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
                     .addComponent(botonBuscarRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonEliminarRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonEliminarRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
                     .addComponent(jButton26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonModificarRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botonModificarRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonGuardarRegistros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30))
         );
         jPanel4Layout.setVerticalGroup(
@@ -688,26 +704,25 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(fecha_de_modificacion))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
-                        .addComponent(botonGuardarRegistros, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonBuscarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonEliminarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonModificarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textoFiltro)
+                            .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textoFiltro)
-                    .addComponent(campoFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(138, Short.MAX_VALUE))
+                        .addComponent(botonGuardarRegistros, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botonBuscarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(botonEliminarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(botonModificarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout registros_guiLayout = new javax.swing.GroupLayout(registros_gui.getContentPane());
@@ -727,6 +742,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        botonExcel.setBackground(new java.awt.Color(0, 153, 51));
+        botonExcel.setForeground(new java.awt.Color(0, 0, 0));
         botonExcel.setText("Exportar a Excel");
         botonExcel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -734,6 +751,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        botonXML.setBackground(new java.awt.Color(204, 204, 0));
+        botonXML.setForeground(new java.awt.Color(0, 0, 0));
         botonXML.setText("Exportar a XML");
         botonXML.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -741,6 +760,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton22.setBackground(new java.awt.Color(0, 204, 204));
         jButton22.setText("Volver");
         jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -753,15 +773,16 @@ public class Principal extends javax.swing.JFrame {
         estandarizacionLayout.setHorizontalGroup(
             estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(estandarizacionLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(botonExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
-                .addComponent(botonXML, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(estandarizacionLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(botonExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)
+                        .addComponent(botonXML, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(estandarizacionLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(74, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, estandarizacionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         estandarizacionLayout.setVerticalGroup(
             estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -782,6 +803,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton23.setBackground(new java.awt.Color(51, 204, 0));
         jButton23.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton23.setText("Crear Indices");
         jButton23.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -790,6 +812,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton24.setBackground(new java.awt.Color(0, 51, 153));
         jButton24.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton24.setText("Reindexar");
         jButton24.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -882,6 +905,9 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(tabla_registro2);
 
+        jButton16.setBackground(new java.awt.Color(0, 51, 102));
+        jButton16.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscarusar.png"))); // NOI18N
         jButton16.setText("Buscar");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -889,6 +915,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton18.setBackground(new java.awt.Color(204, 153, 0));
+        jButton18.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/modificar(1).png"))); // NOI18N
         jButton18.setText("Modificar");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -918,9 +947,9 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 876, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
+                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         guiModificarRegistroLayout.setVerticalGroup(
             guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -951,6 +980,9 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane6.setViewportView(tabla_registro3);
 
+        botonBuscarRegistroBorrar.setBackground(new java.awt.Color(0, 51, 102));
+        botonBuscarRegistroBorrar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        botonBuscarRegistroBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscarusar.png"))); // NOI18N
         botonBuscarRegistroBorrar.setText("Buscar");
         botonBuscarRegistroBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -958,6 +990,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton27.setBackground(new java.awt.Color(102, 0, 153));
+        jButton27.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/borrar.png"))); // NOI18N
         jButton27.setText("Borrar");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1066,10 +1101,10 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(89, 89, 89)
+                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58)
+                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton28)
