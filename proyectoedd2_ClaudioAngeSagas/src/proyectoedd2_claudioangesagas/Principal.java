@@ -440,6 +440,7 @@ public class Principal extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(243, 10, 73));
         jButton5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setText("Atras");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -448,7 +449,8 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton6.setBackground(new java.awt.Color(243, 10, 73));
-        jButton6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Guardar en este archivo seleccionado");
         jButton6.setEnabled(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -459,6 +461,7 @@ public class Principal extends javax.swing.JFrame {
 
         jButton10.setBackground(new java.awt.Color(243, 10, 73));
         jButton10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(255, 255, 255));
         jButton10.setText("Abrir archivo");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -468,6 +471,7 @@ public class Principal extends javax.swing.JFrame {
 
         jButton11.setBackground(new java.awt.Color(243, 10, 73));
         jButton11.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(255, 255, 255));
         jButton11.setText("Nuevo archivo");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -479,10 +483,12 @@ public class Principal extends javax.swing.JFrame {
         jt_archivoActual.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Archivo Actual:");
 
         jButton13.setBackground(new java.awt.Color(243, 10, 73));
-        jButton13.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton13.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(255, 255, 255));
         jButton13.setText("Cerrar Archivo");
         jButton13.setEnabled(false);
         jButton13.addActionListener(new java.awt.event.ActionListener() {
@@ -491,8 +497,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton14.setBackground(new java.awt.Color(255, 0, 51));
+        jButton14.setBackground(new java.awt.Color(243, 10, 73));
         jButton14.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton14.setForeground(new java.awt.Color(255, 255, 255));
         jButton14.setText("Listar Archivo");
         jButton14.setEnabled(false);
         jButton14.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -734,6 +741,7 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        estandarizacion.setBackground(new java.awt.Color(0, 102, 153));
         estandarizacion.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 estandarizacionWindowClosing(evt);
@@ -741,7 +749,9 @@ public class Principal extends javax.swing.JFrame {
         });
 
         botonExcel.setBackground(new java.awt.Color(0, 153, 51));
+        botonExcel.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         botonExcel.setForeground(new java.awt.Color(0, 0, 0));
+        botonExcel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/excel.png"))); // NOI18N
         botonExcel.setText("Exportar a Excel");
         botonExcel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -750,7 +760,9 @@ public class Principal extends javax.swing.JFrame {
         });
 
         botonXML.setBackground(new java.awt.Color(204, 204, 0));
+        botonXML.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         botonXML.setForeground(new java.awt.Color(0, 0, 0));
+        botonXML.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xml.png"))); // NOI18N
         botonXML.setText("Exportar a XML");
         botonXML.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -758,7 +770,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton22.setBackground(new java.awt.Color(0, 204, 204));
+        jButton22.setBackground(new java.awt.Color(0, 102, 102));
+        jButton22.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton22.setForeground(new java.awt.Color(0, 0, 0));
         jButton22.setText("Volver");
         jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -774,13 +788,13 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(estandarizacionLayout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addComponent(botonExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49)
-                        .addComponent(botonXML, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonExcel, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addComponent(botonXML, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(estandarizacionLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(74, Short.MAX_VALUE))
+                        .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         estandarizacionLayout.setVerticalGroup(
             estandarizacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -904,7 +918,8 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane4.setViewportView(tabla_registro2);
 
         jButton16.setBackground(new java.awt.Color(0, 51, 102));
-        jButton16.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton16.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton16.setForeground(new java.awt.Color(0, 0, 0));
         jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscarusar.png"))); // NOI18N
         jButton16.setText("Buscar");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -914,7 +929,8 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton18.setBackground(new java.awt.Color(204, 153, 0));
-        jButton18.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton18.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton18.setForeground(new java.awt.Color(0, 0, 0));
         jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/modificar(1).png"))); // NOI18N
         jButton18.setText("Modificar");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -947,7 +963,7 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
         guiModificarRegistroLayout.setVerticalGroup(
             guiModificarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -968,6 +984,8 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(121, Short.MAX_VALUE))
         );
 
+        guiBorrarRegistro.setBackground(new java.awt.Color(0, 51, 102));
+
         tabla_registro3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -979,7 +997,8 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane6.setViewportView(tabla_registro3);
 
         botonBuscarRegistroBorrar.setBackground(new java.awt.Color(0, 51, 102));
-        botonBuscarRegistroBorrar.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        botonBuscarRegistroBorrar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        botonBuscarRegistroBorrar.setForeground(new java.awt.Color(0, 0, 0));
         botonBuscarRegistroBorrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscarusar.png"))); // NOI18N
         botonBuscarRegistroBorrar.setText("Buscar");
         botonBuscarRegistroBorrar.addActionListener(new java.awt.event.ActionListener() {
@@ -989,7 +1008,8 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton27.setBackground(new java.awt.Color(102, 0, 153));
-        jButton27.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton27.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jButton27.setForeground(new java.awt.Color(0, 0, 0));
         jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/borrar.png"))); // NOI18N
         jButton27.setText("Borrar");
         jButton27.addActionListener(new java.awt.event.ActionListener() {
@@ -1029,22 +1049,25 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(guiBorrarRegistroLayout.createSequentialGroup()
                 .addGroup(guiBorrarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(guiBorrarRegistroLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(guiBorrarRegistroLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
                         .addComponent(botonBuscarRegistroBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(guiBorrarRegistroLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(guiBorrarRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(campoFiltro3, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(textoFiltro3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(115, Short.MAX_VALUE))
+                    .addComponent(campoFiltro3)
+                    .addComponent(textoFiltro3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         guiAgregarRegistro.setUndecorated(true);
 
+        jPanel5.setBackground(new java.awt.Color(0, 51, 102));
+
+        tablaguardarRegistros.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tablaguardarRegistros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -1055,6 +1078,10 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane7.setViewportView(tablaguardarRegistros);
 
+        jButton15.setBackground(new java.awt.Color(0, 153, 102));
+        jButton15.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton15.setForeground(new java.awt.Color(0, 0, 0));
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mas.png"))); // NOI18N
         jButton15.setText("Agregar espacio nuevo");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1062,6 +1089,10 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jButton21.setBackground(new java.awt.Color(0, 102, 153));
+        jButton21.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jButton21.setForeground(new java.awt.Color(0, 0, 0));
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/guardarR.png"))); // NOI18N
         jButton21.setText("Guardar Registros");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1092,7 +1123,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jButton28)))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1146,6 +1177,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jScrollPane8.setViewportView(jt_campos1);
 
+        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cruzarArchivo.png"))); // NOI18N
         jButton30.setText("Cruzar Archivos");
         jButton30.setEnabled(false);
         jButton30.addActionListener(new java.awt.event.ActionListener() {
@@ -1226,10 +1258,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jd_archivoCruzarLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_archivoCruzarLayout.createSequentialGroup()
-                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton32))
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jd_archivoCruzarLayout.createSequentialGroup()
                         .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1237,8 +1266,9 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jd_archivoCruzarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton31)
-                            .addComponent(jButton30))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                            .addComponent(jButton30)
+                            .addComponent(jButton32))))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         jMenuItem1.setText("Eliminar Campo");
@@ -1261,6 +1291,7 @@ public class Principal extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(78, 17, 132));
         jButton1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/campos.png"))); // NOI18N
         jButton1.setText("Agregar campo");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1271,6 +1302,7 @@ public class Principal extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(78, 17, 132));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carpeta.png"))); // NOI18N
         jButton2.setText("Archivos");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1290,9 +1322,10 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton20.setBackground(new java.awt.Color(102, 0, 204));
+        jButton20.setBackground(new java.awt.Color(78, 17, 132));
         jButton20.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton20.setForeground(new java.awt.Color(255, 255, 255));
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/registro.png"))); // NOI18N
         jButton20.setText("Registros");
         jButton20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1308,6 +1341,7 @@ public class Principal extends javax.swing.JFrame {
         jButton19.setBackground(new java.awt.Color(78, 17, 132));
         jButton19.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton19.setForeground(new java.awt.Color(255, 255, 255));
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/indice.png"))); // NOI18N
         jButton19.setText("Indices");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1315,9 +1349,10 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(102, 0, 204));
+        jButton9.setBackground(new java.awt.Color(78, 17, 132));
         jButton9.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estandarizacion.png"))); // NOI18N
         jButton9.setText("Estandarización");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1328,6 +1363,7 @@ public class Principal extends javax.swing.JFrame {
         jButton29.setBackground(new java.awt.Color(78, 17, 132));
         jButton29.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jButton29.setForeground(new java.awt.Color(255, 255, 255));
+        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cruzarArchivo.png"))); // NOI18N
         jButton29.setText("Cruzar Archivos");
         jButton29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1342,47 +1378,46 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(143, 143, 143)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
                     .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 223, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                        .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
-                    .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(113, 113, 113))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton29, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(72, 72, 72))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(251, 251, 251))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton12)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(252, 252, 252))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(99, 99, 99)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(60, 60, 60)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(88, 88, 88))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton29)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jButton12)
                 .addGap(25, 25, 25))
         );
