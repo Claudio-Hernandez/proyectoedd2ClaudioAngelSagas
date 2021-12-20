@@ -1481,6 +1481,9 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_arbolArchivosMouseClicked
 
+    /**
+     *
+     */
     public void actualizarArchivos() {
 
         DefaultTreeModel m = (DefaultTreeModel) arbolArchivos.getModel();
@@ -1703,6 +1706,10 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton8MouseClicked
 
+    /**
+     *este metodo lo que es cargar la metadata
+     * @throws FileNotFoundException excepcion para verificar si no existe el archivo al que se quiere accesar
+     */
     public void cargarMetadata() throws FileNotFoundException {
         try {
 
@@ -1813,6 +1820,9 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    /**
+     *
+     */
     public void borrarElementosTabla() {
         DefaultTableModel dm1 = (DefaultTableModel) jtable_campos.getModel();
         dm1.setRowCount(0);
@@ -1867,6 +1877,9 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jComboBox2ItemStateChanged
 
+    /**
+     *
+     */
     public void abrirVentanaP() {
         //Abrir pantalla principal
         this.pack();
@@ -1999,7 +2012,10 @@ public class Principal extends javax.swing.JFrame {
         registros_gui.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton20MouseClicked
-
+    /**
+     * este metodo lo que hace es organizar la tabla con el formato que debe llevar
+     * @param evt 
+     */
     private void botonGuardarRegistrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonGuardarRegistrosMouseClicked
 
         //=================================================
@@ -2066,6 +2082,12 @@ public class Principal extends javax.swing.JFrame {
         // registroTemp="";
 
     }//GEN-LAST:event_botonGuardarRegistrosMouseClicked
+
+    /**
+     * este metodo lo que hace es escribir el registro dado
+     * @param registro el registro que quiero escribir y que forme anteriormente
+     * @throws IOException excepcion si no se encuentra el archivo
+     */
     public void escribirRegistros(String registro) throws IOException {
         File registroArchivo = new File(ubicacionActual);
         FileWriter fw = new FileWriter(registroArchivo, true);
@@ -2264,7 +2286,11 @@ public class Principal extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton25MouseClicked
-
+    /**
+     * metodo cargar registros
+     * este metodo lo que hace es cargar registros desde el archivo de prueba al que se esta usando
+     * @param evt 
+     */
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
         String archivo = "";
@@ -2393,6 +2419,10 @@ public class Principal extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_botonEliminarRegistroActionPerformed
+
+    /**
+     *
+     */
     public void activarFiltro() {
         campoFiltro.setVisible(true);//los hago visibles
         textoFiltro.setText("Buscar registros con " + tabla_registro.getColumnName(0));
@@ -2521,6 +2551,11 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton16ActionPerformed
 
+    /**
+     * este metodo lo que hace es encontrar la llave con el texto dado en todas las llaves indexadas
+     * @param text texto a buscar, cada llave lleva un texto
+     * @return la llave que encontro
+     */
     public Llave encontrarLlave(String text) {
 
         for (int i = 0; i < llaves.size(); i++) {
@@ -2535,6 +2570,12 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
+    /**
+     *este metodo busca una llave dada en el nodo dado
+     * @param llave esta llave se busca en el nodo
+     * @param nodo nodo en el que buscar
+     * @return retorna llave encontrada
+     */
     public Llave buscarLlave(String llave, NodoArbol nodo) {
         for (int i = 0; i < nodo.getLlaves().length; i++) {
             if (nodo.getLlaves()[i].getLlave().equals(llave)) {
@@ -2546,6 +2587,12 @@ public class Principal extends javax.swing.JFrame {
         return null;
     }
 
+    /**
+     * este metodo llena la tabla dada con la llave dada esto se hace en modificar y eliminar registros
+     * @param tabla la tabla que quiero 
+     * @param llave la llave que quiero agregar
+     * @throws IOException excepcion por si no encuentra nada
+     */
     public void llenarTabla(JTable tabla, Llave llave) throws IOException {
 
         tabla.setModel(new javax.swing.table.DefaultTableModel(
@@ -2580,6 +2627,11 @@ public class Principal extends javax.swing.JFrame {
         tabla.setModel(modelo);
     }
 
+    /**
+     * este metodo llena la tabla de modificacion
+     * @param llave la llave a usar
+     * @throws IOException excepcion si la llave no existe
+     */
     public void llenarTablaModificacion(Llave llave) throws IOException {
         archivoAhorita.seek(llave.getByteoffset());
         String linea;
@@ -2598,6 +2650,11 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
+    /**
+     *llena la tabla de borrado con la llave dada
+     * @param llave la llave que quiero poner
+     * @throws IOException excepcion por si no encuentra nada
+     */
     public void llenarTablaBorrar(Llave llave) throws IOException {
         archivoAhorita.seek(llave.getByteoffset());
         String linea;
@@ -2616,6 +2673,11 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
+    /**
+     * otro metodo para recuperar una llave, lo que hace es buscar en el arbol la llave que quiero encontrar
+     * @param buscar la llave que quiero
+     * @return la llave en el nodo qe devuelve el nodo, si no la encuentra devuelve null
+     */
     public Llave recuperaLLave(Llave buscar) {
 
         NodoArbol n = arbolB.buscar(buscar);
@@ -2695,7 +2757,10 @@ public class Principal extends javax.swing.JFrame {
     private void campoFiltro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoFiltro2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoFiltro2ActionPerformed
-
+/**
+ * este metodo lo que hace es buscar en el arbol las llaves que coincidan con la que se introdujo
+ * @param evt 
+ */
     private void botonBuscarRegistroBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarRegistroBorrarActionPerformed
 
         if (campoFiltro3.getText().equals("")) {
@@ -2719,7 +2784,10 @@ public class Principal extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_botonBuscarRegistroBorrarActionPerformed
-
+/**
+ * este metodo lo que se hace es modificar el registro dado, se busca de nuevo en el arbol y se obtiene el byteoffset
+ * @param evt 
+ */
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         //boton borrar registro guiborrar
         DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro3.getModel();
@@ -2746,6 +2814,11 @@ public class Principal extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton27ActionPerformed
+
+    /**
+     *este metodo elimina la llave que le doy
+     * @param llave que quiero encontrar y eliminar
+     */
     public void elimninarLlave(Llave llave) {
         for (int i = 0; i < llaves.size(); i++) {
             if (llaves.get(i).getLlave().equals(llave.getLlave())) {
@@ -2766,7 +2839,10 @@ public class Principal extends javax.swing.JFrame {
         registros_gui.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton28ActionPerformed
-
+    /**
+     * este metodo lo que hace es agregar una fila a la tabla para poder agregar
+     * @param evt 
+     */
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
         DefaultTableModel modeloTablaRegistros = (DefaultTableModel) tablaguardarRegistros.getModel();
@@ -2774,7 +2850,11 @@ public class Principal extends javax.swing.JFrame {
         modeloTablaRegistros.addRow(b);
         JOptionPane.showMessageDialog(guiAgregarRegistro, "LLena los espacios correspondiente en la nueva fila que se creo en la tabla");
     }//GEN-LAST:event_jButton15ActionPerformed
-
+    /**
+     * este metodo lo que hace es verificar si hay algun slot disponible en el availist si lo hay toma su llave y hace el guardado en ese lugar y elimina el slot  que se uso
+     * si no hay espacio lo guarda normal en el archvivo que se tiene abierto, una vez se agrego eso, se agrega al arbol
+     * @param evt 
+     */
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         //guardar registrossssssssss
         String registroTemp = "";
@@ -2956,6 +3036,10 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton30ActionPerformed
 
+    /**
+     * escribo en la matadata 
+     * @param metadata el objeto de la metadata con la informacion que necesito
+     */
     public void escribirMetadaCampos(Metadata metadata) {
         try {
             String nombre = JOptionPane.showInputDialog("Ingrese el nombre del nuevo archivo");
@@ -3193,6 +3277,10 @@ public class Principal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No Hay campo seleccionado");
         }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    /**
+     *
+     */
     public void actualizarTablaRegistros() {
         // cargarRegistros();
         registros_gui.dispose();
@@ -3202,11 +3290,19 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
+    /**
+     *
+     */
     public void vaciarTabla() {
         DefaultTableModel modeloRegistros = (DefaultTableModel) tablaguardarRegistros.getModel();
         modeloRegistros.setRowCount(0);
     }
 
+    /**
+     * este metodo busca entre los campos que recupere
+     * @param nombre el nombre del campo que quiero verificar
+     * @return el indice de donde esta
+     */
     public int buscarCampoCruzado(String nombre) {
         int index = 0;
         for (int i = 0; i < metaDataCruzada.getCampos().size(); i++) {
@@ -3217,7 +3313,11 @@ public class Principal extends javax.swing.JFrame {
 
         return index;
     }
-
+    /**
+     * este metodo lo que hace es indexar los registros, guarda las llaves correspondientes de cada uno y guarda todo en el arbol
+     * @throws FileNotFoundException excepcion por si hay un error a la hora de encontrar el archivo
+     * @throws IOException  excepcion para verificar si no hay un error a la hora de escritura o lectura
+     */
     public void guardarRegistroEnArchivo() throws FileNotFoundException, IOException {
         archivoAhorita = new RandomAccessFile(new File(ubicacionActual), "rw");
         String saltoLinea = "\n";
@@ -3242,6 +3342,9 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
+    /**
+     * este metodo lo que hace es cargar los registros del archivo e irlos desplegando en la tabla
+     */
     public void cargarRegistros() {
         DefaultTableModel modeloRegistros = (DefaultTableModel) tabla_registro.getModel();
         modeloRegistros.setRowCount(0);
@@ -3303,6 +3406,11 @@ public class Principal extends javax.swing.JFrame {
 
     }
 
+    /**
+     * este metodo es para crear un xml
+     * @param filename el nombre del archivo
+     * @throws TransformerException excepcion si la transformacion del archivo recibio un error
+     */
     public void crearXML(String filename) throws TransformerException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
@@ -3379,6 +3487,11 @@ public class Principal extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * este metodo ordena de manera recursiva el arbol de archivos en el gui de archivos
+     * @param p_raiz raiz es el archivo raiz del cual ire partiendo
+     * @param nodo el nodo del arbol es el que tiene el archivo atual y que es hijo de la raiz
+     */
     public void listar_no_orden(File p_raiz, DefaultMutableTreeNode nodo) {
         try {
             for (File temp : p_raiz.listFiles()) {
